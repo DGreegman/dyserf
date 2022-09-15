@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Box, Flex, HStack, Icon, Spacer, Text } from '@chakra-ui/react';
 import { globalStyles } from '../../styles/customStyles';
 import { dyserfRoutes } from '../../utils/routes';
-import { navLinks } from '../../store/navLinks';
+import { navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { FiMenu } from 'react-icons/fi';
 

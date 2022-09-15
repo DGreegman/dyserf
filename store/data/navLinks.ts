@@ -1,4 +1,4 @@
-import { dyserfRoutes } from '../utils/routes';
+import { dyserfRoutes } from '../../utils/routes';
 
 export const navLinks = [
   {

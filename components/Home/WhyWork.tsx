@@ -11,7 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { globalStyles } from '../../styles/customStyles';
-import { whyworkArray } from '../../store/whywork';
+import { whyworkArray } from '../../store';
 
 const WhyWork = () => {
   // Renders
