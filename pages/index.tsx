@@ -1,3 +1,4 @@
+import WhyWork from '../components/Home/WhyWork';
 import Consultancy from '../components/Home/Consultancy';
 import Hero from '../components/Home/Hero';
 import type { NextPage } from 'next';
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
     >
       <Hero />
       <Consultancy />
+      <WhyWork />
     </div>
   );
 };

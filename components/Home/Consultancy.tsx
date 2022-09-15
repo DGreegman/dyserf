@@ -11,7 +11,7 @@ const Consultancy = () => {
       px={globalStyles.px}
       align={'center'}
       justifyContent={'center'}
-      py={'120px'}
+      py={'150px'}
     >
       <HStack
         width={globalStyles.containerWidth}
