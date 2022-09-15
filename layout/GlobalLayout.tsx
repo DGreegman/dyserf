@@ -1,21 +1,18 @@
 import Aos from 'aos';
 import Head from 'next/head';
 import Script from 'next/script';
-import React, { ReactNode } from 'react';
 import Nav from '../components/Nav/Nav';
+import { ChildProps } from '../models/childrenProps';
 import { globalStyles } from '../styles/customStyles';
 
-type Props = {
-  children: ReactNode;
-};
-
-const GlobalLayout = (props: Props) => {
+const GlobalLayout = (props: ChildProps) => {
   typeof window !== 'undefined' && Aos.init();
 
   return (
     <>
       <Head>
         <title>DYSERF - Accelerating innovations & Business Growth</title>
+        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Dyserf is an innovative solution that builds digital experiences, which accelerate business growth and make life activities easier and faster. "
@@ -25,7 +22,6 @@ const GlobalLayout = (props: Props) => {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="apple-mobile-web-app-title" content="DYSERF" />
-        <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
 

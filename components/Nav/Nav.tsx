@@ -15,11 +15,11 @@ const Nav = () => {
   const path = router.asPath;
 
   // Renders
-  const renderNav = navLinks.map((item) => {
+  const renderNav = navLinks.map((item, i) => {
     const isActive = path.includes(item.path);
 
     return (
-      <Link href={item.path}>
+      <Link href={item.path} key={`${item.title}-${i}`}>
         <a>
           <Text
             color={
