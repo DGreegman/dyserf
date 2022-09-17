@@ -4,7 +4,6 @@ import { globalStyles } from '../../styles/customStyles';
 import {
   Flex,
   Grid,
-  GridItem,
   Heading,
   Stack,
   Text,
@@ -16,50 +15,43 @@ const Services = () => {
   // Renders
   const renderServices = servicesArray.map((service) => {
     return (
-      <GridItem key={service.header}>
-        <Stack
-          minHeight={'308px'}
-          borderRadius={10}
-          padding={'30px 23px 30px 23px'}
-          boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
+      <Stack
+        minHeight={'308px'}
+        borderRadius={10}
+        padding={'30px 23px 30px 23px'}
+        boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
+        key={service.header}
+      >
+        <Image src={service.icon} alt={service.header} />
+
+        <Heading
+          width={'220px'}
+          fontWeight={globalStyles.headerFontWeight}
+          fontFamily={globalStyles.fontFamily}
+          fontSize={18}
+          lineHeight={'27px'}
+          color={globalStyles.textColor}
+          textAlign={'center'}
+          alignSelf={'center'}
         >
-          <Image src={service.icon} alt={service.header} />
+          {service.header}
+        </Heading>
 
-          <Heading
-            width={'220px'}
-            fontWeight={globalStyles.headerFontWeight}
-            fontFamily={globalStyles.fontFamily}
-            fontSize={18}
-            lineHeight={'27px'}
-            color={globalStyles.textColor}
-            textAlign={'center'}
-            alignSelf={'center'}
-          >
-            {service.header}
-          </Heading>
-
-          <Text
-            fontSize={globalStyles.smallTextFontSize}
-            lineHeight={'21px'}
-            color={globalStyles.textColor}
-            textAlign={'center'}
-            alignSelf={'center'}
-          >
-            {service.description}
-          </Text>
-        </Stack>
-      </GridItem>
+        <Text
+          fontSize={globalStyles.smallTextFontSize}
+          lineHeight={'21px'}
+          color={globalStyles.textColor}
+          textAlign={'center'}
+          alignSelf={'center'}
+        >
+          {service.description}
+        </Text>
+      </Stack>
     );
   });
 
   return (
-    <Flex
-      width={globalStyles.width}
-      px={globalStyles.px}
-      align={'center'}
-      justifyContent={'center'}
-      pt={'80px'}
-    >
+    <Flex sx={globalStyles.sectionStyle} pt={'80px'}>
       <VStack
         width={globalStyles.containerWidth}
         gap={9}

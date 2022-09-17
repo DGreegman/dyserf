@@ -6,13 +6,7 @@ import { Box, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 
 const Consultancy = () => {
   return (
-    <Flex
-      width={globalStyles.width}
-      px={globalStyles.px}
-      align={'center'}
-      justifyContent={'center'}
-      py={'150px'}
-    >
+    <Flex sx={globalStyles.sectionStyle} py={'150px'}>
       <HStack
         width={globalStyles.containerWidth}
         minH={'308px'}

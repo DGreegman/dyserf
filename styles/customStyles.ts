@@ -16,4 +16,10 @@ export const globalStyles = {
     xl: '1200px',
     '2xl': '1450px',
   },
+  sectionStyle: {
+    width: '100%',
+    px: { base: 3, xl: 10, '2xl': 0 },
+    align: 'center',
+    justifyContent: 'center',
+  },
 };

@@ -32,13 +32,7 @@ const WhyWork = () => {
   });
 
   return (
-    <Flex
-      width={globalStyles.width}
-      px={globalStyles.px}
-      align={'center'}
-      justifyContent={'center'}
-      pb={'120px'}
-    >
+    <Flex sx={globalStyles.sectionStyle} pb={'120px'}>
       <Grid
         gridTemplateColumns={'repeat(2,1fr)'}
         width={globalStyles.containerWidth}
