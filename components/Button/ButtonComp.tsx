@@ -46,7 +46,7 @@ const ButtonComp = ({
       }}
       _active={{
         backgroundColor: bg ?? globalStyles.primaryColor,
-        transform: 'scale(.98)',
+        transform: 'scale(.99)',
       }}
       _focus={{
         backgroundColor: bg ?? globalStyles.primaryColor,

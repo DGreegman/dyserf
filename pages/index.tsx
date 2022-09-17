@@ -1,22 +1,19 @@
 import WhyWork from '../components/Home/WhyWork';
 import Consultancy from '../components/Home/Consultancy';
 import Hero from '../components/Home/Hero';
+import Services from '../components/Home/Services';
 import type { NextPage } from 'next';
-import { globalStyles } from '../styles/customStyles';
+import FirePower from '../components/Home/FirePower';
 
 const Home: NextPage = () => {
   return (
-    <div
-      style={{
-        width: globalStyles.width,
-        minHeight: '100vh',
-        position: 'relative',
-      }}
-    >
+    <>
       <Hero />
       <Consultancy />
       <WhyWork />
-    </div>
+      <Services />
+      <FirePower />
+    </>
   );
 };
 
