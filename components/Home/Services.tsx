@@ -1,14 +1,7 @@
 import Image from 'next/image';
 import ButtonComp from '../Button/ButtonComp';
 import { globalStyles } from '../../styles/customStyles';
-import {
-  Flex,
-  Grid,
-  Heading,
-  Stack,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Flex, Grid, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 import { servicesArray } from '../../store';
 
 const Services = () => {
