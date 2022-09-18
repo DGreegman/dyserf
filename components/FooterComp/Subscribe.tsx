@@ -65,6 +65,7 @@ const Subscribe = () => {
           alignItems={'center'}
           justifyContent={'center'}
         >
+          {/* eslint-disable */}
           <InputGroup width={{ base: globalStyles.width, lg: '318px' }}>
             <InputLeftElement
               pointerEvents="none"
@@ -93,6 +94,8 @@ const Subscribe = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </InputGroup>
+
+          {/* eslint-enable */}
           <ButtonComp
             width={'108px'}
             height={'40px'}

@@ -47,7 +47,12 @@ const Review = () => {
         key={`${item.id}-${i}`}
       >
         <Box width={'122px'} height={'51px'} position={'relative'}>
-          <Image src={item.icon} layout={'fill'} objectFit={'contain'} />
+          <Image
+            src={item.icon}
+            alt={item.description}
+            layout={'fill'}
+            objectFit={'contain'}
+          />
         </Box>
 
         <Flex alignItems={'flex-start'}>
@@ -99,7 +104,12 @@ const Review = () => {
             gap={3}
           >
             <Box width={'122px'} height={'51px'} position={'relative'}>
-              <Image src={item.icon} layout={'fill'} objectFit={'contain'} />
+              <Image
+                src={item.icon}
+                alt={item.description}
+                layout={'fill'}
+                objectFit={'contain'}
+              />
             </Box>
 
             <Flex alignItems={'flex-start'}>
