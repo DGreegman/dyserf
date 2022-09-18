@@ -114,6 +114,8 @@ const FirePower = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       pt={{ base: '30px', md: '50px', xl: '80px' }}
+      data-aos={'fade-up'}
+      data-aos-duration={'1000'}
     >
       <VStack
         width={globalStyles.containerWidth}

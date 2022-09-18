@@ -18,6 +18,8 @@ const Services = () => {
         padding={'30px 23px 30px 23px'}
         boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
         key={`${service.header}-${i}`}
+        data-aos={'zoom-in-up'}
+        data-aos-duration={'1000'}
       >
         <Image src={service.icon} alt={service.header} />
 
@@ -51,7 +53,8 @@ const Services = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       pt={{ base: '30px', md: '50px', xl: '80px' }}
-      bgColor={globalStyles.whiteColor}
+      data-aos={'fade-up'}
+      data-aos-duration={'1000'}
     >
       <VStack
         width={globalStyles.containerWidth}
@@ -59,7 +62,7 @@ const Services = () => {
         alignItems={'flex-start'}
       >
         <Stack
-          width={{ base: globalStyles.width, lg: '600px' }}
+          width={{ base: globalStyles.width, md: '600px' }}
           alignItems={'flex-start'}
           gap={6}
         >

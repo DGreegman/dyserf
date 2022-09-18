@@ -13,6 +13,8 @@ const Consultancy = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       pt={{ base: '20px', md: '50px', xl: '150px' }}
+      data-aos={'fade-up'}
+      data-aos-duration={'1000'}
     >
       <HStack
         width={globalStyles.containerWidth}

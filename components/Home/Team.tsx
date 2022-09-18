@@ -28,6 +28,8 @@ const Team = () => {
         key={team.id}
         align={'center'}
         gap={2}
+        data-aos={'zoom-in'}
+        data-aos-duration={'1000'}
       >
         <Box
           position={'relative'}
@@ -90,6 +92,8 @@ const Team = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       pt={{ base: '30px', md: '50px', xl: '80px' }}
+      data-aos={'fade-up'}
+      data-aos-duration={'1000'}
     >
       <VStack
         width={globalStyles.containerWidth}
@@ -97,7 +101,7 @@ const Team = () => {
         alignItems={'flex-start'}
       >
         <Stack
-          width={{ base: globalStyles.width, lg: '600px' }}
+          width={{ base: globalStyles.width, md: '600px' }}
           alignItems={'flex-start'}
           gap={6}
         >

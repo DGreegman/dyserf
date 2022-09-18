@@ -39,6 +39,8 @@ const WhyWork = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       pt={{ base: '20px', md: '50px', xl: '120px' }}
+      data-aos={'fade-up'}
+      data-aos-duration={'1000'}
     >
       <Grid
         gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
