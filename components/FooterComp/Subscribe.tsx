@@ -26,7 +26,7 @@ const Subscribe = () => {
       justify={'center'}
     >
       <Stack
-        w={{ base: globalStyles.width, xl: '600px' }}
+        w={{ base: globalStyles.width, md: '600px' }}
         align={'center'}
         justify={'center'}
         gap={{ base: 2, xl: 5 }}

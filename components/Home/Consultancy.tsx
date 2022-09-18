@@ -10,12 +10,16 @@ import { Box, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 
 const Consultancy = () => {
   return (
-    <Flex sx={globalStyles.sectionStyle} py={{ base: '10px', xl: '150px' }}>
+    <Flex
+      sx={globalStyles.sectionStyle}
+      pt={{ base: '20px', md: '50px', xl: '150px' }}
+    >
       <HStack
         width={globalStyles.containerWidth}
         minH={'308px'}
         justifyContent={'space-between'}
-        flexDirection={{ base: 'column-reverse', xl: 'row' }}
+        flexDirection={{ base: 'column-reverse', md: 'row' }}
+        gap={{ base: 2, md: 5, xl: 0 }}
       >
         <Stack
           width={{ base: globalStyles.width, xl: '600px' }}

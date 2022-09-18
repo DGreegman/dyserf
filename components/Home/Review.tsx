@@ -92,7 +92,6 @@ const Review = () => {
           <Stack
             align={'center'}
             minHeight={'241px'}
-            width={globalStyles.width}
             borderRadius={'10px'}
             bgColor={globalStyles.whiteColor}
             boxShadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
@@ -156,7 +155,10 @@ const Review = () => {
     });
 
   return (
-    <Flex sx={globalStyles.sectionStyle} py={{ base: '30px', xl: '80px' }}>
+    <Flex
+      sx={globalStyles.sectionStyle}
+      py={{ base: '30px', md: '50px', xl: '80px' }}
+    >
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
@@ -182,9 +184,9 @@ const Review = () => {
             {renderReview}
           </Grid>
         ) : (
-          <Stack width={globalStyles.width} align={'center'}>
+          <Stack width={{ base: globalStyles.width }} gap={1} align={'center'}>
             <Grid
-              width={globalStyles.width}
+              width={{ base: globalStyles.width, md: '50%' }}
               gridTemplateColumns={'repeat(1,1fr)'}
             >
               {renderReviewSmallScreen}

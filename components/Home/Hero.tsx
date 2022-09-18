@@ -21,7 +21,7 @@ const Hero = () => {
       width={globalStyles.width}
       bg={globalStyles.secondaryColor}
       px={globalStyles.px}
-      minH={{ base: '542px', xl: '600px' }}
+      minH={{ base: '542px', xl: '640px' }}
       align={'center'}
       justifyContent={'center'}
       position={'relative'}
@@ -35,7 +35,7 @@ const Hero = () => {
       >
         <Stack
           color={globalStyles.whiteColor}
-          w={{ base: globalStyles.width, xl: '690px' }}
+          w={{ base: globalStyles.width, md: '690px' }}
         >
           <Heading
             width={globalStyles.width}
@@ -91,14 +91,14 @@ const Hero = () => {
           width={'580px'}
           minHeight={'416px'}
           position={'relative'}
-          display={{ base: 'none', xl: 'flex' }}
+          display={{ base: 'none', lg: 'flex' }}
         >
           <Image
             src={serviceshero}
             alt={'DYSERF'}
             priority
             layout={'fill'}
-            objectFit={'cover'}
+            objectFit={'contain'}
             quality={'100'}
           />
         </Box>

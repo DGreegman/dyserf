@@ -9,7 +9,7 @@ export const globalStyles = {
   textFontSize: { base: 14, xl: 16 },
   headerFontWeight: 600,
   width: '100%',
-  px: { base: 3, xl: 10, '2xl': 0 },
+  px: { base: 4, xl: 10, '2xl': 0 },
   blackColor: '#110F0F',
   fontFamily: " 'Poppins', sans-serif",
   containerWidth: {
@@ -19,7 +19,7 @@ export const globalStyles = {
   },
   sectionStyle: {
     width: '100%',
-    px: { base: 3, xl: 10, '2xl': 0 },
+    px: { base: 4, xl: 10, '2xl': 0 },
     align: 'center',
     justifyContent: 'center',
   },

@@ -6,7 +6,7 @@ import Nav from '../components/Nav/Nav';
 import { ChildProps } from '../models/childrenProps';
 import { globalStyles } from '../styles/customStyles';
 
-const GlobalLayout = (props: ChildProps) => {
+const GlobalLayout = ({ children }: ChildProps) => {
   typeof window !== 'undefined' && Aos.init();
 
   return (
@@ -38,7 +38,7 @@ const GlobalLayout = (props: ChildProps) => {
         }}
       >
         <Nav />
-        {props.children}
+        {children}
 
         <Footer />
       </div>

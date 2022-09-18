@@ -21,8 +21,8 @@ const FooterItem = () => {
         <Link href={dyserfRoutes.homepage}>
           <a>
             <Box
-              width={{ base: '50px', xl: '120px' }}
-              height={{ base: '50px', xl: '120px' }}
+              width={{ base: '50px', md: '60px', xl: '120px' }}
+              height={{ base: '50px', md: '60px', xl: '120px' }}
               position={'relative'}
             >
               <Image
@@ -36,7 +36,7 @@ const FooterItem = () => {
         </Link>
 
         <Text
-          fontSize={{ base: 8, xl: globalStyles.smallTextFontSize }}
+          fontSize={{ base: 8, md: 12, xl: globalStyles.smallTextFontSize }}
           color={globalStyles.whiteColor}
           lineHeight={'21px'}
         >

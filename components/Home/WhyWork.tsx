@@ -36,11 +36,14 @@ const WhyWork = () => {
   });
 
   return (
-    <Flex sx={globalStyles.sectionStyle} pb={{ base: '30px', xl: '120px' }}>
+    <Flex
+      sx={globalStyles.sectionStyle}
+      pt={{ base: '20px', md: '50px', xl: '120px' }}
+    >
       <Grid
-        gridTemplateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}
+        gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
         width={globalStyles.containerWidth}
-        columnGap={'120px'}
+        columnGap={{ base: 10, xl: '120px' }}
         alignItems={'center'}
       >
         <GridItem>
