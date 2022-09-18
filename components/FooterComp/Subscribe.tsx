@@ -31,6 +31,7 @@ const Subscribe = () => {
         justify={'center'}
         gap={{ base: 2, xl: 5 }}
         py={2}
+        px={4}
         as={'form'}
       >
         <Heading
@@ -48,9 +49,8 @@ const Subscribe = () => {
         <Text
           color={globalStyles.textColor}
           fontSize={globalStyles.smallTextFontSize}
-          w={{ base: '300px', xl: '596px' }}
+          w={{ base: globalStyles.width, xl: '596px' }}
           minHeight={'42px'}
-          fontWeight={400}
           lineHeight={'21px'}
           letterSpacing={'0.01em'}
           textAlign={'center'}
@@ -60,12 +60,12 @@ const Subscribe = () => {
         </Text>
 
         <FormControl
+          w={globalStyles.width}
           display={'flex'}
           alignItems={'center'}
           justifyContent={'center'}
-          w={globalStyles.width}
         >
-          <InputGroup width={{ base: '241px', lg: '318px' }}>
+          <InputGroup width={{ base: globalStyles.width, lg: '318px' }}>
             <InputLeftElement
               pointerEvents="none"
               children={<EmailIcon mt={'4px'} color={'#4E5D78'} />}
@@ -74,21 +74,18 @@ const Subscribe = () => {
               id={'email'}
               type={'email'}
               size={'lg'}
+              color={'#110F0F'}
               height={'40px'}
-              borderRadius={'0px'}
-              bgColor={'#FFFFFF'}
-              fontSize={'14px'}
-              fontFamily={"'Poppins', sans-serif"}
+              borderRadius={0}
+              bgColor={globalStyles.whiteColor}
+              fontSize={globalStyles.smallTextFontSize}
               placeholder={'account@gmail.com'}
               border={'1px solid #C9C9C9'}
               _focus={{
                 border: 'none',
               }}
-              color={'#110F0F'}
               _placeholder={{
-                fontFamily: "'Poppins', sans-serif",
-                fontWeight: 400,
-                fontSize: '12px',
+                fontSize: 12,
                 lineHeight: '18px',
                 color: '#4E5D78',
               }}

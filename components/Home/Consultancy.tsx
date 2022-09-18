@@ -1,28 +1,30 @@
 import ButtonComp from '../Button/ButtonComp';
 import Image from 'next/image';
 import consultancy from '../../assets/images/consultancy.svg';
-import { globalStyles } from '../../styles/customStyles';
+import {
+  bodyHeaderStyle,
+  bodyTextStyle,
+  globalStyles,
+} from '../../styles/customStyles';
 import { Box, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 
 const Consultancy = () => {
   return (
-    <Flex sx={globalStyles.sectionStyle} py={'150px'}>
+    <Flex sx={globalStyles.sectionStyle} py={{ base: '10px', xl: '150px' }}>
       <HStack
         width={globalStyles.containerWidth}
         minH={'308px'}
         justifyContent={'space-between'}
+        flexDirection={{ base: 'column-reverse', xl: 'row' }}
       >
-        <Stack width={'600px'} alignItems={'flex-start'} gap={6}>
-          <Heading
-            fontWeight={globalStyles.headerFontWeight}
-            fontFamily={globalStyles.fontFamily}
-            fontSize={globalStyles.headerFontSize}
-            color={globalStyles.secondaryColor}
-          >
-            DYSERF Consultancy
-          </Heading>
+        <Stack
+          width={{ base: globalStyles.width, xl: '600px' }}
+          alignItems={'flex-start'}
+          gap={6}
+        >
+          <Heading sx={bodyHeaderStyle}>DYSERF Consultancy</Heading>
 
-          <Text color={globalStyles.textColor} textAlign={'left'}>
+          <Text sx={bodyTextStyle}>
             We are team of experts from different background that have built
             solutions and digital experiences, affecting over 100,000 people,
             globally. The TEWAM approach is our unique agile methodology that
@@ -40,13 +42,16 @@ const Consultancy = () => {
           />
         </Stack>
 
-        <Box width={'432px'} minHeight={'300px'} position={'relative'}>
+        <Box
+          width={{ base: globalStyles.width, xl: '432px' }}
+          minHeight={'300px'}
+          position={'relative'}
+        >
           <Image
             src={consultancy}
-            alt={'DYSERF'}
-            priority
+            alt={globalStyles.alt}
             layout={'fill'}
-            objectFit={'cover'}
+            objectFit={'contain'}
             quality={'100'}
           />
         </Box>

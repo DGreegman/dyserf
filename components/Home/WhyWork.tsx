@@ -10,7 +10,11 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { globalStyles } from '../../styles/customStyles';
+import {
+  bodyHeaderStyle,
+  bodyTextStyle,
+  globalStyles,
+} from '../../styles/customStyles';
 import { whyworkArray } from '../../store';
 
 const WhyWork = () => {
@@ -23,7 +27,7 @@ const WhyWork = () => {
           borderRadius={'5px'}
           py={2}
           color={'#110F0F'}
-          fontSize={18}
+          fontSize={globalStyles.textFontSize}
         >
           {item}
         </Center>
@@ -32,9 +36,9 @@ const WhyWork = () => {
   });
 
   return (
-    <Flex sx={globalStyles.sectionStyle} pb={'120px'}>
+    <Flex sx={globalStyles.sectionStyle} pb={{ base: '30px', xl: '120px' }}>
       <Grid
-        gridTemplateColumns={'repeat(2,1fr)'}
+        gridTemplateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}
         width={globalStyles.containerWidth}
         columnGap={'120px'}
         alignItems={'center'}
@@ -43,7 +47,7 @@ const WhyWork = () => {
           <Box height={'320px'} position={'relative'}>
             <Image
               src={whywork}
-              alt={'DYSERF'}
+              alt={globalStyles.alt}
               priority
               layout={'fill'}
               objectFit={'contain'}
@@ -54,23 +58,18 @@ const WhyWork = () => {
 
         <GridItem>
           <Stack alignItems={'flex-start'} gap={4}>
-            <Heading
-              fontWeight={globalStyles.headerFontWeight}
-              fontFamily={globalStyles.fontFamily}
-              fontSize={globalStyles.headerFontSize}
-              color={globalStyles.textColor}
-            >
+            <Heading sx={bodyHeaderStyle}>
               <span style={{ color: globalStyles.secondaryColor }}> Why</span>{' '}
               work with us?
             </Heading>
 
-            <Text color={globalStyles.textColor} textAlign={'left'}>
+            <Text sx={bodyTextStyle}>
               Your partnership with us for a particular service offers you
               access to benefit from other of our services and professional team
               experience accross sectors.
             </Text>
 
-            <Text color={globalStyles.textColor} textAlign={'left'}>
+            <Text sx={bodyTextStyle}>
               From startups in need of MVP to large corporations, institutions,
               and government in need of technical firepower, we are here for
               you.

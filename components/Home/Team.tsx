@@ -1,5 +1,9 @@
 import Image from 'next/image';
-import { globalStyles } from '../../styles/customStyles';
+import {
+  bodyHeaderStyle,
+  bodyTextStyle,
+  globalStyles,
+} from '../../styles/customStyles';
 import {
   Box,
   Flex,
@@ -83,26 +87,25 @@ const Team = () => {
   });
 
   return (
-    <Flex sx={globalStyles.sectionStyle} py={'80px'}>
+    <Flex sx={globalStyles.sectionStyle} pt={{ base: '30px', xl: '80px' }}>
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
         alignItems={'flex-start'}
       >
-        <Stack width={'600px'} alignItems={'flex-start'} gap={6}>
-          <Heading
-            fontWeight={globalStyles.headerFontWeight}
-            fontFamily={globalStyles.fontFamily}
-            fontSize={globalStyles.headerFontSize}
-            color={globalStyles.textColor}
-          >
+        <Stack
+          width={{ base: globalStyles.width, xl: '600px' }}
+          alignItems={'flex-start'}
+          gap={6}
+        >
+          <Heading sx={bodyHeaderStyle}>
             <span style={{ color: globalStyles.secondaryColor }}>
               Professional
             </span>{' '}
             Team Members
           </Heading>
 
-          <Text color={globalStyles.textColor} textAlign={'left'}>
+          <Text sx={bodyTextStyle}>
             We have got a group of talented and committed individuals with the
             desire to exceed what we promised in time with needed quality and
             budget.
@@ -111,7 +114,7 @@ const Team = () => {
 
         <Grid
           width={globalStyles.width}
-          gridTemplateColumns={'repeat(4,1fr)'}
+          gridTemplateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(4,1fr)' }}
           gap={6}
         >
           {renderTeam}

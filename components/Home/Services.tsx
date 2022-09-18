@@ -1,24 +1,28 @@
 import Image from 'next/image';
 import ButtonComp from '../Button/ButtonComp';
-import { globalStyles } from '../../styles/customStyles';
+import {
+  bodyHeaderStyle,
+  bodyTextStyle,
+  globalStyles,
+} from '../../styles/customStyles';
 import { Flex, Grid, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 import { servicesArray } from '../../store';
 
 const Services = () => {
   // Renders
-  const renderServices = servicesArray.map((service) => {
+  const renderServices = servicesArray.map((service, i) => {
     return (
       <Stack
         minHeight={'308px'}
         borderRadius={10}
         padding={'30px 23px 30px 23px'}
         boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-        key={service.header}
+        key={`${service.header}-${i}`}
       >
         <Image src={service.icon} alt={service.header} />
 
         <Heading
-          width={'220px'}
+          width={{ base: globalStyles.width, xl: '220px' }}
           fontWeight={globalStyles.headerFontWeight}
           fontFamily={globalStyles.fontFamily}
           fontSize={18}
@@ -44,23 +48,24 @@ const Services = () => {
   });
 
   return (
-    <Flex sx={globalStyles.sectionStyle} pt={'80px'}>
+    <Flex
+      sx={globalStyles.sectionStyle}
+      pt={{ base: '30px', xl: '80px' }}
+      bgColor={globalStyles.whiteColor}
+    >
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
         alignItems={'flex-start'}
       >
-        <Stack width={'600px'} alignItems={'flex-start'} gap={6}>
-          <Heading
-            fontWeight={globalStyles.headerFontWeight}
-            fontFamily={globalStyles.fontFamily}
-            fontSize={globalStyles.headerFontSize}
-            color={globalStyles.secondaryColor}
-          >
-            Our Services
-          </Heading>
+        <Stack
+          width={{ base: globalStyles.width, xl: '600px' }}
+          alignItems={'flex-start'}
+          gap={6}
+        >
+          <Heading sx={bodyHeaderStyle}>Our Services</Heading>
 
-          <Text color={globalStyles.textColor} textAlign={'left'}>
+          <Text sx={bodyTextStyle}>
             DYSERF Consultancy is a strategic and Innovative digital solution
             that builds a disruptive and groundbreaking digital products for the
             future. To accelerate innovations, business growth and developments
@@ -80,7 +85,7 @@ const Services = () => {
 
         <Grid
           width={globalStyles.width}
-          gridTemplateColumns={'repeat(3,1fr)'}
+          gridTemplateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(3,1fr)' }}
           gap={5}
         >
           {renderServices}

@@ -1,5 +1,6 @@
 import ButtonComp from '../Button/ButtonComp';
 import Image from 'next/image';
+import SideBar from './SideBar';
 import logo from '../../assets/images/logo.svg';
 import Link from 'next/link';
 import { Box, Flex, HStack, Icon, Spacer, Text } from '@chakra-ui/react';
@@ -8,11 +9,14 @@ import { dyserfRoutes } from '../../utils/routes';
 import { navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { FiMenu } from 'react-icons/fi';
+import { useContext } from 'react';
+import { SideBarContext } from '../../context/Sidebar';
 
 const Nav = () => {
   // Hooks
   const router = useRouter();
   const path = router.asPath;
+  const showNav = useContext(SideBarContext);
 
   // Renders
   const renderNav = navLinks.map((item, i) => {
@@ -44,7 +48,7 @@ const Nav = () => {
       justifyContent={'center'}
       position={'fixed'}
       shadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-      py={4}
+      py={{ base: 2, xl: 4 }}
       zIndex={3000}
     >
       <HStack width={globalStyles.containerWidth}>
@@ -78,8 +82,10 @@ const Nav = () => {
           _active={{
             transform: 'scale(.95)',
           }}
+          onClick={() => showNav?.setShow(true)}
         />
       </HStack>
+      <SideBar />
     </Flex>
   );
 };

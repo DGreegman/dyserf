@@ -6,7 +6,6 @@ import Team from '../components/Home/Team';
 import Services from '../components/Home/Services';
 import Review from '../components/Home/Review';
 import type { NextPage } from 'next';
-import Footer from '../components/FooterComp/Footer';
 
 const Home: NextPage = () => {
   return (

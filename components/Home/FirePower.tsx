@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import ButtonComp from '../Button/ButtonComp';
-import { globalStyles } from '../../styles/customStyles';
+import {
+  bodyHeaderStyle,
+  bodyTextStyle,
+  globalStyles,
+} from '../../styles/customStyles';
 import {
   Box,
   Flex,
@@ -9,11 +13,15 @@ import {
   Heading,
   Stack,
   Text,
+  useMediaQuery,
   VStack,
 } from '@chakra-ui/react';
 import { firepower } from '../../store';
 
 const FirePower = () => {
+  // Hooks
+  const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
+
   // Renders
   const renderOptions = firepower.map((item) => {
     return (
@@ -28,7 +36,7 @@ const FirePower = () => {
         display={'flex'}
       >
         <Grid
-          templateColumns={'repeat(2,1fr)'}
+          gridTemplateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}
           alignContent={'center'}
           placeContent={'center'}
           gap={4}
@@ -38,6 +46,7 @@ const FirePower = () => {
             justifyContent={'center'}
             display={'flex'}
             flexDirection={'column'}
+            gridRow={isLargerThan1280 ? '' : 2}
           >
             <Stack gap={2}>
               <Heading
@@ -80,9 +89,9 @@ const FirePower = () => {
             </Stack>
           </GridItem>
 
-          <GridItem>
+          <GridItem gridRow={isLargerThan1280 ? '' : 1}>
             <Box
-              w={'362px'}
+              w={{ base: globalStyles.width, xl: '362px' }}
               height={'280px'}
               position={'relative'}
               shadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.02)'}
@@ -91,8 +100,8 @@ const FirePower = () => {
                 src={item.icon}
                 alt={item.title}
                 priority
-                layout="fill"
-                objectFit="cover"
+                layout={'fill'}
+                objectFit={'cover'}
               />
             </Box>
           </GridItem>
@@ -102,19 +111,18 @@ const FirePower = () => {
   });
 
   return (
-    <Flex sx={globalStyles.sectionStyle} py={'80px'}>
+    <Flex sx={globalStyles.sectionStyle} pt={{ base: '30px', xl: '80px' }}>
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
         alignItems={'flex-start'}
       >
-        <Stack width={'600px'} alignItems={'flex-start'} gap={6}>
-          <Heading
-            fontWeight={globalStyles.headerFontWeight}
-            fontFamily={globalStyles.fontFamily}
-            fontSize={globalStyles.headerFontSize}
-            color={globalStyles.textColor}
-          >
+        <Stack
+          width={{ base: globalStyles.width, xl: '600px' }}
+          alignItems={'flex-start'}
+          gap={6}
+        >
+          <Heading sx={bodyHeaderStyle}>
             We are{' '}
             <span style={{ color: globalStyles.secondaryColor }}>
               firepower
@@ -122,7 +130,7 @@ const FirePower = () => {
             for brands
           </Heading>
 
-          <Text color={globalStyles.textColor} textAlign={'left'}>
+          <Text sx={bodyTextStyle}>
             We exist to connect you with scalable innovative solution so you can
             focus on your business while Dyserf focusses on your technology.
           </Text>
@@ -139,7 +147,7 @@ const FirePower = () => {
 
         <Grid
           width={globalStyles.width}
-          gridTemplateColumns={'repeat(2,1fr)'}
+          gridTemplateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}
           gap={6}
         >
           {renderOptions}

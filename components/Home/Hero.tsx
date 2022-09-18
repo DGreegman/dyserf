@@ -21,7 +21,7 @@ const Hero = () => {
       width={globalStyles.width}
       bg={globalStyles.secondaryColor}
       px={globalStyles.px}
-      minH={'720px'}
+      minH={{ base: '542px', xl: '600px' }}
       align={'center'}
       justifyContent={'center'}
       position={'relative'}
@@ -30,15 +30,18 @@ const Hero = () => {
       <HStack
         width={globalStyles.containerWidth}
         align={'center'}
-        minH={'600px'}
+        minH={{ base: 'null', xl: '600px' }}
         justifyContent={{ base: 'none', '2xl': 'space-between' }}
       >
-        <Stack color={globalStyles.whiteColor} w={'690px'}>
+        <Stack
+          color={globalStyles.whiteColor}
+          w={{ base: globalStyles.width, xl: '690px' }}
+        >
           <Heading
-            fontFamily={globalStyles.fontFamily}
             width={globalStyles.width}
-            fontSize={46}
-            lineHeight={'58px'}
+            fontFamily={globalStyles.fontFamily}
+            fontSize={{ base: 20, xl: 46 }}
+            lineHeight={{ base: '29px', xl: '58px' }}
             fontWeight={700}
           >
             <span style={{ color: globalStyles.goldenColor }}>
@@ -48,7 +51,13 @@ const Hero = () => {
             <span style={{ color: globalStyles.goldenColor }}>Growth</span>
           </Heading>
 
-          <Text lineHeight={1.8} pt={2} pb={10} width={globalStyles.width}>
+          <Text
+            width={globalStyles.width}
+            lineHeight={1.8}
+            pt={2}
+            fontSize={{ base: 12, xl: 16 }}
+            pb={10}
+          >
             Dyserf is an innovative solution that builds digital experiences,
             which accelerate <br /> business growth and make life activities
             easier and faster.
