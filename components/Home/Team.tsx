@@ -43,7 +43,7 @@ const Team = () => {
             style={{ borderRadius: '100%' }}
             layout={'fill'}
             objectFit={'cover'}
-            quality={'100'}
+            quality={100}
             priority
           />
         </Box>

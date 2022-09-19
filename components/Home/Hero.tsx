@@ -67,7 +67,7 @@ const Hero = () => {
             <ButtonComp width={'135px'} height={'44px'} text={'Learn more'} />
 
             <HStack alignItems={'center'} position={'relative'}>
-              <Image src={curve} alt={'DYSERF'} />
+              <Image src={curve} alt={globalStyles.alt} />
               <Icon
                 as={BsFillPlayFill}
                 color={globalStyles.goldenColor}
@@ -95,11 +95,11 @@ const Hero = () => {
         >
           <Image
             src={serviceshero}
-            alt={'DYSERF'}
+            alt={globalStyles.alt}
             priority
             layout={'fill'}
             objectFit={'contain'}
-            quality={'100'}
+            quality={100}
             loading={'eager'}
           />
         </Box>
