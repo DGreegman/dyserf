@@ -35,6 +35,8 @@ const GlobalLayout = ({ children }: ChildProps) => {
           width: globalStyles.width,
           minHeight: '100vh',
           position: 'relative',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         <Nav />

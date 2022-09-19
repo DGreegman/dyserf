@@ -38,6 +38,7 @@ const SideBar = () => {
         _hover={{
           color: globalStyles.primaryColor,
         }}
+        onClick={() => showNav?.setShow(false)}
       >
         <Link href={path}>{title}</Link>
       </LinkBox>
