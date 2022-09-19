@@ -28,7 +28,7 @@ const Team = () => {
         key={team.id}
         align={'center'}
         gap={2}
-        data-aos={'zoom-in'}
+        data-aos={'fade-up'}
         data-aos-duration={'1000'}
       >
         <Box
