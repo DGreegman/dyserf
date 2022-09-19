@@ -100,6 +100,7 @@ const Hero = () => {
             layout={'fill'}
             objectFit={'contain'}
             quality={'100'}
+            loading={'eager'}
           />
         </Box>
       </HStack>

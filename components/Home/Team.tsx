@@ -44,7 +44,7 @@ const Team = () => {
             layout={'fill'}
             objectFit={'cover'}
             quality={'100'}
-            loading={'eager'}
+            priority
           />
         </Box>
 
