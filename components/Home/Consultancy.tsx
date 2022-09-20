@@ -59,6 +59,8 @@ const Consultancy = () => {
             layout={'fill'}
             objectFit={'contain'}
             quality={'100'}
+            priority
+            loading="eager"
           />
         </Box>
       </HStack>
