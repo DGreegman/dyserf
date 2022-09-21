@@ -1,13 +1,12 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import ButtonComp from '../Button/ButtonComp';
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo.png';
 import {
   Flex,
   LinkBox,
-  Link as ChakraLink,
   VStack,
   Center,
-  Text,
   Spacer,
   Stack,
   Box,
@@ -19,7 +18,6 @@ import { navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { globalStyles } from '../../styles/customStyles';
 import { dyserfRoutes } from '../../utils/routes';
-import Link from 'next/link';
 
 const SideBar = () => {
   // Hooks

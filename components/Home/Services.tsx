@@ -5,7 +5,15 @@ import {
   bodyTextStyle,
   globalStyles,
 } from '../../styles/customStyles';
-import { Flex, Grid, Heading, Stack, Text, VStack } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Grid,
+  Heading,
+  Stack,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 import { servicesArray } from '../../store';
 
 const Services = () => {
@@ -21,7 +29,19 @@ const Services = () => {
         data-aos={'zoom-in-up'}
         data-aos-duration={'1000'}
       >
-        <Image src={service.icon} alt={service.header} />
+        <Box
+          width={'122px'}
+          height={'51px'}
+          position={'relative'}
+          alignSelf={'center'}
+        >
+          <Image
+            src={service.icon}
+            alt={service.header}
+            layout={'fill'}
+            objectFit={'contain'}
+          />
+        </Box>
 
         <Heading
           width={{ base: globalStyles.width, xl: '220px' }}

@@ -1,5 +1,5 @@
-import fire1 from '../../assets/images/fire1.svg';
-import fire2 from '../../assets/images/fire2.svg';
+import fire1 from '../../assets/images/fire1.png';
+import fire2 from '../../assets/images/fire2.png';
 
 export const firepower = [
   {

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ButtonComp from '../Button/ButtonComp';
-import curve from '../../assets/images/curve.svg';
-import serviceshero from '../../assets/images/serviceshero.svg';
+import curve from '../../assets/images/curve.png';
+import serviceshero from '../../assets/images/serviceshero.png';
 import {
   Box,
   Flex,
@@ -96,7 +96,7 @@ const Hero = () => {
           width={'580px'}
           minHeight={'416px'}
           position={'relative'}
-          display={{ base: 'none', lg: 'flex' }}
+          display={{ base: 'none', md: 'flex' }}
         >
           <Image
             src={serviceshero}

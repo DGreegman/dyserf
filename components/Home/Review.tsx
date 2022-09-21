@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import quote1 from '../../assets/images/quote1.svg';
-import quote2 from '../../assets/images/quote2.svg';
+import quote1 from '../../assets/images/quote1.png';
+import quote2 from '../../assets/images/quote2.png';
 import { bodyHeaderStyle, globalStyles } from '../../styles/customStyles';
 import {
   Box,

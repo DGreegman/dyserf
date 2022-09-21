@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import whywork from '../../assets/images/whywork.svg';
+import whywork from '../../assets/images/whywork.png';
 import {
   Box,
   Center,

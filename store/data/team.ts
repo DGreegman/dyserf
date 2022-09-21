@@ -1,10 +1,10 @@
-import team1 from '../../assets/images/team1.svg';
-import team2 from '../../assets/images/team2.svg';
-import team3 from '../../assets/images/team3.svg';
-import team4 from '../../assets/images/team4.svg';
-import team5 from '../../assets/images/team5.svg';
-import ifeanyi from '../../assets/images/ifeanyi.svg';
-import team7 from '../../assets/images/team7.svg';
+import team1 from '../../assets/images/team1.png';
+import team2 from '../../assets/images/team2.png';
+import team3 from '../../assets/images/team3.png';
+import team4 from '../../assets/images/team4.png';
+import team5 from '../../assets/images/team5.png';
+import ifeanyi from '../../assets/images/ifeanyi.png';
+import team7 from '../../assets/images/team7.png';
 import { BsTwitter, BsLinkedin } from 'react-icons/bs';
 
 export const team = [

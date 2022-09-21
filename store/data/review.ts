@@ -1,6 +1,6 @@
-import vobb from '../../assets/images/vobb.svg';
-import diftrak from '../../assets/images/diftrak.svg';
-import bepro from '../../assets/images/bepro.svg';
+import vobb from '../../assets/images/vobb.png';
+import diftrak from '../../assets/images/diftrak.png';
+import bepro from '../../assets/images/bepro.png';
 
 export const review = [
   {

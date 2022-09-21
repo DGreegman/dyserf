@@ -1,6 +1,6 @@
 import ButtonComp from '../Button/ButtonComp';
 import Image from 'next/image';
-import consultancy from '../../assets/images/consultancy.svg';
+import consultancy from '../../assets/images/consultancy.png';
 import {
   bodyHeaderStyle,
   bodyTextStyle,

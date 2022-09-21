@@ -1,7 +1,7 @@
 import ButtonComp from '../Button/ButtonComp';
 import Image from 'next/image';
 import SideBar from './SideBar';
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo.png';
 import Link from 'next/link';
 import { Box, Flex, HStack, Icon, Spacer, Text } from '@chakra-ui/react';
 import { globalStyles } from '../../styles/customStyles';

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import footerlogo from '../../assets/images//footerlogo.svg';
+import footerlogo from '../../assets/images//footerlogo.png';
 import { Flex, Text, HStack, Icon, Box } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { globalStyles } from '../../styles/customStyles';
