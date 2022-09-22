@@ -1,5 +1,5 @@
 import ButtonComp from '../Button/ButtonComp';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import SideBar from './SideBar';
 import logo from '../../assets/images/logo.png';
 import Link from 'next/link';
@@ -54,7 +54,7 @@ const Nav = () => {
       <HStack width={globalStyles.containerWidth}>
         <Link href={dyserfRoutes.homepage}>
           <a style={{ cursor: 'pointer' }}>
-            <Image src={logo} alt={'DYSERF'} priority quality={'100'} />
+            <Image src={logo} alt={globalStyles.alt} priority quality={100} />
           </a>
         </Link>
 
