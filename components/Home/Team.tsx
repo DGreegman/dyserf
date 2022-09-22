@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import {
   bodyHeaderStyle,
   bodyTextStyle,
@@ -40,11 +40,13 @@ const Team = () => {
           <Image
             src={team.icon}
             alt={team.name}
-            style={{ borderRadius: '100%' }}
-            layout={'fill'}
-            objectFit={'cover'}
-            quality={100}
             priority
+            fill
+            style={{
+              objectFit: 'contain',
+              borderRadius: '100%',
+            }}
+            quality={100}
           />
         </Box>
 

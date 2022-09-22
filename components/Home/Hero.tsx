@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import ButtonComp from '../Button/ButtonComp';
 import curve from '../../assets/images/curve.png';
 import serviceshero from '../../assets/images/serviceshero.png';
@@ -21,16 +21,14 @@ const Hero = () => {
       width={globalStyles.width}
       bg={globalStyles.secondaryColor}
       px={globalStyles.px}
-      minH={{ base: '542px', xl: '640px' }}
       align={'center'}
       justifyContent={'center'}
-      position={'relative'}
       pt={20}
     >
       <HStack
         width={globalStyles.containerWidth}
         align={'center'}
-        minH={{ base: 'null', xl: '600px' }}
+        minH={{ base: '542px', xl: '600px' }}
         justifyContent={{ base: 'none', '2xl': 'space-between' }}
       >
         <Stack
@@ -67,12 +65,7 @@ const Hero = () => {
             <ButtonComp width={'135px'} height={'44px'} text={'Learn more'} />
 
             <HStack alignItems={'center'} position={'relative'}>
-              <Image
-                src={curve}
-                alt={globalStyles.alt}
-                loading={'eager'}
-                priority
-              />
+              <Image src={curve} alt={globalStyles.alt} priority />
               <Icon
                 as={BsFillPlayFill}
                 color={globalStyles.goldenColor}
@@ -102,10 +95,11 @@ const Hero = () => {
             src={serviceshero}
             alt={globalStyles.alt}
             priority
-            layout={'fill'}
-            objectFit={'contain'}
+            fill
+            style={{
+              objectFit: 'contain',
+            }}
             quality={100}
-            loading={'eager'}
           />
         </Box>
       </HStack>
