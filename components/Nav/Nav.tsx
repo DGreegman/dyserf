@@ -1,5 +1,5 @@
 import ButtonComp from '../Button/ButtonComp';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import SideBar from './SideBar';
 import logo from '../../assets/images/logo.png';
 import Link from 'next/link';
