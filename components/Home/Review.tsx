@@ -26,7 +26,7 @@ const Review = () => {
       selected < review.length - 1
         ? setSelected((prev) => prev + 1)
         : setSelected(0);
-    }, 3000);
+    }, 7000);
 
     return () => {
       clearInterval(timer);
