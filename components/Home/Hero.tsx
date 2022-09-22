@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import ButtonComp from '../Button/ButtonComp';
 import curve from '../../assets/images/curve.png';
 import serviceshero from '../../assets/images/serviceshero.png';
@@ -95,8 +95,10 @@ const Hero = () => {
             src={serviceshero}
             alt={globalStyles.alt}
             priority
-            layout={'fill'}
-            objectFit={'contain'}
+            fill
+            style={{
+              objectFit: 'contain',
+            }}
             quality={100}
           />
         </Box>
