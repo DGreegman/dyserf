@@ -92,57 +92,62 @@ const Review = () => {
     const isActive = i === selected;
 
     return (
-      <div key={`${item.id}-${i}`}>
-        {isActive && (
-          <Stack
-            align={'center'}
-            minHeight={'241px'}
-            borderRadius={'10px'}
-            bgColor={globalStyles.whiteColor}
-            boxShadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-            p={{ base: '20px 15px', xl: '20px 20px' }}
-            gap={3}
-          >
-            <Box width={'122px'} height={'51px'} position={'relative'}>
-              <Image
-                src={item.icon}
-                alt={item.description}
-                layout={'fill'}
-                objectFit={'contain'}
-              />
-            </Box>
+      <div
+        key={`${item.id}-${i}`}
+        style={{
+          position: 'absolute',
+          opacity: isActive ? 1 : 0,
+          transition: 'all linear 0.4s',
+        }}
+      >
+        <Stack
+          align={'center'}
+          minHeight={'241px'}
+          borderRadius={'10px'}
+          bgColor={globalStyles.whiteColor}
+          boxShadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
+          p={{ base: '20px 15px', xl: '20px 20px' }}
+          gap={3}
+        >
+          <Box width={'122px'} height={'51px'} position={'relative'}>
+            <Image
+              src={item.icon}
+              alt={item.description}
+              layout={'fill'}
+              objectFit={'contain'}
+            />
+          </Box>
 
-            <Flex alignItems={'flex-start'}>
-              <Image
-                src={quote1}
-                width={'19px'}
-                height={'13px'}
-                alt={'Quote '}
-                priority
-              />
+          <Flex alignItems={'flex-start'}>
+            <Image
+              src={quote1}
+              width={'19px'}
+              height={'13px'}
+              alt={'Quote '}
+              priority
+            />
 
-              <Text
-                w={{ base: globalStyles.width, xl: '332px' }}
-                minHeight={'84px'}
-                fontSize={{ base: '10px', xl: globalStyles.smallTextFontSize }}
-                lineHeight={'21px'}
-                color={'#4E5D78'}
-                pt={'10px'}
-                textAlign={'center'}
-              >
-                {item.description}
-              </Text>
+            <Text
+              w={{ base: globalStyles.width, xl: '332px' }}
+              minHeight={'84px'}
+              fontSize={{ base: '10px', xl: globalStyles.smallTextFontSize }}
+              lineHeight={'21px'}
+              color={'#4E5D78'}
+              pt={'10px'}
+              textAlign={'center'}
+            >
+              {item.description}
+            </Text>
 
-              <Image
-                src={quote2}
-                width={'19px'}
-                height={'13px'}
-                alt={'Quote '}
-                priority
-              />
-            </Flex>
-          </Stack>
-        )}
+            <Image
+              src={quote2}
+              width={'19px'}
+              height={'13px'}
+              alt={'Quote '}
+              priority
+            />
+          </Flex>
+        </Stack>
       </div>
     );
   });
@@ -160,6 +165,7 @@ const Review = () => {
           border={`1px solid ${globalStyles.secondaryColor}`}
           onClick={() => setSelected(i)}
           cursor={'pointer'}
+          transition={'all linear 0.4s'}
         />
       );
     });
@@ -200,6 +206,8 @@ const Review = () => {
             <Grid
               width={{ base: globalStyles.width, md: '50%' }}
               gridTemplateColumns={'repeat(1,1fr)'}
+              position={'relative'}
+              minHeight={'250px'}
             >
               {renderReviewSmallScreen}
             </Grid>
