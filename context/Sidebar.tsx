@@ -8,7 +8,7 @@ interface sideBarProps {
 
 export const SideBarContext = createContext<sideBarProps | null>(null);
 
-const ShowSideNav = ({ children }: ChildProps) => {
+const ShowSideNavContext = ({ children }: ChildProps) => {
   const [show, setShow] = useState(false);
 
   return (
@@ -18,4 +18,4 @@ const ShowSideNav = ({ children }: ChildProps) => {
   );
 };
 
-export default ShowSideNav;
+export default ShowSideNavContext;

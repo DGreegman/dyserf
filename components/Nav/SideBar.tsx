@@ -13,11 +13,11 @@ import {
 } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons';
 import { useContext } from 'react';
-import { SideBarContext } from '../../context/Sidebar';
 import { navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { globalStyles } from '../../styles/customStyles';
 import { dyserfRoutes } from '../../utils/routes';
+import { SideBarContext } from '../../context/Sidebar';
 
 const SideBar = () => {
   // Hooks
