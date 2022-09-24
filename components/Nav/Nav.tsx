@@ -47,7 +47,7 @@ const Nav = () => {
       align={'center'}
       justifyContent={'center'}
       position={'fixed'}
-      shadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
+      shadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.06)'}
       py={{ base: 2, xl: 4 }}
       zIndex={3000}
     >
