@@ -20,7 +20,12 @@ const Consultancy = () => {
         width={globalStyles.containerWidth}
         minH={'308px'}
         justifyContent={'space-between'}
-        flexDirection={{ base: 'column-reverse', md: 'row' }}
+        flexDirection={{
+          base: 'column-reverse',
+          md: 'row',
+          lg: 'row',
+          xl: 'row',
+        }}
         gap={{ base: 2, md: 5, xl: 0 }}
       >
         <Stack
@@ -60,7 +65,6 @@ const Consultancy = () => {
             objectFit={'contain'}
             quality={'100'}
             priority
-            loading="eager"
           />
         </Box>
       </HStack>
