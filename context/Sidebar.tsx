@@ -1,12 +1,12 @@
 import { createContext, Dispatch, SetStateAction, useState } from 'react';
 import { ChildProps } from '../models/childrenProps';
 
-interface sideBarProps {
+interface SideBarProps {
   show: boolean;
   setShow: Dispatch<SetStateAction<boolean>>;
 }
 
-export const SideBarContext = createContext<sideBarProps | null>(null);
+export const SideBarContext = createContext<SideBarProps | null>(null);
 
 const ShowSideNavContext = ({ children }: ChildProps) => {
   const [show, setShow] = useState(false);
