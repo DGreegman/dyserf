@@ -53,7 +53,7 @@ const Nav = () => {
     >
       <HStack width={globalStyles.containerWidth}>
         <Link href={dyserfRoutes.homepage}>
-          <a style={{ cursor: 'pointer' }}>
+          <a>
             <Image src={logo} alt={globalStyles.alt} priority quality={100} />
           </a>
         </Link>
