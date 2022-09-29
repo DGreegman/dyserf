@@ -10,9 +10,10 @@ import {
   Spacer,
   Stack,
   Box,
+  useMediaQuery,
 } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { globalStyles } from '../../styles/customStyles';
@@ -23,6 +24,11 @@ const SideBar = () => {
   // Hooks
   const showNav = useContext(SideBarContext);
   const router = useRouter();
+  const [isLargerThan992] = useMediaQuery('(min-width: 992px)');
+
+  useEffect(() => {
+    isLargerThan992 && showNav?.setShow(false);
+  }, [isLargerThan992]);
 
   // renders
   const renderNavLinks = navLinks.map(({ path, title }, i) => {
