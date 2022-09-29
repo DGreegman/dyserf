@@ -26,19 +26,22 @@ const Hero = () => {
       pt={20}
     >
       <HStack
-        width={globalStyles.containerWidth}
+        width={{
+          base: '100%',
+          xl: '1200px',
+        }}
         align={'center'}
-        minH={{ base: '542px', xl: '600px' }}
+        minH={{ base: '400px', md: '542px', xl: '600px' }}
         justifyContent={{ base: 'none', '2xl': 'space-between' }}
       >
         <Stack
           color={globalStyles.whiteColor}
-          w={{ base: globalStyles.width, md: '690px' }}
+          w={{ base: globalStyles.width, md: '70%', lg: '65%', xl: '690px' }}
         >
           <Heading
             width={globalStyles.width}
             fontFamily={globalStyles.fontFamily}
-            fontSize={{ base: 20, xl: 46 }}
+            fontSize={{ base: '1.25rem', xl: '2.87rem' }}
             lineHeight={{ base: '29px', xl: '58px' }}
             fontWeight={700}
           >
@@ -50,15 +53,18 @@ const Hero = () => {
           </Heading>
 
           <Text
-            width={globalStyles.width}
+            width={{ base: '85%', md: '95%', xl: '600px' }}
             lineHeight={1.8}
             pt={2}
-            fontSize={{ base: 12, xl: 16 }}
-            pb={10}
+            fontSize={{
+              base: globalStyles.smallTextFontSize,
+              md: globalStyles.textFontSize.xl,
+            }}
+            pb={5}
           >
             Dyserf is an innovative solution that builds digital experiences,
-            which accelerate <br /> business growth and make life activities
-            easier and faster.
+            which accelerate business growth and make life activities easier and
+            faster.
           </Text>
 
           <Flex alignItems={'center'} gap={7}>

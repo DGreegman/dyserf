@@ -51,11 +51,10 @@ const Team = () => {
         </Box>
 
         <Heading
-          width={'161px'}
           fontWeight={globalStyles.headerFontWeight - 100}
           fontFamily={globalStyles.fontFamily}
           color={globalStyles.textColor}
-          fontSize={16}
+          fontSize={globalStyles.textFontSize.xl}
           lineHeight={'27px'}
           textAlign={'center'}
           alignSelf={'center'}
@@ -64,7 +63,7 @@ const Team = () => {
         </Heading>
 
         <Text
-          fontSize={12}
+          fontSize={globalStyles.smallTextFontSize}
           color={globalStyles.textColor}
           textAlign={'center'}
           alignSelf={'center'}
@@ -83,7 +82,7 @@ const Team = () => {
             as={team.social.linkedin}
             color={globalStyles.primaryColor}
             cursor={'pointer'}
-            fontSize={20}
+            fontSize={'1.25rem'}
           />
         </Flex>
       </Stack>

@@ -32,7 +32,7 @@ const SideBar = () => {
       <LinkBox
         key={i}
         lineHeight={'21px'}
-        color={isActive ? globalStyles.primaryColor : '#110F0f'}
+        color={isActive ? globalStyles.primaryColor : globalStyles.blackColor}
         _hover={{
           color: globalStyles.primaryColor,
         }}
@@ -92,7 +92,11 @@ const SideBar = () => {
         {renderNavLinks}
       </Stack>
 
-      <Box width={globalStyles.width} pt={10}>
+      <Box
+        width={{ base: globalStyles.width, md: '50%' }}
+        alignSelf={{ base: 'left', md: 'center' }}
+        pt={10}
+      >
         <ButtonComp
           width={globalStyles.width}
           height={'44px'}

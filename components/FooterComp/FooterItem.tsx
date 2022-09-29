@@ -15,8 +15,8 @@ const FooterItem = () => {
     >
       <Flex
         width={globalStyles.containerWidth}
-        align={'center'}
         justifyContent={'space-between'}
+        align={'center'}
       >
         <Link href={dyserfRoutes.homepage}>
           <a>
@@ -36,7 +36,11 @@ const FooterItem = () => {
         </Link>
 
         <Text
-          fontSize={{ base: 8, md: 12, xl: globalStyles.smallTextFontSize }}
+          fontSize={{
+            base: 8,
+            md: globalStyles.smallTextFontSize,
+            xl: globalStyles.smallTextFontSize,
+          }}
           color={globalStyles.whiteColor}
           lineHeight={'21px'}
         >

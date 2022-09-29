@@ -65,7 +65,7 @@ const Review = () => {
           />
 
           <Text
-            w={{ base: '200px', xl: '332px' }}
+            w={globalStyles.width}
             minHeight={'84px'}
             fontSize={{ base: '10px', xl: globalStyles.smallTextFontSize }}
             lineHeight={'21px'}
@@ -202,9 +202,9 @@ const Review = () => {
             {renderReview}
           </Grid>
         ) : (
-          <Stack width={{ base: globalStyles.width }} gap={1} align={'center'}>
+          <Stack width={globalStyles.width} gap={1} align={'center'}>
             <Grid
-              width={{ base: globalStyles.width, md: '50%' }}
+              width={{ base: globalStyles.width, md: '60%' }}
               gridTemplateColumns={'repeat(1,1fr)'}
               position={'relative'}
               minHeight={'250px'}

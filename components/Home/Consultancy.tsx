@@ -1,5 +1,5 @@
 import ButtonComp from '../Button/ButtonComp';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import consultancy from '../../assets/images/consultancy.png';
 import {
   bodyHeaderStyle,
@@ -61,8 +61,8 @@ const Consultancy = () => {
           <Image
             src={consultancy}
             alt={globalStyles.alt}
-            layout={'fill'}
-            objectFit={'contain'}
+            fill
+            style={{ objectFit: 'contain' }}
             quality={'100'}
             priority
           />

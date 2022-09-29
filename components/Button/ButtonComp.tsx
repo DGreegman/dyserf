@@ -27,31 +27,21 @@ const ButtonComp = ({
   bg,
   color,
 }: Props) => {
+  const style = {
+    width: width,
+    height: height,
+    borderRadius: borderRadius ?? '5px',
+    padding: '10px',
+    bg: bg ?? globalStyles.primaryColor,
+    color: color ?? globalStyles.whiteColor,
+    fontSize: globalStyles.smallTextFontSize,
+    fontWeight: globalStyles.headerFontWeight,
+    border: border ?? 'none',
+    lineHeight: '24px',
+  };
+
   return (
-    <Button
-      width={width}
-      height={height}
-      borderRadius={borderRadius ?? '5px'}
-      padding={'10px'}
-      bg={bg ?? globalStyles.primaryColor}
-      color={color ?? globalStyles.whiteColor}
-      fontSize={globalStyles.smallTextFontSize}
-      fontWeight={globalStyles.headerFontWeight}
-      type={type ? 'submit' : 'button'}
-      border={border ?? 'none'}
-      onClick={onClick}
-      lineHeight={'24px'}
-      _hover={{
-        backgroundColor: bg ?? globalStyles.primaryColor,
-      }}
-      _active={{
-        backgroundColor: bg ?? globalStyles.primaryColor,
-        transform: 'scale(.99)',
-      }}
-      _focus={{
-        backgroundColor: bg ?? globalStyles.primaryColor,
-      }}
-    >
+    <>
       {link ? (
         <ChakraLink
           rel={'noopener noreferrer'}
@@ -59,12 +49,44 @@ const ButtonComp = ({
           target={'_blank'}
           href={link}
         >
-          {text}
+          <Button
+            sx={style}
+            type={type ? 'submit' : 'button'}
+            onClick={onClick}
+            _hover={{
+              backgroundColor: bg ?? globalStyles.primaryColor,
+            }}
+            _active={{
+              backgroundColor: bg ?? globalStyles.primaryColor,
+              transform: 'scale(.99)',
+            }}
+            _focus={{
+              backgroundColor: bg ?? globalStyles.primaryColor,
+            }}
+          >
+            <Text>{text}</Text>
+          </Button>
         </ChakraLink>
       ) : (
-        <Text>{text}</Text>
+        <Button
+          sx={style}
+          type={type ? 'submit' : 'button'}
+          onClick={onClick}
+          _hover={{
+            backgroundColor: bg ?? globalStyles.primaryColor,
+          }}
+          _active={{
+            backgroundColor: bg ?? globalStyles.primaryColor,
+            transform: 'scale(.99)',
+          }}
+          _focus={{
+            backgroundColor: bg ?? globalStyles.primaryColor,
+          }}
+        >
+          <Text>{text}</Text>
+        </Button>
       )}
-    </Button>
+    </>
   );
 };
 

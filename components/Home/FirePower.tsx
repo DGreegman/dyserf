@@ -27,7 +27,7 @@ const FirePower = () => {
     return (
       <GridItem
         key={item.id}
-        bgColor="#FAFBFC"
+        bgColor={'#FAFBFC'}
         rounded={10}
         minHeight={'392px'}
         p={5}
@@ -53,7 +53,7 @@ const FirePower = () => {
                 fontFamily={globalStyles.fontFamily}
                 fontSize={globalStyles.smallTextFontSize}
                 color={'#8A94A6'}
-                lineHeight={1.5}
+                lineHeight={globalStyles.lineHeight}
                 width={'124px'}
                 fontWeight={globalStyles.headerFontWeight}
               >
@@ -62,9 +62,9 @@ const FirePower = () => {
 
               <Heading
                 fontFamily={globalStyles.fontFamily}
-                fontSize={16}
-                color={'#110F0F'}
-                lineHeight={1.5}
+                fontSize={globalStyles.textFontSize.xl}
+                color={globalStyles.blackColor}
+                lineHeight={globalStyles.lineHeight}
                 fontWeight={globalStyles.headerFontWeight - 100}
               >
                 {item.header}
@@ -72,9 +72,9 @@ const FirePower = () => {
 
               <Text
                 fontFamily={globalStyles.fontFamily}
-                fontSize={12}
+                fontSize={globalStyles.smallTextFontSize}
                 color={'#656262'}
-                lineHeight={1.5}
+                lineHeight={globalStyles.lineHeight}
               >
                 {item.description}
               </Text>

@@ -4,9 +4,9 @@ export const globalStyles = {
   secondaryColor: '#061173',
   goldenColor: '#FFC700',
   whiteColor: '#FFF',
-  smallTextFontSize: '14px',
-  headerFontSize: { base: 24, xl: 36 },
-  textFontSize: { base: 14, xl: 16 },
+  smallTextFontSize: '0.8rem',
+  headerFontSize: { base: '1.5rem', xl: '2.25rem' },
+  textFontSize: { base: '0.8rem', xl: '1rem' },
   headerFontWeight: 600,
   width: '100%',
   px: { base: 4, xl: 10, '2xl': 0 },
@@ -24,6 +24,7 @@ export const globalStyles = {
     justifyContent: 'center',
   },
   alt: 'DYSERF',
+  lineHeight: 1.5,
 };
 
 export const bodyTextStyle = {

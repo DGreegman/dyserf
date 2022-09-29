@@ -37,11 +37,14 @@ const Subscribe = () => {
         <Heading
           minW={{ base: globalStyles.width, xl: '386px' }}
           fontFamily={globalStyles.fontFamily}
-          fontSize={{ base: 16, xl: 24 }}
+          fontSize={{
+            base: globalStyles.textFontSize.xl,
+            xl: globalStyles.headerFontSize.base,
+          }}
           fontWeight={500}
           lineHeight={{ base: '24px', xl: '36px' }}
           textAlign={'center'}
-          color={'#110F0F'}
+          color={globalStyles.blackColor}
         >
           Subscribe for Weekly Newsletter
         </Heading>
@@ -75,7 +78,7 @@ const Subscribe = () => {
               id={'email'}
               type={'email'}
               size={'lg'}
-              color={'#110F0F'}
+              color={globalStyles.blackColor}
               height={'40px'}
               borderRadius={0}
               bgColor={globalStyles.whiteColor}
@@ -86,7 +89,7 @@ const Subscribe = () => {
                 border: 'none',
               }}
               _placeholder={{
-                fontSize: 12,
+                fontSize: globalStyles.smallTextFontSize,
                 lineHeight: '18px',
                 color: '#4E5D78',
               }}

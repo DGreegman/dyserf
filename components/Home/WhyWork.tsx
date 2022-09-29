@@ -26,7 +26,7 @@ const WhyWork = () => {
           boxShadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
           borderRadius={'5px'}
           py={2}
-          color={'#110F0F'}
+          color={globalStyles.blackColor}
           fontSize={globalStyles.textFontSize}
         >
           {item}

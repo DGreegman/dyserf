@@ -47,9 +47,9 @@ const Services = () => {
           width={{ base: globalStyles.width, xl: '220px' }}
           fontWeight={globalStyles.headerFontWeight}
           fontFamily={globalStyles.fontFamily}
-          fontSize={18}
-          lineHeight={'27px'}
           color={globalStyles.textColor}
+          fontSize={'1.1rem'}
+          lineHeight={'27px'}
           textAlign={'center'}
           alignSelf={'center'}
         >
@@ -58,8 +58,8 @@ const Services = () => {
 
         <Text
           fontSize={globalStyles.smallTextFontSize}
-          lineHeight={'21px'}
           color={globalStyles.textColor}
+          lineHeight={'21px'}
           textAlign={'center'}
           alignSelf={'center'}
         >
