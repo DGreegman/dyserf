@@ -63,6 +63,7 @@ const SideBar = () => {
       pt={2}
       pb={10}
       px={2}
+      // boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.05)'}
     >
       <Flex width={globalStyles.width} align={'center'} px={4} pt={4}>
         <Link href={dyserfRoutes.homepage}>
