@@ -1,9 +1,5 @@
 import Image from 'next/future/image';
-import {
-  bodyHeaderStyle,
-  bodyTextStyle,
-  globalStyles,
-} from '../../styles/customStyles';
+import { bodyHeaderStyle, bodyTextStyle, globalStyles } from '../../styles';
 import {
   Box,
   Flex,
@@ -28,14 +24,14 @@ const Team = () => {
         key={team.id}
         align={'center'}
         gap={2}
-        data-aos={'fade-up'}
+        data-aos={'zoom-in'}
         data-aos-duration={'1000'}
       >
         <Box
           position={'relative'}
           width={'110px'}
           height={'110px'}
-          borderRadius={'full'}
+          borderRadius={globalStyles.width}
         >
           <Image
             src={team.icon}
@@ -44,7 +40,7 @@ const Team = () => {
             fill
             style={{
               objectFit: 'contain',
-              borderRadius: '100%',
+              borderRadius: globalStyles.width,
             }}
             quality={100}
           />
@@ -57,7 +53,6 @@ const Team = () => {
           fontSize={globalStyles.textFontSize.xl}
           lineHeight={'27px'}
           textAlign={'center'}
-          alignSelf={'center'}
         >
           {team.name}
         </Heading>
@@ -66,24 +61,28 @@ const Team = () => {
           fontSize={globalStyles.smallTextFontSize}
           color={globalStyles.textColor}
           textAlign={'center'}
-          alignSelf={'center'}
         >
           {team.position}
         </Text>
 
         <Flex gap={4}>
-          <Icon
-            as={team.social.twitter}
-            color={globalStyles.primaryColor}
-            fontSize={20}
-            cursor={'pointer'}
-          />
-          <Icon
-            as={team.social.linkedin}
-            color={globalStyles.primaryColor}
-            cursor={'pointer'}
-            fontSize={'1.25rem'}
-          />
+          <a href="#">
+            <Icon
+              as={team.social.twitter}
+              color={globalStyles.primaryColor}
+              fontSize={'1.25rem'}
+              cursor={'pointer'}
+            />
+          </a>
+
+          <a href="#">
+            <Icon
+              as={team.social.linkedin}
+              color={globalStyles.primaryColor}
+              cursor={'pointer'}
+              fontSize={'1.25rem'}
+            />
+          </a>
         </Flex>
       </Stack>
     );
@@ -92,7 +91,7 @@ const Team = () => {
   return (
     <Flex
       sx={globalStyles.sectionStyle}
-      pt={{ base: '30px', md: '50px', xl: '80px' }}
+      py={{ base: '30px', md: '50px', xl: '80px' }}
       data-aos={'fade-up'}
       data-aos-duration={'1000'}
     >

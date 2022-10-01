@@ -4,3 +4,6 @@ export * from './data/services';
 export * from './data/firepower';
 export * from './data/team';
 export * from './data/review';
+export * from './data/shared';
+export * from './data/about';
+export * from './data/works';

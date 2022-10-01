@@ -1,6 +1,5 @@
-import React from 'react';
 import { Button, Link as ChakraLink, Text } from '@chakra-ui/react';
-import { globalStyles } from '../../styles/customStyles';
+import { globalStyles } from '../../styles';
 
 type Props = {
   text: string;
@@ -35,9 +34,8 @@ const ButtonComp = ({
     bg: bg ?? globalStyles.primaryColor,
     color: color ?? globalStyles.whiteColor,
     fontSize: globalStyles.smallTextFontSize,
-    fontWeight: globalStyles.headerFontWeight,
+    fontWeight: globalStyles.mediumbold,
     border: border ?? 'none',
-    lineHeight: '24px',
   };
 
   return (
@@ -51,8 +49,6 @@ const ButtonComp = ({
         >
           <Button
             sx={style}
-            type={type ? 'submit' : 'button'}
-            onClick={onClick}
             _hover={{
               backgroundColor: bg ?? globalStyles.primaryColor,
             }}

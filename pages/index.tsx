@@ -5,16 +5,15 @@ import FirePower from '../components/Home/FirePower';
 import Team from '../components/Home/Team';
 import Services from '../components/Home/Services';
 import Review from '../components/Home/Review';
-import type { NextPage } from 'next';
 
-const Home: NextPage = () => {
+const Home = () => {
   return (
     <>
       <Hero />
       <Consultancy />
       <WhyWork />
-      <Services />
-      <FirePower />
+      <Services background={'#E7E7FA'} />
+      <FirePower showBtn={true} />
       <Team />
       <Review />
     </>

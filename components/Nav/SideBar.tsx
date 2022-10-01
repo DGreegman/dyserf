@@ -16,8 +16,8 @@ import { CloseIcon } from '@chakra-ui/icons';
 import { useContext, useEffect } from 'react';
 import { navLinks } from '../../store';
 import { useRouter } from 'next/router';
-import { globalStyles } from '../../styles/customStyles';
-import { dyserfRoutes } from '../../utils/routes';
+import { globalStyles } from '../../styles';
+import { dyserfRoutes } from '../../utils';
 import { SideBarContext } from '../../context/Sidebar';
 
 const SideBar = () => {
@@ -32,7 +32,7 @@ const SideBar = () => {
 
   // renders
   const renderNavLinks = navLinks.map(({ path, title }, i) => {
-    const isActive = router.asPath.includes(path);
+    const isActive = router.pathname.includes(path);
 
     return (
       <LinkBox
@@ -63,7 +63,7 @@ const SideBar = () => {
       pt={2}
       pb={10}
       px={2}
-      // boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.05)'}
+      boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.05)'}
     >
       <Flex width={globalStyles.width} align={'center'} px={4} pt={4}>
         <Link href={dyserfRoutes.homepage}>

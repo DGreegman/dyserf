@@ -3,8 +3,8 @@ import Image from 'next/image';
 import footerlogo from '../../assets/images//footerlogo.png';
 import { Flex, Text, HStack, Icon, Box } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
-import { globalStyles } from '../../styles/customStyles';
-import { dyserfRoutes } from '../../utils/routes';
+import { globalStyles } from '../../styles';
+import { dyserfRoutes } from '../../utils';
 
 const FooterItem = () => {
   return (
@@ -37,7 +37,7 @@ const FooterItem = () => {
 
         <Text
           fontSize={{
-            base: 8,
+            base: 9,
             md: globalStyles.smallTextFontSize,
             xl: globalStyles.smallTextFontSize,
           }}
@@ -48,24 +48,27 @@ const FooterItem = () => {
         </Text>
 
         <HStack gap={{ base: 1, xl: 5 }}>
-          <Icon
-            as={FaFacebook}
-            color={globalStyles.whiteColor}
-            fontSize={{ base: 14, xl: 20 }}
-            cursor={'pointer'}
-          />
-          <Icon
-            as={FaTwitter}
-            color={globalStyles.whiteColor}
-            fontSize={{ base: 14, xl: 20 }}
-            cursor={'pointer'}
-          />
-          <Icon
-            as={FaLinkedin}
-            color={globalStyles.whiteColor}
-            fontSize={{ base: 14, xl: 20 }}
-            cursor={'pointer'}
-          />
+          <a href="#">
+            <Icon
+              as={FaFacebook}
+              color={globalStyles.whiteColor}
+              fontSize={{ base: globalStyles.smallTextFontSize, xl: '1.25rem' }}
+            />
+          </a>
+          <a href="#">
+            <Icon
+              as={FaTwitter}
+              color={globalStyles.whiteColor}
+              fontSize={{ base: globalStyles.smallTextFontSize, xl: '1.25rem' }}
+            />
+          </a>
+          <a href="#">
+            <Icon
+              as={FaLinkedin}
+              color={globalStyles.whiteColor}
+              fontSize={{ base: globalStyles.smallTextFontSize, xl: '1.25rem' }}
+            />
+          </a>
         </HStack>
       </Flex>
     </Flex>

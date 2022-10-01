@@ -1,9 +1,9 @@
 import service1 from '../../assets/images/service1.png';
 import service2 from '../../assets/images/service2.png';
 import service3 from '../../assets/images/service3.png';
-import service4 from '../../assets/images/service4.png';
 import service5 from '../../assets/images/service5.png';
 import service6 from '../../assets/images/service6.png';
+import { sharedImg } from './shared';
 
 export const servicesArray = [
   {
@@ -25,7 +25,7 @@ export const servicesArray = [
       'Team of expert developers with proven years of excellent services. Converting visual designs into interactive software applications or web. ',
   },
   {
-    icon: service4,
+    icon: sharedImg,
     header: 'Business Development',
     description:
       'From startups in need of MVP to large corporations, institutions, and government in need of technical firepower, we are here for you. ',

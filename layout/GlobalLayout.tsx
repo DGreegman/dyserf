@@ -3,8 +3,8 @@ import Head from 'next/head';
 import Script from 'next/script';
 import Footer from '../components/FooterComp/Footer';
 import Nav from '../components/Nav/Nav';
-import { ChildProps } from '../models/childrenProps';
-import { globalStyles } from '../styles/customStyles';
+import { ChildProps } from '../models';
+import { globalStyles } from '../styles';
 
 const GlobalLayout = ({ children }: ChildProps) => {
   typeof window !== 'undefined' && Aos.init();
@@ -33,7 +33,7 @@ const GlobalLayout = ({ children }: ChildProps) => {
       <div
         style={{
           width: globalStyles.width,
-          minHeight: '100vh',
+          minHeight: globalStyles.fullHeight,
           display: 'flex',
           flexDirection: 'column',
         }}

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import quote1 from '../../assets/images/quote1.png';
 import quote2 from '../../assets/images/quote2.png';
-import { bodyHeaderStyle, globalStyles } from '../../styles/customStyles';
+import { bodyHeaderStyle, globalStyles } from '../../styles';
 import {
   Box,
   Circle,
@@ -26,7 +26,7 @@ const Review = () => {
       selected < review.length - 1
         ? setSelected((prev) => prev + 1)
         : setSelected(0);
-    }, 7000);
+    }, 5000);
 
     return () => {
       clearInterval(timer);
@@ -42,7 +42,7 @@ const Review = () => {
         borderRadius={'10px'}
         bgColor={globalStyles.whiteColor}
         boxShadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-        p={'20px 20px'}
+        p={'20px'}
         gap={3}
         key={`${item.id}-${i}`}
       >

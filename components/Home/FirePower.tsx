@@ -1,10 +1,6 @@
 import Image from 'next/image';
 import ButtonComp from '../Button/ButtonComp';
-import {
-  bodyHeaderStyle,
-  bodyTextStyle,
-  globalStyles,
-} from '../../styles/customStyles';
+import { bodyHeaderStyle, bodyTextStyle, globalStyles } from '../../styles';
 import {
   Box,
   Flex,
@@ -18,7 +14,11 @@ import {
 } from '@chakra-ui/react';
 import { firepower } from '../../store';
 
-const FirePower = () => {
+type Props = {
+  showBtn: boolean;
+};
+
+const FirePower = ({ showBtn }: Props) => {
   // Hooks
   const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
 
@@ -65,7 +65,7 @@ const FirePower = () => {
                 fontSize={globalStyles.textFontSize.xl}
                 color={globalStyles.blackColor}
                 lineHeight={globalStyles.lineHeight}
-                fontWeight={globalStyles.headerFontWeight - 100}
+                fontWeight={globalStyles.semibold}
               >
                 {item.header}
               </Heading>
@@ -140,14 +140,16 @@ const FirePower = () => {
             focus on your business while Dyserf focusses on your technology.
           </Text>
 
-          <ButtonComp
-            width={'186px'}
-            height={'56px'}
-            text={'See more case studies'}
-            bg={'transparent'}
-            color={globalStyles.secondaryColor}
-            border={` 1px solid ${globalStyles.secondaryColor}`}
-          />
+          {showBtn && (
+            <ButtonComp
+              width={'186px'}
+              height={'56px'}
+              text={'See more case studies'}
+              bg={'transparent'}
+              color={globalStyles.secondaryColor}
+              border={` 1px solid ${globalStyles.secondaryColor}`}
+            />
+          )}
         </Stack>
 
         <Grid

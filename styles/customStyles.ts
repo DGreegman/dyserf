@@ -5,10 +5,13 @@ export const globalStyles = {
   goldenColor: '#FFC700',
   whiteColor: '#FFF',
   smallTextFontSize: '0.8rem',
-  headerFontSize: { base: '1.5rem', xl: '2.25rem' },
+  headerFontSize: { base: '1.5rem', xl: '2rem' },
   textFontSize: { base: '0.8rem', xl: '1rem' },
-  headerFontWeight: 600,
+  semibold: 500,
+  mediumbold: 600,
+  headerFontWeight: 700,
   width: '100%',
+  fullHeight: '100vh',
   px: { base: 4, xl: 10, '2xl': 0 },
   blackColor: '#110F0F',
   fontFamily: " 'Poppins', sans-serif",
@@ -33,7 +36,7 @@ export const bodyTextStyle = {
 };
 
 export const bodyHeaderStyle = {
-  fontWeight: globalStyles.headerFontWeight,
+  fontWeight: globalStyles.mediumbold,
   fontFamily: globalStyles.fontFamily,
   fontSize: globalStyles.headerFontSize,
   color: globalStyles.textColor,

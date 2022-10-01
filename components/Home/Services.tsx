@@ -1,10 +1,6 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import ButtonComp from '../Button/ButtonComp';
-import {
-  bodyHeaderStyle,
-  bodyTextStyle,
-  globalStyles,
-} from '../../styles/customStyles';
+import { bodyHeaderStyle, bodyTextStyle, globalStyles } from '../../styles';
 import {
   Box,
   Flex,
@@ -16,7 +12,11 @@ import {
 } from '@chakra-ui/react';
 import { servicesArray } from '../../store';
 
-const Services = () => {
+type Props = {
+  background?: string;
+};
+
+const Services = ({ background }: Props) => {
   // Renders
   const renderServices = servicesArray.map((service, i) => {
     return (
@@ -28,6 +28,7 @@ const Services = () => {
         key={`${service.header}-${i}`}
         data-aos={'zoom-in-up'}
         data-aos-duration={'1000'}
+        bg={globalStyles.whiteColor}
       >
         <Box
           width={'122px'}
@@ -38,8 +39,8 @@ const Services = () => {
           <Image
             src={service.icon}
             alt={service.header}
-            layout={'fill'}
-            objectFit={'contain'}
+            fill
+            style={{ objectFit: 'contain' }}
           />
         </Box>
 
@@ -61,7 +62,6 @@ const Services = () => {
           color={globalStyles.textColor}
           lineHeight={'21px'}
           textAlign={'center'}
-          alignSelf={'center'}
         >
           {service.description}
         </Text>
@@ -72,9 +72,10 @@ const Services = () => {
   return (
     <Flex
       sx={globalStyles.sectionStyle}
-      pt={{ base: '30px', md: '50px', xl: '80px' }}
+      py={{ base: '30px', md: '50px', xl: '80px' }}
       data-aos={'fade-up'}
       data-aos-duration={'1000'}
+      bgColor={background ?? globalStyles.whiteColor}
     >
       <VStack
         width={globalStyles.containerWidth}
@@ -100,9 +101,8 @@ const Services = () => {
             height={'56px'}
             text={'Hire Us'}
             link={'mailto:officialdyserf@gmail.com'}
-            bg={'transparent'}
-            color={globalStyles.secondaryColor}
-            border={` 1px solid ${globalStyles.secondaryColor}`}
+            bg={globalStyles.primaryColor}
+            color={globalStyles.whiteColor}
           />
         </Stack>
 

@@ -15,7 +15,7 @@ import { SideBarContext } from '../../context/Sidebar';
 const Nav = () => {
   // Hooks
   const router = useRouter();
-  const path = router.asPath;
+  const path = router.pathname;
   const showNav = useContext(SideBarContext);
 
   // Renders
@@ -27,10 +27,10 @@ const Nav = () => {
         <a>
           <Text
             color={
-              isActive ? globalStyles.primaryColor : globalStyles.textColor
+              isActive ? globalStyles.secondaryColor : globalStyles.textColor
             }
-            fontSize={globalStyles.smallTextFontSize}
-            transition={'all linear .3s'}
+            fontSize={globalStyles.textFontSize.base}
+            fontWeight={isActive ? globalStyles.mediumbold : 400}
           >
             {item.title}
           </Text>
@@ -54,7 +54,7 @@ const Nav = () => {
       <HStack width={globalStyles.containerWidth}>
         <Link href={dyserfRoutes.homepage}>
           <a>
-            <Image src={logo} alt={globalStyles.alt} priority quality={100} />
+            <Image src={logo} alt={globalStyles.alt} priority quality={'100'} />
           </a>
         </Link>
 
@@ -78,13 +78,14 @@ const Nav = () => {
           display={{ base: 'flex', lg: 'none' }}
           pl={3}
           cursor={'pointer'}
-          fontSize={36}
+          fontSize={'2.25rem'}
           _active={{
             transform: 'scale(.95)',
           }}
           onClick={() => showNav?.setShow(true)}
         />
       </HStack>
+
       <SideBar />
     </Flex>
   );

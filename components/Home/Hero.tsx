@@ -12,7 +12,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { globalStyles } from '../../styles/customStyles';
+import { globalStyles } from '../../styles';
 import { BsFillPlayFill } from 'react-icons/bs';
 
 const Hero = () => {
@@ -43,7 +43,7 @@ const Hero = () => {
             fontFamily={globalStyles.fontFamily}
             fontSize={{ base: '1.25rem', xl: '2.87rem' }}
             lineHeight={{ base: '29px', xl: '58px' }}
-            fontWeight={700}
+            fontWeight={globalStyles.headerFontWeight}
           >
             <span style={{ color: globalStyles.goldenColor }}>
               Accelerating
@@ -75,7 +75,7 @@ const Hero = () => {
               <Icon
                 as={BsFillPlayFill}
                 color={globalStyles.goldenColor}
-                fontSize={25}
+                fontSize={globalStyles.headerFontSize.base}
                 position={'absolute'}
                 left={0.5}
               />

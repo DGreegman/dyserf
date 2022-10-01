@@ -6,20 +6,20 @@ export const navLinks = [
     title: 'About us',
   },
   {
-    path: '#work',
+    path: dyserfRoutes.works,
     title: 'Our works',
   },
 
   {
-    path: '#service',
+    path: dyserfRoutes.services,
     title: 'Services',
   },
   {
-    path: '#team',
+    path: dyserfRoutes.team,
     title: 'Team',
   },
   {
-    path: '#career',
+    path: dyserfRoutes.career,
     title: 'Career',
   },
 ];

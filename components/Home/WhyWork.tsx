@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import whywork from '../../assets/images/whywork.png';
 import {
   Box,
@@ -38,7 +38,7 @@ const WhyWork = () => {
   return (
     <Flex
       sx={globalStyles.sectionStyle}
-      pt={{ base: '20px', md: '50px', xl: '120px' }}
+      py={{ base: '20px', md: '50px', xl: '120px' }}
       data-aos={'fade-up'}
       data-aos-duration={'1000'}
     >
@@ -59,8 +59,8 @@ const WhyWork = () => {
               src={whywork}
               alt={globalStyles.alt}
               priority
-              layout={'fill'}
-              objectFit={'contain'}
+              fill
+              style={{ objectFit: 'contain' }}
               quality={'100'}
             />
           </Box>

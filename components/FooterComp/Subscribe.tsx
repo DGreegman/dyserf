@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { EmailIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
-import { globalStyles } from '../../styles/customStyles';
+import { globalStyles } from '../../styles';
 
 const Subscribe = () => {
   // Hooks
@@ -41,7 +41,7 @@ const Subscribe = () => {
             base: globalStyles.textFontSize.xl,
             xl: globalStyles.headerFontSize.base,
           }}
-          fontWeight={500}
+          fontWeight={globalStyles.semibold}
           lineHeight={{ base: '24px', xl: '36px' }}
           textAlign={'center'}
           color={globalStyles.blackColor}

@@ -1,11 +1,7 @@
 import ButtonComp from '../Button/ButtonComp';
 import Image from 'next/future/image';
 import consultancy from '../../assets/images/consultancy.png';
-import {
-  bodyHeaderStyle,
-  bodyTextStyle,
-  globalStyles,
-} from '../../styles/customStyles';
+import { bodyHeaderStyle, bodyTextStyle, globalStyles } from '../../styles';
 import { Box, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
 
 const Consultancy = () => {
