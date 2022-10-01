@@ -69,7 +69,12 @@ const About = () => {
 
           <Grid
             width={globalStyles.width}
-            gridTemplateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
+            gridTemplateColumns={{
+              base: 'repeat(1,1fr)',
+              md: 'repeat(2,1fr)',
+              lg: 'repeat(2,1fr)',
+              xl: 'repeat(2,1fr)',
+            }}
             gap={10}
             minH={'584px'}
             bgColor={'#FAFBFC'}
