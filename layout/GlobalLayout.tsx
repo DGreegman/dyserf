@@ -21,6 +21,7 @@ const GlobalLayout = ({ children }: ChildProps) => {
           name="keywords"
           content="Dyserf, Digital,Development,web design, Front end design, Blockchain"
         />
+        <meta name="author" content="Dyserf - Chigbo Ifeanyi James" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
