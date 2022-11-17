@@ -1,7 +1,7 @@
-import GlobalLayout from '../layout/GlobalLayout';
-import ShowSideNavContext from '../context/Sidebar';
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
+import { ShowSideNavContext } from '../context';
+import { GlobalLayout } from '../layout';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -3,9 +3,10 @@ import service2 from '../../assets/images/service2.png';
 import service3 from '../../assets/images/service3.png';
 import service5 from '../../assets/images/service5.png';
 import service6 from '../../assets/images/service6.png';
+import { ServiceModel } from '../../models';
 import { sharedImg } from './shared';
 
-export const servicesArray = [
+export const servicesArray: ServiceModel[] = [
   {
     icon: service1,
     header: 'Product Designs UI/UX',

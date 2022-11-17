@@ -6,8 +6,9 @@ import team5 from '../../assets/images/team5.png';
 import ifeanyi from '../../assets/images/ifeanyi.png';
 import team7 from '../../assets/images/team7.png';
 import { BsTwitter, BsLinkedin } from 'react-icons/bs';
+import { TeamDataModel } from '../../models';
 
-export const team = [
+export const teams: TeamDataModel[] = [
   {
     id: 1,
     icon: team1,

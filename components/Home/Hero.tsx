@@ -31,18 +31,18 @@ const Hero = () => {
           xl: '1200px',
         }}
         align={'center'}
-        minH={{ base: '400px', md: '542px', xl: '600px' }}
+        minH={{ base: '25rem', md: '34rem', xl: '37.5rem' }}
         justifyContent={{ base: 'none', '2xl': 'space-between' }}
       >
         <Stack
           color={globalStyles.whiteColor}
-          w={{ base: globalStyles.width, md: '70%', lg: '65%', xl: '690px' }}
+          w={{ base: globalStyles.width, md: '70%', lg: '65%', xl: '43.1rem' }}
         >
           <Heading
             width={globalStyles.width}
             fontFamily={globalStyles.fontFamily}
             fontSize={{ base: '1.25rem', xl: '2.87rem' }}
-            lineHeight={{ base: '29px', xl: '58px' }}
+            lineHeight={{ base: '1.8rem', xl: '3.6rem' }}
             fontWeight={globalStyles.headerFontWeight}
           >
             <span style={{ color: globalStyles.goldenColor }}>
@@ -53,7 +53,7 @@ const Hero = () => {
           </Heading>
 
           <Text
-            width={{ base: '85%', md: '95%', xl: '600px' }}
+            width={{ base: '85%', md: '95%', xl: '37.5rem' }}
             lineHeight={1.8}
             pt={2}
             fontSize={{
@@ -68,7 +68,11 @@ const Hero = () => {
           </Text>
 
           <Flex alignItems={'center'} gap={7}>
-            <ButtonComp width={'135px'} height={'44px'} text={'Learn more'} />
+            <ButtonComp
+              width={'8.4rem'}
+              height={'2.75rem'}
+              text={'Learn more'}
+            />
 
             <HStack alignItems={'center'} position={'relative'}>
               <Image src={curve} alt={globalStyles.alt} priority />
@@ -92,8 +96,8 @@ const Hero = () => {
         </Stack>
 
         <Box
-          width={'580px'}
-          minHeight={'416px'}
+          width={'36rem'}
+          minHeight={'26rem'}
           position={'relative'}
           display={{ base: 'none', md: 'flex' }}
         >

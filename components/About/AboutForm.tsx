@@ -18,7 +18,7 @@ const AboutForm = () => {
           }}
           _focus={{
             border: '1px solid #E3E3E3',
-            ring: '0',
+            ring: 0,
           }}
         />
       </FormControl>
@@ -37,7 +37,7 @@ const AboutForm = () => {
           isRequired
           _focus={{
             border: '1px solid #E3E3E3',
-            ring: '0',
+            ring: 0,
           }}
         />
       </FormControl>
@@ -57,7 +57,7 @@ const AboutForm = () => {
           }}
           _focus={{
             border: '1px solid #E3E3E3',
-            ring: '0',
+            ring: 0,
           }}
         />
       </FormControl>

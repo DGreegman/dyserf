@@ -1,7 +1,8 @@
 import fire1 from '../../assets/images/fire1.png';
 import fire2 from '../../assets/images/fire2.png';
+import { FirePowerModel } from '../../models';
 
-export const firepower = [
+export const firepower: FirePowerModel[] = [
   {
     title: 'Ux/Ux Case Study',
     header: 'Saas Application',

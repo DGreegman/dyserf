@@ -1,5 +1,5 @@
-import Team from '../components/Home/Team';
-import PageContainer from '../layout/PageContainer';
+import { Team } from '../components';
+import { PageContainer } from '../layout';
 
 const Index = () => {
   return (

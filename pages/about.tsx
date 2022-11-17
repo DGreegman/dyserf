@@ -1,7 +1,3 @@
-import RenderLists from '../components/Shared/RenderLists';
-import PageContainer from '../layout/PageContainer';
-import Header from '../components/Shared/Header';
-import AboutForm from '../components/About/AboutForm';
 import {
   Flex,
   Grid,
@@ -15,6 +11,8 @@ import {
 import { globalStyles } from '../styles';
 import { coreValues } from '../store';
 import { BsTwitter, BsLinkedin, BsFacebook } from 'react-icons/bs';
+import { PageContainer } from '../layout';
+import { AboutForm, Header, RenderLists } from '../components';
 
 const About = () => {
   // Hooks

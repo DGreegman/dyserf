@@ -1,10 +1,8 @@
-import Header from '../components/Shared/Header';
-import FirePower from '../components/Home/FirePower';
-import RenderLists from '../components/Shared/RenderLists';
-import PageContainer from '../layout/PageContainer';
 import { works } from '../store';
 import { globalStyles } from '../styles';
 import { Flex, Stack, VStack } from '@chakra-ui/react';
+import { PageContainer } from '../layout';
+import { FirePower, Header, RenderLists } from '../components';
 
 const Works = () => {
   return (
