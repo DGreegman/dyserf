@@ -11,7 +11,7 @@ type Props = {
 const Services = ({ background }: Props) => {
   // Renders
   const renderServices = servicesArray.map((service, i) => (
-    <ServiceItem service={service} index={i} />
+    <ServiceItem service={service} key={`${service.header}-${i}`} />
   ));
 
   return (

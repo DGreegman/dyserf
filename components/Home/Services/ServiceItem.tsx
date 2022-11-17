@@ -5,17 +5,15 @@ import { globalStyles } from '../../../styles';
 
 type Props = {
   service: ServiceModel;
-  index: number;
 };
 
-const ServiceItem = ({ service, index }: Props) => {
+const ServiceItem = ({ service }: Props) => {
   return (
     <Stack
       minHeight={'308px'}
       borderRadius={10}
       padding={'30px 23px 30px 23px'}
       boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-      key={`${service.header}-${index}`}
       data-aos={'zoom-in-up'}
       data-aos-duration={'1000'}
       bg={globalStyles.whiteColor}
