@@ -10,20 +10,15 @@ type Props = {
 const ServiceItem = ({ service }: Props) => {
   return (
     <Stack
-      minHeight={'308px'}
+      minHeight='308px'
       borderRadius={10}
-      padding={'30px 23px 30px 23px'}
-      boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-      data-aos={'zoom-in-up'}
-      data-aos-duration={'1000'}
+      padding='30px 23px 30px 23px'
+      boxShadow=' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'
+      data-aos='zoom-in-up'
+      data-aos-duration='1000'
       bg={globalStyles.whiteColor}
     >
-      <Box
-        width={'122px'}
-        height={'51px'}
-        position={'relative'}
-        alignSelf={'center'}
-      >
+      <Box width='122px' height='51px' position='relative' alignSelf='center'>
         <Image
           src={service.icon}
           alt={service.header}
@@ -37,10 +32,10 @@ const ServiceItem = ({ service }: Props) => {
         fontWeight={globalStyles.headerFontWeight}
         fontFamily={globalStyles.fontFamily}
         color={globalStyles.textColor}
-        fontSize={'1.1rem'}
-        lineHeight={'27px'}
-        textAlign={'center'}
-        alignSelf={'center'}
+        fontSize='1.1rem'
+        lineHeight='27px'
+        textAlign='center'
+        alignSelf='center'
       >
         {service.header}
       </Heading>
@@ -48,8 +43,8 @@ const ServiceItem = ({ service }: Props) => {
       <Text
         fontSize={globalStyles.smallTextFontSize}
         color={globalStyles.textColor}
-        lineHeight={'21px'}
-        textAlign={'center'}
+        lineHeight='21px'
+        textAlign='center'
       >
         {service.description}
       </Text>

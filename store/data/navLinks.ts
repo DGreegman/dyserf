@@ -1,25 +1,25 @@
-import { dyserfRoutes } from '../../utils';
+import { DyserfRoutes } from '../../utils';
 
 export const navLinks = [
   {
-    path: dyserfRoutes.about,
+    path: DyserfRoutes.about,
     title: 'About us',
   },
   {
-    path: dyserfRoutes.works,
+    path: DyserfRoutes.works,
     title: 'Our works',
   },
 
   {
-    path: dyserfRoutes.services,
+    path: DyserfRoutes.services,
     title: 'Services',
   },
   {
-    path: dyserfRoutes.team,
+    path: DyserfRoutes.team,
     title: 'Team',
   },
   {
-    path: dyserfRoutes.career,
+    path: DyserfRoutes.career,
     title: 'Career',
   },
 ];

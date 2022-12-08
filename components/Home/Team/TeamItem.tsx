@@ -1,6 +1,5 @@
-import { Box, Flex, Heading, Icon, Stack, Text } from '@chakra-ui/react';
 import Image from 'next/future/image';
-import React from 'react';
+import { Box, Flex, Heading, Icon, Stack, Text } from '@chakra-ui/react';
 import { TeamDataModel } from '../../../models';
 import { globalStyles } from '../../../styles';
 
@@ -11,20 +10,19 @@ type Props = {
 const TeamItem = ({ team }: Props) => {
   return (
     <Stack
-      minHeight={'290px'}
+      minHeight='290px'
       borderRadius={10}
-      padding={'25px 23px 25px 23px'}
-      boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-      key={team.id}
-      align={'center'}
+      padding='25px 23px 25px 23px'
+      boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.03)'
+      align='center'
       gap={2}
-      data-aos={'zoom-in'}
-      data-aos-duration={'1000'}
+      data-aos='zoom-in'
+      data-aos-duration='1000'
     >
       <Box
-        position={'relative'}
-        width={'110px'}
-        height={'110px'}
+        position='relative'
+        width='110px'
+        height='110px'
         borderRadius={globalStyles.width}
       >
         <Image
@@ -45,8 +43,8 @@ const TeamItem = ({ team }: Props) => {
         fontFamily={globalStyles.fontFamily}
         color={globalStyles.textColor}
         fontSize={globalStyles.textFontSize.xl}
-        lineHeight={'27px'}
-        textAlign={'center'}
+        lineHeight='27px'
+        textAlign='center'
       >
         {team.name}
       </Heading>
@@ -54,27 +52,27 @@ const TeamItem = ({ team }: Props) => {
       <Text
         fontSize={globalStyles.smallTextFontSize}
         color={globalStyles.textColor}
-        textAlign={'center'}
+        textAlign='center'
       >
         {team.position}
       </Text>
 
       <Flex gap={4}>
-        <a href="#">
+        <a href='#'>
           <Icon
             as={team.social.twitter}
             color={globalStyles.primaryColor}
-            fontSize={'1.25rem'}
-            cursor={'pointer'}
+            fontSize='1.25rem'
+            cursor='pointer'
           />
         </a>
 
-        <a href="#">
+        <a href='#'>
           <Icon
             as={team.social.linkedin}
             color={globalStyles.primaryColor}
-            cursor={'pointer'}
-            fontSize={'1.25rem'}
+            cursor='pointer'
+            fontSize='1.25rem'
           />
         </a>
       </Flex>

@@ -13,17 +13,17 @@ const Team = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       py={{ base: '30px', md: '50px', xl: '80px' }}
-      data-aos={'fade-up'}
-      data-aos-duration={'1000'}
+      data-aos='fade-up'
+      data-aos-duration='1000'
     >
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
-        alignItems={'flex-start'}
+        alignItems='flex-start'
       >
         <Stack
           width={{ base: globalStyles.width, md: '600px' }}
-          alignItems={'flex-start'}
+          alignItems='flex-start'
           gap={6}
         >
           <Heading sx={bodyHeaderStyle}>

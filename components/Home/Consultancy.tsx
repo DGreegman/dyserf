@@ -9,13 +9,13 @@ const Consultancy = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       pt={{ base: '20px', md: '50px', xl: '150px' }}
-      data-aos={'fade-up'}
-      data-aos-duration={'1000'}
+      data-aos='fade-up'
+      data-aos-duration='1000'
     >
       <HStack
         width={globalStyles.containerWidth}
-        minH={'308px'}
-        justifyContent={'space-between'}
+        minH='308px'
+        justifyContent='space-between'
         flexDirection={{
           base: 'column-reverse',
           md: 'row',
@@ -26,7 +26,7 @@ const Consultancy = () => {
       >
         <Stack
           width={{ base: globalStyles.width, xl: '600px' }}
-          alignItems={'flex-start'}
+          alignItems='flex-start'
           gap={6}
         >
           <Heading sx={bodyHeaderStyle}>DYSERF Consultancy</Heading>
@@ -39,11 +39,11 @@ const Consultancy = () => {
           </Text>
 
           <ButtonComp
-            width={'186px'}
-            height={'56px'}
-            text={'Hire Us'}
-            link={'mailto:officialdyserf@gmail.com'}
-            bg={'transparent'}
+            width='186px'
+            height='56px'
+            text='Hire Us'
+            link='mailto:officialdyserf@gmail.com'
+            bg='transparent'
             color={globalStyles.secondaryColor}
             border={` 1px solid ${globalStyles.secondaryColor}`}
           />
@@ -51,15 +51,15 @@ const Consultancy = () => {
 
         <Box
           width={{ base: globalStyles.width, xl: '432px' }}
-          minHeight={'300px'}
-          position={'relative'}
+          minHeight='300px'
+          position='relative'
         >
           <Image
             src={consultancy}
             alt={globalStyles.alt}
             fill
             style={{ objectFit: 'contain' }}
-            quality={'100'}
+            quality='100'
             priority
           />
         </Box>

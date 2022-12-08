@@ -21,8 +21,8 @@ const Hero = () => {
       width={globalStyles.width}
       bg={globalStyles.secondaryColor}
       px={globalStyles.px}
-      align={'center'}
-      justifyContent={'center'}
+      align='center'
+      justifyContent='center'
       pt={20}
     >
       <HStack
@@ -30,7 +30,7 @@ const Hero = () => {
           base: '100%',
           xl: '1200px',
         }}
-        align={'center'}
+        align='center'
         minH={{ base: '25rem', md: '34rem', xl: '37.5rem' }}
         justifyContent={{ base: 'none', '2xl': 'space-between' }}
       >
@@ -67,24 +67,20 @@ const Hero = () => {
             faster.
           </Text>
 
-          <Flex alignItems={'center'} gap={7}>
-            <ButtonComp
-              width={'8.4rem'}
-              height={'2.75rem'}
-              text={'Learn more'}
-            />
+          <Flex alignItems='center' gap={7}>
+            <ButtonComp width='8.4rem' height='2.75rem' text='Learn more' />
 
-            <HStack alignItems={'center'} position={'relative'}>
+            <HStack alignItems='center' position='relative'>
               <Image src={curve} alt={globalStyles.alt} priority />
               <Icon
                 as={BsFillPlayFill}
                 color={globalStyles.goldenColor}
                 fontSize={globalStyles.headerFontSize.base}
-                position={'absolute'}
+                position='absolute'
                 left={0.5}
               />
 
-              <Link href={'#'}>
+              <Link href='#'>
                 <a>
                   <Text pl={2} fontSize={globalStyles.smallTextFontSize}>
                     How we work
@@ -96,9 +92,9 @@ const Hero = () => {
         </Stack>
 
         <Box
-          width={'36rem'}
-          minHeight={'26rem'}
-          position={'relative'}
+          width='36rem'
+          minHeight='26rem'
+          position='relative'
           display={{ base: 'none', md: 'flex' }}
         >
           <Image

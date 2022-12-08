@@ -42,9 +42,9 @@ const ButtonComp = ({
     <>
       {link ? (
         <ChakraLink
-          rel={'noopener noreferrer'}
+          rel='noopener noreferrer'
           _hover={{ textDecoration: 'none' }}
-          target={'_blank'}
+          target='_blank'
           href={link}
         >
           <Button

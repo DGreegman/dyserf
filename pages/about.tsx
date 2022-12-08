@@ -18,52 +18,51 @@ const About = () => {
   // Hooks
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
 
+  // Renders
+  const renderIcons = [BsTwitter, BsLinkedin, BsFacebook].map((item, i) => (
+    <a href='#' key={i}>
+      <Icon as={item} fontSize='1.2rem' />
+    </a>
+  ));
+
   return (
     <PageContainer>
       <Flex
         sx={globalStyles.sectionStyle}
         py={{ base: '30px', md: '50px', xl: '80px' }}
-        data-aos={'fade-up'}
-        data-aos-duration={'1000'}
+        data-aos='fade-up'
+        data-aos-duration='1000'
       >
         <VStack
           width={globalStyles.containerWidth}
           gap={9}
-          alignItems={'flex-start'}
+          alignItems='flex-start'
         >
           <Header
-            header={'About us'}
-            text={
-              'Dyserf is an innovative solution that builds digital experiences that accelerate business growth and make life activities easier and faster. We are team of experts from different background that have built solutions and digital experiences that affect over 100,000 people, globally. The TEWAM approach is our unique agile methodology that helps us translate your business goals and objectives into solution.'
-            }
+            header='About us'
+            text='Dyserf is an innovative solution that builds digital experiences that accelerate business growth and make life activities easier and faster. We are team of experts from different background that have built solutions and digital experiences that affect over 100,000 people, globally. The TEWAM approach is our unique agile methodology that helps us translate your business goals and objectives into solution.'
           />
 
           <Header
-            header={'Our Vision'}
-            text={
-              'Our vision is to be a digital solution that fronts business growth and accelerate Innovations.'
-            }
+            header='Our Vision'
+            text='Our vision is to be a digital solution that fronts business growth and accelerate Innovations.'
           />
 
           <Header
-            header={'Our Mission'}
-            text={
-              'To continually collaborate with our clients and stakeholders to meet business goals & objectives by providing first-class, innovative, cost-effective solutions.'
-            }
+            header='Our Mission'
+            text='To continually collaborate with our clients and stakeholders to meet business goals & objectives by providing first-class, innovative, cost-effective solutions.'
           />
 
           <Stack gap={10} py={5}>
             <Header
-              header={'Core Values'}
-              text={
-                'Team of differnt race and background that focus on building a tangible system that translates your business goals and objectives into solutions.'
-              }
+              header='Core Values'
+              text='Team of differnt race and background that focus on building a tangible system that translates your business goals and objectives into solutions.'
             />
 
             <RenderLists data={coreValues} />
           </Stack>
 
-          <Header header={'Contact us here'} text={'Send us a message here.'} />
+          <Header header='Contact us here' text='Send us a message here.' />
 
           <Grid
             width={globalStyles.width}
@@ -74,8 +73,8 @@ const About = () => {
               xl: 'repeat(2,1fr)',
             }}
             gap={10}
-            minH={'584px'}
-            bgColor={'#FAFBFC'}
+            minH='584px'
+            bgColor='#FAFBFC'
             borderRadius={10}
             padding={{ base: globalStyles.px.base, lg: '50px 30px' }}
           >
@@ -99,24 +98,12 @@ const About = () => {
                 color={globalStyles.secondaryColor}
                 fontSize={globalStyles.textFontSize}
               >
-                <a href="mailto:officialdyserf@gmail.com">
+                <a href='mailto:officialdyserf@gmail.com'>
                   officialdyserf@gmail.com
                 </a>
               </Text>
 
-              <Flex gap={5}>
-                <a href="#">
-                  <Icon as={BsTwitter} fontSize={'1.2rem'} />
-                </a>
-
-                <a href="#">
-                  <Icon as={BsLinkedin} fontSize={'1.2rem'} />
-                </a>
-
-                <a href="#">
-                  <Icon as={BsFacebook} fontSize={'1.2rem'} />
-                </a>
-              </Flex>
+              <Flex gap={5}>{renderIcons}</Flex>
             </Stack>
           </Grid>
         </VStack>

@@ -10,21 +10,17 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import {
-  bodyHeaderStyle,
-  bodyTextStyle,
-  globalStyles,
-} from '../../styles/customStyles';
+import { bodyHeaderStyle, bodyTextStyle, globalStyles } from '../../styles';
 import { whyworkArray } from '../../store';
 
 const WhyWork = () => {
   // Renders
   const renderItems = whyworkArray.map((item, i) => {
     return (
-      <GridItem key={i}>
+      <GridItem key={`${item}-${i}`}>
         <Center
-          boxShadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.03)'}
-          borderRadius={'5px'}
+          boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.03)'
+          borderRadius='5px'
           py={2}
           color={globalStyles.blackColor}
           fontSize={globalStyles.textFontSize}
@@ -39,8 +35,8 @@ const WhyWork = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       py={{ base: '20px', md: '50px', xl: '120px' }}
-      data-aos={'fade-up'}
-      data-aos-duration={'1000'}
+      data-aos='fade-up'
+      data-aos-duration='1000'
     >
       <Grid
         gridTemplateColumns={{
@@ -51,23 +47,23 @@ const WhyWork = () => {
         }}
         width={globalStyles.containerWidth}
         columnGap={{ base: 10, xl: '120px' }}
-        alignItems={'center'}
+        alignItems='center'
       >
         <GridItem>
-          <Box height={'320px'} position={'relative'}>
+          <Box height='320px' position='relative'>
             <Image
               src={whywork}
               alt={globalStyles.alt}
               priority
               fill
               style={{ objectFit: 'contain' }}
-              quality={'100'}
+              quality='100'
             />
           </Box>
         </GridItem>
 
         <GridItem>
-          <Stack alignItems={'flex-start'} gap={4}>
+          <Stack alignItems='flex-start' gap={4}>
             <Heading sx={bodyHeaderStyle}>
               <span style={{ color: globalStyles.secondaryColor }}> Why</span>{' '}
               work with us?
@@ -86,7 +82,7 @@ const WhyWork = () => {
             </Text>
 
             <Grid
-              templateColumns={'repeat(3,1fr)'}
+              templateColumns='repeat(3,1fr)'
               width={globalStyles.width}
               columnGap={4}
               rowGap={5}

@@ -13,21 +13,21 @@ import {
   useMediaQuery,
 } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { globalStyles } from '../../styles';
-import { dyserfRoutes } from '../../utils';
-import { SideBarContext } from '../../context/Sidebar';
+import { DyserfRoutes } from '../../utils';
+import { useSideBar } from '../../context';
 
 const SideBar = () => {
   // Hooks
-  const showNav = useContext(SideBarContext);
+  const { updateShow, show } = useSideBar();
   const router = useRouter();
   const [isLargerThan992] = useMediaQuery('(min-width: 992px)');
 
   useEffect(() => {
-    isLargerThan992 && showNav?.setShow(false);
+    isLargerThan992 && updateShow(false);
   }, [isLargerThan992]);
 
   // renders
@@ -37,12 +37,12 @@ const SideBar = () => {
     return (
       <LinkBox
         key={i}
-        lineHeight={'21px'}
+        lineHeight='21px'
         color={isActive ? globalStyles.primaryColor : globalStyles.blackColor}
         _hover={{
           color: globalStyles.primaryColor,
         }}
-        onClick={() => showNav?.setShow(false)}
+        onClick={() => updateShow(false)}
       >
         <Link href={path}>{title}</Link>
       </LinkBox>
@@ -52,49 +52,46 @@ const SideBar = () => {
   return (
     <VStack
       width={globalStyles.width}
-      minHeight={'388px'}
-      position={'absolute'}
+      minHeight='388px'
+      position='absolute'
       backgroundColor={globalStyles.whiteColor}
       zIndex={3000}
       top={0}
-      align={'flex-start'}
-      transition={'linear all .3s'}
-      transform={showNav?.show ? 'translate(0%)' : 'translate(-100%)'}
+      align='flex-start'
+      transition='linear all .3s'
+      transform={show ? 'translate(0%)' : 'translate(-100%)'}
       pt={2}
       pb={10}
       px={2}
-      boxShadow={' 2px 2px 100px 50px rgba(0, 0, 0, 0.05)'}
+      boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.05)'
     >
-      <Flex width={globalStyles.width} align={'center'} px={4} pt={4}>
-        <Link href={dyserfRoutes.homepage}>
-          <a
-            style={{ cursor: 'pointer' }}
-            onClick={() => showNav?.setShow(false)}
-          >
-            <Image src={logo} alt={'DYSERF'} priority quality={'100'} />
+      <Flex width={globalStyles.width} align='center' px={4} pt={4}>
+        <Link href={DyserfRoutes.homepage}>
+          <a style={{ cursor: 'pointer' }} onClick={() => updateShow(false)}>
+            <Image src={logo} alt={globalStyles.alt} priority quality='100' />
           </a>
         </Link>
 
         <Spacer />
 
         <Center
-          cursor={'pointer'}
+          cursor='pointer'
           _active={{
             transform: 'scale(.95)',
           }}
-          userSelect={'none'}
-          onClick={() => showNav?.setShow(false)}
+          userSelect='none'
+          onClick={() => updateShow(false)}
         >
-          <CloseIcon fontSize={'20px'} />
+          <CloseIcon fontSize='1.25rem' />
         </Center>
       </Flex>
 
       <Stack
         width={globalStyles.width}
-        justify={'center'}
+        justify='center'
         px={4}
         pt={10}
-        gap={'31px'}
+        gap='31px'
       >
         {renderNavLinks}
       </Stack>
@@ -106,10 +103,10 @@ const SideBar = () => {
       >
         <ButtonComp
           width={globalStyles.width}
-          height={'44px'}
-          text={'Hire Us'}
-          borderRadius={'5px'}
-          link={'mailto:officialdyserf@gmail.com'}
+          height='44px'
+          text='Hire Us'
+          borderRadius='5px'
+          link='mailto:officialdyserf@gmail.com'
         />
       </Box>
     </VStack>

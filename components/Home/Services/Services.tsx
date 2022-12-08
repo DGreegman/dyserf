@@ -18,18 +18,18 @@ const Services = ({ background }: Props) => {
     <Flex
       sx={globalStyles.sectionStyle}
       py={{ base: '30px', md: '50px', xl: '80px' }}
-      data-aos={'fade-up'}
-      data-aos-duration={'1000'}
+      data-aos='fade-up'
+      data-aos-duration='1000'
       bgColor={background ?? globalStyles.whiteColor}
     >
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
-        alignItems={'flex-start'}
+        alignItems='flex-start'
       >
         <Stack
           width={{ base: globalStyles.width, md: '600px' }}
-          alignItems={'flex-start'}
+          alignItems='flex-start'
           gap={6}
         >
           <Heading sx={bodyHeaderStyle}>Our Services</Heading>
@@ -42,10 +42,10 @@ const Services = ({ background }: Props) => {
           </Text>
 
           <ButtonComp
-            width={'186px'}
-            height={'56px'}
-            text={'Hire Us'}
-            link={'mailto:officialdyserf@gmail.com'}
+            width='186px'
+            height='56px'
+            text='Hire Us'
+            link='mailto:officialdyserf@gmail.com'
             bg={globalStyles.primaryColor}
             color={globalStyles.whiteColor}
           />

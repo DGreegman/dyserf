@@ -1,4 +1,4 @@
-export class dyserfRoutes {
+export class DyserfRoutes {
   static homepage = '/';
   static about = '/about';
   static services = '/services';

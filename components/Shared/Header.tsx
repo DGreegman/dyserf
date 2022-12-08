@@ -8,7 +8,7 @@ type Props = {
 
 const Header = ({ header, text }: Props) => {
   return (
-    <VStack align={'flex-start'} w={globalStyles.width} gap={5}>
+    <VStack align='flex-start' w={globalStyles.width} gap={5}>
       <Heading sx={bodyHeaderStyle}>{header}</Heading>
       <Text sx={bodyTextStyle}>{text}</Text>;
     </VStack>

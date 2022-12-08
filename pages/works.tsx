@@ -11,20 +11,18 @@ const Works = () => {
       <Flex
         sx={globalStyles.sectionStyle}
         py={{ base: '30px', md: '50px', xl: '80px' }}
-        data-aos={'fade-up'}
-        data-aos-duration={'1000'}
+        data-aos='fade-up'
+        data-aos-duration='1000'
       >
         <VStack
           width={globalStyles.containerWidth}
           gap={9}
-          alignItems={'flex-start'}
+          alignItems='flex-start'
         >
           <Stack gap={10} py={5}>
             <Header
-              header={'Our Dynamism'}
-              text={
-                'We exist to connect you with scalable innovative solution so you can focus on your business while Dyserf focusses on your technology.'
-              }
+              header='Our Dynamism'
+              text='We exist to connect you with scalable innovative solution so you can focus on your business while Dyserf focusses on your technology.'
             />
 
             <RenderLists data={works} />

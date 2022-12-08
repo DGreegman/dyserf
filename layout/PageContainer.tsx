@@ -19,44 +19,44 @@ const PageContainer = ({ children }: ChildProps) => {
         width={globalStyles.width}
         bgColor={globalStyles.secondaryColor}
         pb={5}
-        align={'center'}
-        justifyContent={'center'}
-        minH={'170'}
-        position={'relative'}
-        overflow={'hidden'}
-        pt={'78px'}
+        align='center'
+        justifyContent='center'
+        minH='170'
+        position='relative'
+        overflow='hidden'
+        pt='78px'
       >
         <Box
-          position={'absolute'}
+          position='absolute'
           left={-6}
           bottom={0}
-          width={'100px'}
-          height={'100px'}
+          width='100px'
+          height='100px'
           zIndex={2000}
         >
           <Image
             src={leftbg}
             alt={globalStyles.alt}
             priority
-            quality={'100'}
+            quality='100'
             fill
             style={{ objectFit: 'contain' }}
           />
         </Box>
 
         <Box
-          position={'absolute'}
+          position='absolute'
           right={-6}
           bottom={0}
-          width={'100px'}
-          height={'100px'}
+          width='100px'
+          height='100px'
           zIndex={2000}
         >
           <Image
             src={rightbg}
             alt={globalStyles.alt}
             priority
-            quality={'100'}
+            quality='100'
             fill
             style={{ objectFit: 'contain' }}
           />
@@ -65,10 +65,10 @@ const PageContainer = ({ children }: ChildProps) => {
         <Flex
           width={globalStyles.width}
           pb={5}
-          align={'center'}
-          justifyContent={'center'}
+          align='center'
+          justifyContent='center'
           pt={{ base: 0, xl: '38px' }}
-          minH={'100'}
+          minH='100'
           px={globalStyles.px}
         >
           <Heading
@@ -76,8 +76,8 @@ const PageContainer = ({ children }: ChildProps) => {
             fontWeight={globalStyles.semibold}
             fontSize={globalStyles.headerFontSize.base}
             color={globalStyles.whiteColor}
-            letterSpacing={'4px'}
-            textAlign={'center'}
+            letterSpacing='4px'
+            textAlign='center'
           >
             <span style={{ color: globalStyles.goldenColor }}>
               Accelerating

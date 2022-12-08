@@ -51,7 +51,7 @@ const Review = () => {
     );
   });
 
-  const renderDots = Array(review.length)
+  const renderDots = Array<string>(review.length)
     .fill('-')
     .map((dot, i) => {
       const isActive = i === selected;
@@ -63,8 +63,8 @@ const Review = () => {
           bgColor={isActive ? globalStyles.secondaryColor : 'transparent'}
           border={`1px solid ${globalStyles.secondaryColor}`}
           onClick={() => setSelected(i)}
-          cursor={'pointer'}
-          transition={'all linear 0.4s'}
+          cursor='pointer'
+          transition='all linear 0.4s'
         />
       );
     });
@@ -73,17 +73,17 @@ const Review = () => {
     <Flex
       sx={globalStyles.sectionStyle}
       py={{ base: '30px', md: '50px', xl: '80px' }}
-      data-aos={'fade-up'}
-      data-aos-duration={'1000'}
+      data-aos='fade-up'
+      data-aos-duration='1000'
     >
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
-        alignItems={'flex-start'}
+        alignItems='flex-start'
       >
         <Stack
           width={{ base: globalStyles.width, xl: '600px' }}
-          alignItems={'flex-start'}
+          alignItems='flex-start'
           gap={6}
         >
           <Heading sx={bodyHeaderStyle}>
@@ -95,22 +95,22 @@ const Review = () => {
         {isLargerThan1280 ? (
           <Grid
             width={globalStyles.width}
-            gridTemplateColumns={'repeat(3,1fr)'}
+            gridTemplateColumns='repeat(3,1fr)'
             gap={6}
           >
             {renderReview}
           </Grid>
         ) : (
-          <Stack width={globalStyles.width} gap={1} align={'center'}>
+          <Stack width={globalStyles.width} gap={1} align='center'>
             <Grid
               width={{ base: globalStyles.width, md: '60%' }}
-              gridTemplateColumns={'repeat(1,1fr)'}
-              position={'relative'}
-              minHeight={'250px'}
+              gridTemplateColumns='repeat(1,1fr)'
+              position='relative'
+              minHeight='250px'
             >
               {renderReviewSmallScreen}
             </Grid>
-            <Flex align={'center'} gap={0.5}>
+            <Flex align='center' gap={0.5}>
               {renderDots}
             </Flex>
           </Stack>

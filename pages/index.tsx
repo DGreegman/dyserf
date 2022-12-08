@@ -14,8 +14,8 @@ const Home = () => {
       <Hero />
       <Consultancy />
       <WhyWork />
-      <Services background={'#E7E7FA'} />
-      <FirePower showBtn={true} />
+      <Services background='#E7E7FA' />
+      <FirePower showBtn />
       <Team />
       <Review />
     </>

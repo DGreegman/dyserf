@@ -9,8 +9,6 @@ type Props = {
 };
 
 const FirePower = ({ showBtn }: Props) => {
-  // Hooks
-
   // Renders
   const renderOptions = firepower.map((item) => {
     return <FirePowerItem item={item} key={item.id} />;
@@ -20,17 +18,17 @@ const FirePower = ({ showBtn }: Props) => {
     <Flex
       sx={globalStyles.sectionStyle}
       pt={{ base: '30px', md: '50px', xl: '80px' }}
-      data-aos={'fade-up'}
-      data-aos-duration={'1000'}
+      data-aos='fade-up'
+      data-aos-duration='1000'
     >
       <VStack
         width={globalStyles.containerWidth}
         gap={9}
-        alignItems={'flex-start'}
+        alignItems='flex-start'
       >
         <Stack
           width={{ base: globalStyles.width, md: '600px' }}
-          alignItems={'flex-start'}
+          alignItems='flex-start'
           gap={6}
         >
           <Heading sx={bodyHeaderStyle}>
@@ -48,12 +46,12 @@ const FirePower = ({ showBtn }: Props) => {
 
           {showBtn && (
             <ButtonComp
-              width={'186px'}
-              height={'56px'}
-              text={'See more case studies'}
-              bg={'transparent'}
+              width='186px'
+              height='56px'
+              text='See more case studies'
+              bg='transparent'
               color={globalStyles.secondaryColor}
-              border={` 1px solid ${globalStyles.secondaryColor}`}
+              border={`1px solid ${globalStyles.secondaryColor}`}
             />
           )}
         </Stack>

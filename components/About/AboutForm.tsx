@@ -4,14 +4,20 @@ import { globalStyles } from '../../styles';
 
 const AboutForm = () => {
   return (
-    <Stack as={'form'} gap={2}>
+    <Stack
+      as='form'
+      gap={2}
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       <FormControl>
         <Input
-          size={'lg'}
+          size='lg'
           bgColor={globalStyles.whiteColor}
-          border={'1px solid #E3E3E3'}
+          border='1px solid #E3E3E3'
           isRequired
-          placeholder={'Name'}
+          placeholder='Name'
           fontSize={globalStyles.smallTextFontSize}
           _placeholder={{
             fontSize: globalStyles.smallTextFontSize,
@@ -27,9 +33,9 @@ const AboutForm = () => {
         <Input
           size={'lg'}
           bgColor={globalStyles.whiteColor}
-          border={'1px solid #E3E3E3'}
-          placeholder={'Email'}
-          type={'email'}
+          border='1px solid #E3E3E3'
+          placeholder='Email'
+          type='email'
           fontSize={globalStyles.smallTextFontSize}
           _placeholder={{
             fontSize: globalStyles.smallTextFontSize,
@@ -44,13 +50,13 @@ const AboutForm = () => {
 
       <FormControl>
         <Textarea
-          size={'lg'}
+          size='lg'
           bgColor={globalStyles.whiteColor}
-          border={'1px solid #E3E3E3'}
-          resize={'none'}
-          minH={'250px'}
+          border='1px solid #E3E3E3'
+          resize='none'
+          minH='250px'
           isRequired
-          placeholder={'Message'}
+          placeholder='Message'
           fontSize={globalStyles.smallTextFontSize}
           _placeholder={{
             fontSize: globalStyles.smallTextFontSize,
@@ -63,10 +69,10 @@ const AboutForm = () => {
       </FormControl>
 
       <ButtonComp
-        text={'Send Message'}
         width={globalStyles.width}
-        height={'58px'}
         bg={globalStyles.secondaryColor}
+        text='Send Message'
+        height='58px'
         type
       />
     </Stack>

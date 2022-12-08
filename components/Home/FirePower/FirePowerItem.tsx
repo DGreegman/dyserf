@@ -23,34 +23,34 @@ const FirePowerItem = ({ item }: Props) => {
   return (
     <GridItem
       key={item.id}
-      bgColor={'#FAFBFC'}
+      bgColor='#FAFBFC'
       rounded={10}
-      minHeight={'392px'}
+      minHeight='392px'
       p={5}
-      alignItems={'center'}
-      justifyContent={'center'}
-      display={'flex'}
+      alignItems='center'
+      justifyContent='center'
+      display='flex'
     >
       <Grid
         gridTemplateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}
-        alignContent={'center'}
-        placeContent={'center'}
+        alignContent='center'
+        placeContent='center'
         gap={4}
       >
         <GridItem
-          alignItems={'center'}
-          justifyContent={'center'}
-          display={'flex'}
-          flexDirection={'column'}
+          alignItems='center'
+          justifyContent='center'
+          display='flex'
+          flexDirection='column'
           gridRow={isLargerThan1280 ? '' : 2}
         >
           <Stack gap={2}>
             <Heading
               fontFamily={globalStyles.fontFamily}
               fontSize={globalStyles.smallTextFontSize}
-              color={'#8A94A6'}
+              color='#8A94A6'
               lineHeight={globalStyles.lineHeight}
-              width={'124px'}
+              width='124px'
               fontWeight={globalStyles.headerFontWeight}
             >
               {item.title}
@@ -69,17 +69,17 @@ const FirePowerItem = ({ item }: Props) => {
             <Text
               fontFamily={globalStyles.fontFamily}
               fontSize={globalStyles.smallTextFontSize}
-              color={'#656262'}
+              color='#656262'
               lineHeight={globalStyles.lineHeight}
             >
               {item.description}
             </Text>
 
             <ButtonComp
-              text={'See details'}
-              width={'77px'}
-              height={'21px'}
-              bg={'transparent'}
+              text='See details'
+              width='77px'
+              height='21px'
+              bg='transparent'
               color={globalStyles.primaryColor}
             />
           </Stack>
@@ -88,16 +88,16 @@ const FirePowerItem = ({ item }: Props) => {
         <GridItem gridRow={isLargerThan1280 ? '' : 1}>
           <Box
             w={{ base: globalStyles.width, xl: '362px' }}
-            height={'280px'}
-            position={'relative'}
-            shadow={'2px 2px 100px 50px rgba(0, 0, 0, 0.02)'}
+            height='280px'
+            position='relative'
+            shadow='2px 2px 100px 50px rgba(0, 0, 0, 0.02)'
           >
             <Image
               src={item.icon}
               alt={item.title}
               priority
-              layout={'fill'}
-              objectFit={'cover'}
+              layout='fill'
+              objectFit='cover'
             />
           </Box>
         </GridItem>
