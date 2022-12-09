@@ -9,10 +9,9 @@ import { DyserfRoutes } from '../../utils';
 const FooterItem = () => {
   // Renders
   const renderIcons = [FaFacebook, FaTwitter, FaLinkedin].map((item, i) => (
-    <a href='#'>
+    <a href='#' key={i}>
       <Icon
         as={item}
-        key={i}
         color={globalStyles.whiteColor}
         fontSize={{ base: globalStyles.smallTextFontSize, xl: '1.25rem' }}
       />
