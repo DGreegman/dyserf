@@ -42,8 +42,8 @@ const Review = () => {
         key={`${item.id}-${i}`}
         style={{
           position: 'absolute',
-          opacity: isActive ? 1 : 0,
-          transition: 'all linear 0.4s',
+          transform: isActive ? 'translate(0%)' : 'translate(-120%)',
+          transition: 'all linear 0.5s',
         }}
       >
         <ReviewItem item={item} />
@@ -64,7 +64,7 @@ const Review = () => {
           border={`1px solid ${globalStyles.secondaryColor}`}
           onClick={() => setSelected(i)}
           cursor='pointer'
-          transition='all linear 0.4s'
+          transition='all linear 0.5s'
         />
       );
     });

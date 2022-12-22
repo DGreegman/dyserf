@@ -3,6 +3,7 @@ import Image from 'next/future/image';
 import consultancy from '../../assets/images/consultancy.png';
 import { bodyHeaderStyle, bodyTextStyle, globalStyles } from '../../styles';
 import { Box, Flex, Heading, HStack, Stack, Text } from '@chakra-ui/react';
+import { DyserfRoutes } from '../../utils';
 
 const Consultancy = () => {
   return (
@@ -42,7 +43,7 @@ const Consultancy = () => {
             width='186px'
             height='56px'
             text='Hire Us'
-            link='mailto:officialdyserf@gmail.com'
+            link={DyserfRoutes.gmail}
             bg='transparent'
             color={globalStyles.secondaryColor}
             border={` 1px solid ${globalStyles.secondaryColor}`}

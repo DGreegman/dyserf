@@ -5,4 +5,5 @@ export class DyserfRoutes {
   static works = '/works';
   static team = '/team';
   static career = '/career';
+  static gmail = 'mailto:officialdyserf@gmail.com';
 }

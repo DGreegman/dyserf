@@ -3,6 +3,7 @@ import { FormControl, Input, Stack, Textarea } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 
 const AboutForm = () => {
+  const border = '1px solid #E3E3E3';
   return (
     <Stack
       as='form'
@@ -15,7 +16,7 @@ const AboutForm = () => {
         <Input
           size='lg'
           bgColor={globalStyles.whiteColor}
-          border='1px solid #E3E3E3'
+          border={border}
           isRequired
           placeholder='Name'
           fontSize={globalStyles.smallTextFontSize}
@@ -23,7 +24,7 @@ const AboutForm = () => {
             fontSize: globalStyles.smallTextFontSize,
           }}
           _focus={{
-            border: '1px solid #E3E3E3',
+            border: { border },
             ring: 0,
           }}
         />
@@ -33,7 +34,7 @@ const AboutForm = () => {
         <Input
           size={'lg'}
           bgColor={globalStyles.whiteColor}
-          border='1px solid #E3E3E3'
+          border={border}
           placeholder='Email'
           type='email'
           fontSize={globalStyles.smallTextFontSize}
@@ -42,7 +43,7 @@ const AboutForm = () => {
           }}
           isRequired
           _focus={{
-            border: '1px solid #E3E3E3',
+            border: border,
             ring: 0,
           }}
         />
@@ -52,7 +53,7 @@ const AboutForm = () => {
         <Textarea
           size='lg'
           bgColor={globalStyles.whiteColor}
-          border='1px solid #E3E3E3'
+          border={border}
           resize='none'
           minH='250px'
           isRequired
@@ -62,7 +63,7 @@ const AboutForm = () => {
             fontSize: globalStyles.smallTextFontSize,
           }}
           _focus={{
-            border: '1px solid #E3E3E3',
+            border: border,
             ring: 0,
           }}
         />

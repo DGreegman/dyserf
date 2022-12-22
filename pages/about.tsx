@@ -13,6 +13,7 @@ import { coreValues } from '../store';
 import { BsTwitter, BsLinkedin, BsFacebook } from 'react-icons/bs';
 import { PageContainer } from '../layout';
 import { AboutForm, Header, RenderLists } from '../components';
+import { DyserfRoutes } from '../utils';
 
 const About = () => {
   // Hooks
@@ -98,9 +99,7 @@ const About = () => {
                 color={globalStyles.secondaryColor}
                 fontSize={globalStyles.textFontSize}
               >
-                <a href='mailto:officialdyserf@gmail.com'>
-                  officialdyserf@gmail.com
-                </a>
+                <a href={DyserfRoutes.gmail}>officialdyserf@gmail.com</a>
               </Text>
 
               <Flex gap={5}>{renderIcons}</Flex>

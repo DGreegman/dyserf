@@ -67,7 +67,7 @@ const Nav = () => {
             width='135px'
             height='44px'
             text='Hire Us'
-            link='mailto:officialdyserf@gmail.com'
+            link={DyserfRoutes.gmail}
           />
         </Box>
 

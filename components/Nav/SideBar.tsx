@@ -106,7 +106,7 @@ const SideBar = () => {
           height='44px'
           text='Hire Us'
           borderRadius='5px'
-          link='mailto:officialdyserf@gmail.com'
+          link={DyserfRoutes.gmail}
         />
       </Box>
     </VStack>

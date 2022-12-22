@@ -3,6 +3,7 @@ import ButtonComp from '../../Button/ButtonComp';
 import { bodyHeaderStyle, bodyTextStyle, globalStyles } from '../../../styles';
 import { Flex, Grid, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 import { servicesArray } from '../../../store';
+import { DyserfRoutes } from '../../../utils';
 
 type Props = {
   background?: string;
@@ -45,7 +46,7 @@ const Services = ({ background }: Props) => {
             width='186px'
             height='56px'
             text='Hire Us'
-            link='mailto:officialdyserf@gmail.com'
+            link={DyserfRoutes.gmail}
             bg={globalStyles.primaryColor}
             color={globalStyles.whiteColor}
           />

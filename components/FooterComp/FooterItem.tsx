@@ -53,7 +53,7 @@ const FooterItem = () => {
             xl: globalStyles.smallTextFontSize,
           }}
           color={globalStyles.whiteColor}
-          lineHeight={'21px'}
+          lineHeight='21px'
         >
           &copy; Dyserf Professional Services. All Rights Reserved
         </Text>
