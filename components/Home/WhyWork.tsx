@@ -54,7 +54,6 @@ const WhyWork = () => {
             <Image
               src={whywork}
               alt={globalStyles.alt}
-              priority
               fill
               style={{ objectFit: 'contain' }}
               quality='100'

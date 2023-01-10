@@ -69,7 +69,7 @@ const SideBar = () => {
       <Flex width={globalStyles.width} align='center' px={4} pt={2}>
         <Link href={DyserfRoutes.homepage}>
           <a style={{ cursor: 'pointer' }} onClick={() => updateShow(false)}>
-            <Image src={logo} alt={globalStyles.alt} priority quality='100' />
+            <Image src={logo} alt={globalStyles.alt}  quality='100' />
           </a>
         </Link>
 
