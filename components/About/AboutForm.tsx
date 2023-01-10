@@ -32,7 +32,7 @@ const AboutForm = () => {
 
       <FormControl>
         <Input
-          size={'lg'}
+          size='lg'
           bgColor={globalStyles.whiteColor}
           border={border}
           placeholder='Email'
