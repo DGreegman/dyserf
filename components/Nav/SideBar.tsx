@@ -70,7 +70,7 @@ const SideBar = () => {
       transition='linear all .3s'
       transform={show ? 'translate(0%)' : 'translate(-100%)'}
       pt={2}
-      pb={5}
+      pb={20}
       px={2}
       boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.05)'
     >
@@ -90,7 +90,7 @@ const SideBar = () => {
           }}
           userSelect='none'
           onClick={() => updateShow(false)}
-          pb={3}
+          pb={1}
         >
           <CloseIcon fontSize='1.25rem' />
         </Center>
