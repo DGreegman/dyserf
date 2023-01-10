@@ -53,7 +53,7 @@ const SideBar = () => {
   return (
     <VStack
       width={globalStyles.width}
-      minHeight='100vh'
+      minHeight='388px'
       position='absolute'
       backgroundColor={globalStyles.whiteColor}
       zIndex={3000}
@@ -62,14 +62,14 @@ const SideBar = () => {
       transition='linear all .3s'
       transform={show ? 'translate(0%)' : 'translate(-100%)'}
       pt={2}
-      pb={20}
+      pb={5}
       px={2}
-      boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.05)'
+      boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.07)'
     >
       <Flex width={globalStyles.width} align='center' px={4} pt={2}>
         <Link href={DyserfRoutes.homepage}>
           <a style={{ cursor: 'pointer' }} onClick={() => updateShow(false)}>
-            <Image src={logo} alt={globalStyles.alt}  quality='100' />
+            <Image src={logo} alt={globalStyles.alt} quality='100' />
           </a>
         </Link>
 
@@ -94,7 +94,6 @@ const SideBar = () => {
         px={4}
         pt={10}
         gap='31px'
-        flex={1}
       >
         {renderNavLinks}
       </Stack>
