@@ -3,7 +3,15 @@ import Image from 'next/future/image';
 import SideBar from './SideBar';
 import logo from '../../assets/images/logo.png';
 import Link from 'next/link';
-import { Box, Flex, HStack, Icon, Spacer, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Center,
+  Flex,
+  HStack,
+  Icon,
+  Spacer,
+  Text,
+} from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { navLinks } from '../../store';
@@ -71,17 +79,16 @@ const Nav = () => {
           />
         </Box>
 
-        <Icon
-          as={FiMenu}
+        <Center
           display={{ base: 'flex', lg: 'none' }}
-          pl={3}
           cursor='pointer'
-          fontSize='2.25rem'
           _active={{
             transform: 'scale(.95)',
           }}
           onClick={() => updateShow(true)}
-        />
+        >
+          <Icon as={FiMenu} fontSize='1.8rem' />
+        </Center>
       </HStack>
 
       <SideBar />
