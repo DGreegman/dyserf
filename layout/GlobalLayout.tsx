@@ -29,11 +29,6 @@ const GlobalLayout = ({ children }: ChildProps) => {
         <meta name='apple-mobile-web-app-title' content='DYSERF' />
       </Head>
 
-      <Script
-        src='https://unpkg.com/aos@2.3.1/dist/aos.js'
-        strategy='beforeInteractive'
-      />
-
       <div
         style={{
           width: globalStyles.width,
