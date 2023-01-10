@@ -95,7 +95,6 @@ const FirePowerItem = ({ item }: Props) => {
             <Image
               src={item.icon}
               alt={item.title}
-              priority
               layout='fill'
               objectFit='cover'
             />

@@ -61,7 +61,6 @@ const Consultancy = () => {
             fill
             style={{ objectFit: 'contain' }}
             quality='100'
-            priority
           />
         </Box>
       </HStack>
