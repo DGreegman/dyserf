@@ -53,7 +53,7 @@ const SideBar = () => {
   return (
     <VStack
       width={globalStyles.width}
-      height='100vh'
+      minHeight='100vh'
       position='absolute'
       backgroundColor={globalStyles.whiteColor}
       zIndex={3000}
@@ -102,7 +102,7 @@ const SideBar = () => {
         width={{ base: '90%', md: '50%' }}
         alignSelf='center'
         position='absolute'
-        bottom={10}
+        bottom={20}
       >
         <ButtonComp
           width={globalStyles.width}
