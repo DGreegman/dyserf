@@ -53,7 +53,7 @@ const SideBar = () => {
   return (
     <VStack
       width={globalStyles.width}
-      minHeight='100vh'
+      minHeight='388px'
       position='absolute'
       backgroundColor={globalStyles.whiteColor}
       zIndex={3000}
