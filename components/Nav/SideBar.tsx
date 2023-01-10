@@ -102,7 +102,7 @@ const SideBar = () => {
         width={{ base: '90%', md: '50%' }}
         alignSelf='center'
         position='absolute'
-        bottom={5}
+        bottom={20}
       >
         <ButtonComp
           width={globalStyles.width}
