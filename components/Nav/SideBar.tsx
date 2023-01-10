@@ -62,7 +62,7 @@ const SideBar = () => {
       transition='linear all .3s'
       transform={show ? 'translate(0%)' : 'translate(-100%)'}
       pt={2}
-      pb={10}
+      pb={5}
       px={2}
       boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.05)'
     >
@@ -90,20 +90,16 @@ const SideBar = () => {
 
       <Stack
         width={globalStyles.width}
-        justify='center'
+        justify='flex-start'
         px={4}
         pt={10}
         gap='31px'
+        flex={1}
       >
         {renderNavLinks}
       </Stack>
 
-      <Box
-        width={{ base: '90%', md: '50%' }}
-        alignSelf='center'
-        position='absolute'
-        bottom={20}
-      >
+      <Box width={{ base: '90%', md: '50%' }} alignSelf='center' pt={10}>
         <ButtonComp
           width={globalStyles.width}
           height='44px'
