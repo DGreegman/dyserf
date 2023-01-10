@@ -31,6 +31,14 @@ const SideBar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLargerThan992]);
 
+  useEffect(() => {
+    const body = document.getElementsByTagName('body');
+    show
+      ? ((body[0].style.overflow = 'hidden'), (body[0].style.height = '100%'))
+      : (body[0].style.overflow = 'auto'),
+      (body[0].style.height = 'auto');
+  }, [show]);
+
   // renders
   const renderNavLinks = navLinks.map(({ path, title }, i) => {
     const isActive = router.pathname.includes(path);
@@ -53,7 +61,7 @@ const SideBar = () => {
   return (
     <VStack
       width={globalStyles.width}
-      minHeight='388px'
+      minHeight='100vh'
       position='absolute'
       backgroundColor={globalStyles.whiteColor}
       zIndex={3000}
