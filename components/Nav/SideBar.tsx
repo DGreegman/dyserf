@@ -90,7 +90,7 @@ const SideBar = () => {
           }}
           userSelect='none'
           onClick={() => updateShow(false)}
-          pb={3}
+          pb={1}
         >
           <CloseIcon fontSize='1.25rem' />
         </Center>
