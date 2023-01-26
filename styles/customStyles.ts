@@ -15,6 +15,7 @@ export const globalStyles = {
   px: { base: 4, xl: 10, '2xl': 0 },
   blackColor: '#110F0F',
   fontFamily: " 'Poppins', sans-serif",
+  className: 'cursor',
   containerWidth: {
     base: '100%',
     xl: '1200px',
@@ -28,6 +29,10 @@ export const globalStyles = {
   },
   alt: 'DYSERF',
   lineHeight: 1.5,
+  gradientBg:
+    'linear-gradient(180deg, rgba(23, 31, 52, 0.25) 0%, rgba(23, 31, 52, 0.25) 100%)',
+  boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.03)',
+  backDropFilter: 'blur(15px)',
 };
 
 export const bodyTextStyle = {

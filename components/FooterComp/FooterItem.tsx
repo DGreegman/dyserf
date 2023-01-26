@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import footerlogo from '../../assets/images//footerlogo.png';
 import { Flex, Text, HStack, Icon, Box } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
+import { logo } from '../../store';
 
 const FooterItem = () => {
   // Renders
@@ -37,7 +37,7 @@ const FooterItem = () => {
               position={'relative'}
             >
               <Image
-                src={footerlogo}
+                src={logo}
                 alt='DYSERF'
                 layout='fill'
                 objectFit='contain'

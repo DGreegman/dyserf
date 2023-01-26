@@ -1,30 +1,31 @@
-import { Button, Link as ChakraLink, Text } from '@chakra-ui/react';
+import { Button, Flex } from '@chakra-ui/react';
+import { ReactElement } from 'react';
 import { globalStyles } from '../../styles';
 
 type Props = {
   text: string;
   width: string;
   height: string;
-  type?: boolean;
+  type?: 'button' | 'submit' | 'reset' | undefined;
   onClick?: () => void;
-  link?: string;
   borderRadius?: string;
   border?: string;
   bg?: string;
   color?: string;
+  rightIcon?: ReactElement;
 };
 
 const ButtonComp = ({
   text,
   width,
   height,
-  link,
   type,
   borderRadius,
   onClick,
   border,
   bg,
   color,
+  rightIcon,
 }: Props) => {
   const style = {
     width: width,
@@ -39,50 +40,26 @@ const ButtonComp = ({
   };
 
   return (
-    <>
-      {link ? (
-        <ChakraLink
-          rel='noopener noreferrer'
-          _hover={{ textDecoration: 'none' }}
-          target='_blank'
-          href={link}
-        >
-          <Button
-            sx={style}
-            _hover={{
-              backgroundColor: bg ?? globalStyles.primaryColor,
-            }}
-            _active={{
-              backgroundColor: bg ?? globalStyles.primaryColor,
-              transform: 'scale(.99)',
-            }}
-            _focus={{
-              backgroundColor: bg ?? globalStyles.primaryColor,
-            }}
-          >
-            <Text>{text}</Text>
-          </Button>
-        </ChakraLink>
-      ) : (
-        <Button
-          sx={style}
-          type={type ? 'submit' : 'button'}
-          onClick={onClick}
-          _hover={{
-            backgroundColor: bg ?? globalStyles.primaryColor,
-          }}
-          _active={{
-            backgroundColor: bg ?? globalStyles.primaryColor,
-            transform: 'scale(.99)',
-          }}
-          _focus={{
-            backgroundColor: bg ?? globalStyles.primaryColor,
-          }}
-        >
-          <Text>{text}</Text>
-        </Button>
-      )}
-    </>
+    <Button
+      sx={style}
+      type={type}
+      onClick={onClick}
+      className='cursor'
+      _hover={{
+        backgroundBlendMode: bg ?? globalStyles.primaryColor,
+      }}
+      _active={{
+        background: bg ?? globalStyles.primaryColor,
+        transform: 'scale(.99)',
+      }}
+      _focus={{
+        background: bg ?? globalStyles.primaryColor,
+      }}
+    >
+      <Flex bgColor='transparent' alignItems='center' className='cursor'>
+        {text} {rightIcon}
+      </Flex>
+    </Button>
   );
 };
 
