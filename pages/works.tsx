@@ -2,7 +2,7 @@ import { PageContainer } from '../layout';
 
 const Works = () => {
   return (
-    <PageContainer>
+    <PageContainer title='Our Works'>
       <h1>Done</h1>
     </PageContainer>
   );

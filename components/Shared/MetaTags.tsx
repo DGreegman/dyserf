@@ -16,7 +16,9 @@ const Metatags = ({ title, description }: Props) => {
 
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
-      <title>{title}</title>
+      <title>
+        {title} - DYSERF - Accelerating innovations & Business Growth
+      </title>
     </Head>
   );
 };
