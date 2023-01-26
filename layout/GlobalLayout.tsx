@@ -1,7 +1,6 @@
 import Aos from 'aos';
 import Head from 'next/head';
-import Script from 'next/script';
-import { Footer, Nav } from '../components';
+import { Nav } from '../components';
 import { ChildProps } from '../models';
 import { globalStyles } from '../styles';
 
@@ -40,7 +39,7 @@ const GlobalLayout = ({ children }: ChildProps) => {
         <Nav />
         {children}
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

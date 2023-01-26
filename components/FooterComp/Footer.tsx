@@ -1,13 +1,7 @@
 import FooterItem from './FooterItem';
-import Subscribe from './Subscribe';
 
 const Footer = () => {
-  return (
-    <>
-      <Subscribe />
-      <FooterItem />
-    </>
-  );
+  return <FooterItem />;
 };
 
 export default Footer;

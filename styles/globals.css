@@ -5,7 +5,13 @@
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  /* scroll-behavior: smooth; */
+  cursor: url('../assets/images/cursor1.png'), auto;
+  background-color: #182341;
+  color: #fff;
+}
+
+.cursor:hover {
+  cursor: url('../assets/images/hovercursor.png'), auto;
 }
 
 ::selection {

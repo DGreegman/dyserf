@@ -37,6 +37,7 @@ const Nav = () => {
             }
             fontSize={globalStyles.textFontSize.base}
             fontWeight={isActive ? globalStyles.mediumbold : 400}
+            className='cursor'
           >
             {item.title}
           </Text>
@@ -48,7 +49,7 @@ const Nav = () => {
   return (
     <Flex
       width={globalStyles.width}
-      bg={globalStyles.whiteColor}
+      bgColor=''
       px={globalStyles.px}
       align='center'
       justifyContent='center'

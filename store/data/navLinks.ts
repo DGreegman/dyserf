@@ -11,15 +11,7 @@ export const navLinks = [
   },
 
   {
-    path: DyserfRoutes.services,
-    title: 'Services',
-  },
-  {
-    path: DyserfRoutes.team,
-    title: 'Team',
-  },
-  {
-    path: DyserfRoutes.career,
-    title: 'Career',
+    path: DyserfRoutes.blog,
+    title: 'Blog',
   },
 ];
