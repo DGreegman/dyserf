@@ -44,7 +44,7 @@ const ButtonComp = ({
       sx={style}
       type={type}
       onClick={onClick}
-      className='cursor'
+      className={globalStyles.className}
       _hover={{
         backgroundBlendMode: bg ?? globalStyles.primaryColor,
       }}
@@ -56,7 +56,11 @@ const ButtonComp = ({
         background: bg ?? globalStyles.primaryColor,
       }}
     >
-      <Flex bgColor='transparent' alignItems='center' className='cursor'>
+      <Flex
+        bgColor='transparent'
+        alignItems='center'
+        className={globalStyles.className}
+      >
         {text} {rightIcon}
       </Flex>
     </Button>

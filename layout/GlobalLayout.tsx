@@ -1,6 +1,7 @@
 import Aos from 'aos';
 import Head from 'next/head';
-import { Nav } from '../components';
+import { Flex } from '@chakra-ui/react';
+import { Footer, Nav } from '../components';
 import { ChildProps } from '../models';
 import { globalStyles } from '../styles';
 
@@ -37,9 +38,11 @@ const GlobalLayout = ({ children }: ChildProps) => {
         }}
       >
         <Nav />
-        {children}
+        <Flex direction='column' width={globalStyles.width} flex={1}>
+          {children}
+        </Flex>
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

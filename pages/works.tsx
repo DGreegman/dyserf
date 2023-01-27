@@ -1,11 +1,5 @@
-import { PageContainer } from '../layout';
-
 const Works = () => {
-  return (
-    <PageContainer title='Our Works'>
-      <h1>Done</h1>
-    </PageContainer>
-  );
+  return <h1>Done</h1>;
 };
 
 export default Works;

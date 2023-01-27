@@ -1,11 +1,5 @@
-import { PageContainer } from '../layout';
-
 const About = () => {
-  return (
-    <PageContainer title='About Us'>
-      <h1>Done</h1>
-    </PageContainer>
-  );
+  return <h1>Done</h1>;
 };
 
 export default About;

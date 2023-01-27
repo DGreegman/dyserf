@@ -1,66 +1,54 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Flex, Text, HStack, Icon, Box } from '@chakra-ui/react';
+import { Text, HStack, Icon, Box } from '@chakra-ui/react';
 import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { logo } from '../../store';
+import { SectionContainer } from '../../layout';
 
 const FooterItem = () => {
   // Renders
   const renderIcons = [FaFacebook, FaTwitter, FaLinkedin].map((item, i) => (
-    <a href='#' key={i}>
-      <Icon
-        as={item}
-        color={globalStyles.whiteColor}
-        fontSize={{ base: globalStyles.smallTextFontSize, xl: '1.25rem' }}
-      />
-    </a>
+    <Box key={i} className={globalStyles.className}>
+      <a href='#'>
+        <Icon
+          as={item}
+          color={globalStyles.whiteColor}
+          fontSize={{ base: globalStyles.smallTextFontSize, xl: '1.25rem' }}
+          className={globalStyles.className}
+        />
+      </a>
+    </Box>
   ));
 
   return (
-    <Flex
-      sx={globalStyles.sectionStyle}
-      backgroundColor={globalStyles.secondaryColor}
-      minHeight={{ base: '50px', xl: '138px' }}
-    >
-      <Flex
-        width={globalStyles.containerWidth}
-        justifyContent='space-between'
-        align='center'
+    <SectionContainer alignItems='center' justifyContent='space-between' py={5}>
+      <Link href={DyserfRoutes.homepage}>
+        <a className={globalStyles.className}>
+          <Image
+            src={logo}
+            alt={globalStyles.alt}
+            priority
+            quality='100'
+            className={globalStyles.className}
+          />
+        </a>
+      </Link>
+
+      <Text
+        fontSize={{
+          base: 9,
+          md: globalStyles.smallTextFontSize,
+          xl: globalStyles.smallTextFontSize,
+        }}
+        color={globalStyles.whiteColor}
       >
-        <Link href={DyserfRoutes.homepage}>
-          <a>
-            <Box
-              width={{ base: '50px', md: '60px', xl: '120px' }}
-              height={{ base: '50px', md: '60px', xl: '120px' }}
-              position={'relative'}
-            >
-              <Image
-                src={logo}
-                alt='DYSERF'
-                layout='fill'
-                objectFit='contain'
-              />
-            </Box>
-          </a>
-        </Link>
+        &copy; Dyserf Professional Services. All Rights Reserved
+      </Text>
 
-        <Text
-          fontSize={{
-            base: 9,
-            md: globalStyles.smallTextFontSize,
-            xl: globalStyles.smallTextFontSize,
-          }}
-          color={globalStyles.whiteColor}
-          lineHeight='21px'
-        >
-          &copy; Dyserf Professional Services. All Rights Reserved
-        </Text>
-
-        <HStack gap={{ base: 1, xl: 5 }}>{renderIcons}</HStack>
-      </Flex>
-    </Flex>
+      <HStack gap={{ base: 1, xl: 5 }}>{renderIcons}</HStack>
+    </SectionContainer>
   );
 };
 
