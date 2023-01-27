@@ -1,6 +1,6 @@
-import ButtonComp from '../Button/ButtonComp';
 import { FormControl, Input, Stack, Textarea } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
+import { ButtonComp } from '../Button';
 
 const AboutForm = () => {
   const border = '1px solid #E3E3E3';
@@ -74,7 +74,7 @@ const AboutForm = () => {
         bg={globalStyles.secondaryColor}
         text='Send Message'
         height='58px'
-        type
+        type='submit'
       />
     </Stack>
   );
