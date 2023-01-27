@@ -110,10 +110,9 @@ const Nav = () => {
         <IconBtn
           aria-label='menu icon'
           onClick={() => updateShow(true)}
-          icon={<FiMenu className='cursor' />}
+          icon={<FiMenu className={globalStyles.className} />}
           display={{ base: 'flex', lg: 'none' }}
           fontSize='1.8rem'
-          className={globalStyles.className}
         />
       </HStack>
 

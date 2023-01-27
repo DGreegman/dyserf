@@ -38,8 +38,11 @@ const SideBar = () => {
           color: globalStyles.primaryColor,
         }}
         onClick={() => updateShow(false)}
+        className={globalStyles.className}
       >
-        <Link href={path}>{title}</Link>
+        <Link href={path} className={globalStyles.className}>
+          {title}
+        </Link>
       </LinkBox>
     );
   });
@@ -71,7 +74,9 @@ const SideBar = () => {
         <IconBtn
           aria-label='menu icon'
           onClick={() => updateShow(false)}
-          icon={<CloseIcon fontSize='1.25rem' />}
+          icon={
+            <CloseIcon fontSize='1.25rem' className={globalStyles.className} />
+          }
           display={{ base: 'flex', lg: 'none' }}
           fontSize='1.8rem'
         />

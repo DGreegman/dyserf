@@ -1,5 +1,6 @@
 import React from 'react';
 import { IconButton, IconButtonProps } from '@chakra-ui/react';
+import { globalStyles } from '../../styles';
 
 interface Props extends IconButtonProps {
   icon: React.ReactElement;
@@ -20,7 +21,7 @@ const IconBtn = ({ icon, onClick, ...rest }: Props) => {
         bgColor: 'transparent',
       }}
       onClick={onClick}
-      className='cursor'
+      className={globalStyles.className}
     />
   );
 };
