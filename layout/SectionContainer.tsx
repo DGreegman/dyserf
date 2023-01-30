@@ -4,12 +4,17 @@ import { globalStyles } from '../styles';
 
 interface Props extends FlexboxProps, BoxProps {
   children: ReactNode;
+  direction?: FlexboxProps['flexDirection'];
 }
 
-const SectionContainer = ({ children, ...rest }: Props) => {
+const SectionContainer = ({ children, direction, ...rest }: Props) => {
   return (
     <Flex sx={globalStyles.sectionStyle}>
-      <Flex width={globalStyles.containerWidth} {...rest}>
+      <Flex
+        width={globalStyles.containerWidth}
+        {...rest}
+        flexDirection={direction ?? 'column'}
+      >
         {children}
       </Flex>
     </Flex>

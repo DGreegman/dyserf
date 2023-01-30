@@ -1,15 +1,19 @@
 export const globalStyles = {
   primaryColor: '#1312C9',
-  textColor: '#323B4B',
   secondaryColor: '#061173',
   goldenColor: '#FFC700',
   whiteColor: '#FFF',
+  textColor: '#EEEEFC',
   smallTextFontSize: '0.8rem',
-  headerFontSize: { base: '1.5rem', xl: '2rem' },
-  textFontSize: { base: '0.8rem', xl: '1rem' },
+  heroHeader: { base: '2rem', xl: '4rem' },
+  cardHeader: { base: '1rem', xl: '1.5rem' },
+  sectionHeader: { base: '1.5rem', xl: '3rem' },
+  textFontSize: '0.88rem',
+  cardText: '0.75rem',
   semibold: 500,
   mediumbold: 600,
   headerFontWeight: 700,
+  bold: 900,
   width: '100%',
   fullHeight: '100vh',
   px: { base: 4, xl: 10, '2xl': 0 },
@@ -33,16 +37,4 @@ export const globalStyles = {
     'linear-gradient(180deg, rgba(23, 31, 52, 0.25) 0%, rgba(23, 31, 52, 0.25) 100%)',
   boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.03)',
   backDropFilter: 'blur(15px)',
-};
-
-export const bodyTextStyle = {
-  color: globalStyles.textColor,
-  fontSize: globalStyles.textFontSize,
-};
-
-export const bodyHeaderStyle = {
-  fontWeight: globalStyles.mediumbold,
-  fontFamily: globalStyles.fontFamily,
-  fontSize: globalStyles.headerFontSize,
-  color: globalStyles.textColor,
 };

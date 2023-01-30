@@ -1,5 +1,5 @@
 import ButtonComp from '../Button/ButtonComp';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import SideBar from './SideBar';
 import Link from 'next/link';
 import hoops from '../../assets/images/hoops.png';
@@ -30,21 +30,20 @@ const Nav = () => {
         justify='center'
         minW='100px'
       >
-        <Link href={item.path}>
-          <a
-            style={{
-              position: isActive ? 'absolute' : 'relative',
-              zIndex: 3000,
-            }}
+        <Link
+          href={item.path}
+          style={{
+            position: isActive ? 'absolute' : 'relative',
+            zIndex: 3000,
+          }}
+        >
+          <Text
+            color={globalStyles.whiteColor}
+            fontSize={globalStyles.textFontSize}
+            className={globalStyles.className}
           >
-            <Text
-              color={globalStyles.whiteColor}
-              fontSize={globalStyles.textFontSize.base}
-              className={globalStyles.className}
-            >
-              {item.title}
-            </Text>
-          </a>
+            {item.title}
+          </Text>
         </Link>
 
         <Box
@@ -73,15 +72,13 @@ const Nav = () => {
     >
       <HStack width={globalStyles.containerWidth}>
         <Link href={DyserfRoutes.homepage}>
-          <a>
-            <Image
-              src={logo}
-              alt={globalStyles.alt}
-              priority
-              quality='100'
-              className={globalStyles.className}
-            />
-          </a>
+          <Image
+            src={logo}
+            alt={globalStyles.alt}
+            priority
+            quality='100'
+            className={globalStyles.className}
+          />
         </Link>
 
         <Spacer />

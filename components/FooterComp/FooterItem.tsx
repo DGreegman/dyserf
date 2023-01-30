@@ -22,17 +22,20 @@ const FooterItem = () => {
   ));
 
   return (
-    <SectionContainer alignItems='center' justifyContent='space-between' py={5}>
+    <SectionContainer
+      alignItems='center'
+      justifyContent='space-between'
+      py={5}
+      direction='row'
+    >
       <Link href={DyserfRoutes.homepage}>
-        <a className={globalStyles.className}>
-          <Image
-            src={logo}
-            alt={globalStyles.alt}
-            priority
-            quality='100'
-            className={globalStyles.className}
-          />
-        </a>
+        <Image
+          src={logo}
+          alt={globalStyles.alt}
+          priority
+          quality='100'
+          className={globalStyles.className}
+        />
       </Link>
 
       <Text

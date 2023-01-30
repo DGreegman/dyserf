@@ -63,10 +63,8 @@ const SideBar = () => {
       boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.07)'
     >
       <Flex width={globalStyles.width} align='center' px={4} pt={2}>
-        <Link href={DyserfRoutes.homepage}>
-          <a onClick={() => updateShow(false)}>
+        <Link href={DyserfRoutes.homepage} onClick={() => updateShow(false)}>
             <Image src={logo} alt={globalStyles.alt} quality='100' />
-          </a>
         </Link>
 
         <Spacer />
