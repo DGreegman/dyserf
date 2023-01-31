@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Text, HStack, Box } from '@chakra-ui/react';
+import { Text, HStack, Box, Flex } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { logo, socialIcons } from '../../store';
-import { SectionContainer } from '../../layout';
 
 const FooterItem = () => {
   // Renders
@@ -22,11 +21,11 @@ const FooterItem = () => {
   ));
 
   return (
-    <SectionContainer
+    <Flex
+      w={globalStyles.width}
       alignItems='center'
       justifyContent='space-between'
       py={5}
-      direction='row'
     >
       <Link href={DyserfRoutes.homepage}>
         <Image
@@ -41,8 +40,8 @@ const FooterItem = () => {
       <Text
         fontSize={{
           base: 10,
-          md: globalStyles.smallTextFontSize,
-          xl: globalStyles.smallTextFontSize,
+          md: globalStyles.textFontSize,
+          xl: globalStyles.textFontSize,
         }}
         color={globalStyles.whiteColor}
         textAlign='center'
@@ -52,7 +51,7 @@ const FooterItem = () => {
       </Text>
 
       <HStack gap={{ base: 3, xl: 5 }}>{renderIcons}</HStack>
-    </SectionContainer>
+    </Flex>
   );
 };
 

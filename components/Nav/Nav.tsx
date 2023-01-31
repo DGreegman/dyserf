@@ -67,7 +67,6 @@ const Nav = () => {
       position='fixed'
       py={{ base: 3, xl: 4 }}
       zIndex={3000}
-      border='2px solid red'
     >
       <HStack width={globalStyles.containerWidth}>
         <Link href={DyserfRoutes.homepage}>

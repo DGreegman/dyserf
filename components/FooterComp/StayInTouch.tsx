@@ -5,7 +5,6 @@ import {
   InputGroup,
   InputLeftElement,
 } from '@chakra-ui/react';
-import { SectionContainer } from '../../layout';
 import { globalStyles } from '../../styles';
 import { CustomBtn } from '../Button';
 import { DescriptionText, SectionHeader } from '../Shared';
@@ -13,7 +12,8 @@ import { IoMdMail } from 'react-icons/io';
 
 const StayInTouch = () => {
   return (
-    <SectionContainer
+    <Flex
+      w={globalStyles.width}
       background='linear-gradient(180deg, rgba(23, 31, 52, 0.44) 0%, rgba(23, 31, 52, 0.44) 100%)'
       boxShadow={globalStyles.boxShadow}
       borderRadius={20}
@@ -21,6 +21,8 @@ const StayInTouch = () => {
       border='1px solid'
       borderColor='gray.700'
       className='addBorder'
+      align='center'
+      justify='center'
     >
       <Flex
         maxW='596px'
@@ -73,7 +75,7 @@ const StayInTouch = () => {
           />
         </Flex>
       </Flex>
-    </SectionContainer>
+    </Flex>
   );
 };
 
