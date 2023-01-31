@@ -42,7 +42,7 @@ const StayInTouch = () => {
           maxW='426px'
           minH='40px'
           border='1px solid rgba(138, 148, 166, 0.2)'
-          borderRadius={5}
+          borderRadius={globalStyles.radius}
           align='center'
           pl='0.5'
         >

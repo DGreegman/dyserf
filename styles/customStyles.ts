@@ -2,7 +2,7 @@ export const globalStyles = {
   primaryColor: '#1312C9',
   bgColor: '#1312C9',
   secondaryColor: '#061173',
-  goldenColor: '#FFC700',
+  whiteB: '#EEF4FC',
   whiteColor: '#FFF',
   headerTextColor: '#EEEEFC',
   textColor: '#EBF8FE',
@@ -39,4 +39,5 @@ export const globalStyles = {
   boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.03)',
   backDropFilter: 'blur(15px)',
   buttonGradient: 'linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)',
+  radius: 5,
 };

@@ -30,7 +30,7 @@ const CustomBtn = ({
   const style = {
     width: width,
     height: height,
-    borderRadius: borderRadius ?? '5px',
+    borderRadius: borderRadius ?? globalStyles.radius,
     padding: '10px',
     bg: bg ?? globalStyles.bgColor,
     color: color ?? globalStyles.whiteColor,
