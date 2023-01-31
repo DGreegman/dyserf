@@ -20,7 +20,6 @@ const StayInTouch = () => {
       border='1px solid'
       minH='365px'
       borderColor='gray.700'
-      className='addBorder'
       align='center'
       justify='center'
     >

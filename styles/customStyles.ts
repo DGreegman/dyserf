@@ -36,7 +36,7 @@ export const globalStyles = {
   lineHeight: 1.5,
   gradientBg:
     'linear-gradient(180deg, rgba(23, 31, 52, 0.25) 0%, rgba(23, 31, 52, 0.25) 100%)',
-  boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.03)',
+  boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.05)',
   backDropFilter: 'blur(15px)',
   buttonGradient: 'linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)',
   radius: 5,
