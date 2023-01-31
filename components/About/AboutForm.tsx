@@ -1,6 +1,6 @@
 import { FormControl, Input, Stack, Textarea } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
-import { ButtonComp } from '../Button';
+import { CustomBtn } from '../Button';
 
 const AboutForm = () => {
   const border = '1px solid #E3E3E3';
@@ -19,9 +19,9 @@ const AboutForm = () => {
           border={border}
           isRequired
           placeholder='Name'
-          fontSize={globalStyles.smallTextFontSize}
+          fontSize={globalStyles.textFontSize}
           _placeholder={{
-            fontSize: globalStyles.smallTextFontSize,
+            fontSize: globalStyles.textFontSize,
           }}
           _focus={{
             border: { border },
@@ -37,9 +37,9 @@ const AboutForm = () => {
           border={border}
           placeholder='Email'
           type='email'
-          fontSize={globalStyles.smallTextFontSize}
+          fontSize={globalStyles.textFontSize}
           _placeholder={{
-            fontSize: globalStyles.smallTextFontSize,
+            fontSize: globalStyles.textFontSize,
           }}
           isRequired
           _focus={{
@@ -58,9 +58,9 @@ const AboutForm = () => {
           minH='250px'
           isRequired
           placeholder='Message'
-          fontSize={globalStyles.smallTextFontSize}
+          fontSize={globalStyles.textFontSize}
           _placeholder={{
-            fontSize: globalStyles.smallTextFontSize,
+            fontSize: globalStyles.textFontSize,
           }}
           _focus={{
             border: border,
@@ -69,7 +69,7 @@ const AboutForm = () => {
         />
       </FormControl>
 
-      <ButtonComp
+      <CustomBtn
         width={globalStyles.width}
         bg={globalStyles.secondaryColor}
         text='Send Message'
