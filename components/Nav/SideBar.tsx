@@ -16,7 +16,7 @@ import { navLinks } from '../../store';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { useSideBar } from '../../context';
-import { ButtonComp, IconBtn } from '../Button';
+import { CustomBtn, IconBtn } from '../Button';
 
 const SideBar = () => {
   // Hooks
@@ -64,7 +64,7 @@ const SideBar = () => {
     >
       <Flex width={globalStyles.width} align='center' px={4} pt={2}>
         <Link href={DyserfRoutes.homepage} onClick={() => updateShow(false)}>
-            <Image src={logo} alt={globalStyles.alt} quality='100' />
+          <Image src={logo} alt={globalStyles.alt} quality='100' />
         </Link>
 
         <Spacer />
@@ -91,11 +91,11 @@ const SideBar = () => {
       </Stack>
 
       <Box pt='50px' pl={4}>
-        <ButtonComp
+        <CustomBtn
           width='140px'
           height='47px'
           text='Let’s Collab'
-          bg='linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)'
+          bg={globalStyles.buttonGradient}
           rightIcon={
             <ArrowForwardIcon
               bgColor='transparent'

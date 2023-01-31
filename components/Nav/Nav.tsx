@@ -1,4 +1,3 @@
-import ButtonComp from '../Button/ButtonComp';
 import Image from 'next/image';
 import SideBar from './SideBar';
 import Link from 'next/link';
@@ -11,7 +10,7 @@ import { useRouter } from 'next/router';
 import { FiMenu } from 'react-icons/fi';
 import { useSideBar } from '../../context';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { IconBtn } from '../Button';
+import { CustomBtn, IconBtn } from '../Button';
 
 const Nav = () => {
   // Hooks
@@ -62,13 +61,13 @@ const Nav = () => {
       width={globalStyles.width}
       bgColor={globalStyles.gradientBg}
       px={globalStyles.px}
-      backdropFilter={globalStyles.backDropFilter}
       shadow={globalStyles.boxShadow}
       align='center'
       justifyContent='center'
       position='fixed'
       py={{ base: 3, xl: 4 }}
       zIndex={3000}
+      border='2px solid red'
     >
       <HStack width={globalStyles.containerWidth}>
         <Link href={DyserfRoutes.homepage}>
@@ -88,7 +87,7 @@ const Nav = () => {
         </Flex>
 
         <Box display={{ base: 'none', lg: 'flex' }}>
-          <ButtonComp
+          <CustomBtn
             width='140px'
             height='47px'
             text='Let’s Collab'

@@ -7,7 +7,7 @@ export const HeroHeader = ({ children, ...rest }: HeadingProps) => {
       fontFamily={globalStyles.fontFamily}
       fontWeight={globalStyles.headerFontWeight}
       lineHeight={globalStyles.lineHeight}
-      color={globalStyles.textColor}
+      color={globalStyles.headerTextColor}
       fontSize={globalStyles.heroHeader}
       {...rest}
     >
@@ -21,10 +21,11 @@ export const SectionHeader = ({ children, ...rest }: HeadingProps) => {
     <Heading
       fontFamily={globalStyles.fontFamily}
       fontWeight={globalStyles.bold}
-      fontSize='3rem'
       lineHeight={globalStyles.lineHeight}
+      color={globalStyles.headerTextColor}
+      fontSize={globalStyles.sectionHeader}
       letterSpacing='0.015em'
-      color={globalStyles.textColor}
+      bg='transparent'
       textAlign='center'
       {...rest}
     >
@@ -38,9 +39,9 @@ export const CardHeader = ({ children, ...rest }: HeadingProps) => {
     <Heading
       fontFamily={globalStyles.fontFamily}
       fontWeight={globalStyles.semibold}
-      lineHeight='48px'
-      color={globalStyles.textColor}
+      color={globalStyles.headerTextColor}
       fontSize={globalStyles.cardHeader}
+      lineHeight='48px'
       {...rest}
     >
       {children}

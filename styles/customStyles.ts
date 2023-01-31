@@ -1,10 +1,11 @@
 export const globalStyles = {
   primaryColor: '#1312C9',
+  bgColor: '#1312C9',
   secondaryColor: '#061173',
   goldenColor: '#FFC700',
   whiteColor: '#FFF',
-  textColor: '#EEEEFC',
-  smallTextFontSize: '0.8rem',
+  headerTextColor: '#EEEEFC',
+  textColor: '#EBF8FE',
   heroHeader: { base: '2rem', xl: '4rem' },
   cardHeader: { base: '1rem', xl: '1.5rem' },
   sectionHeader: { base: '1.5rem', xl: '3rem' },
@@ -22,7 +23,7 @@ export const globalStyles = {
   className: 'cursor',
   containerWidth: {
     base: '100%',
-    xl: '1200px',
+    xl: '1240px',
     '2xl': '1450px',
   },
   sectionStyle: {
@@ -37,4 +38,5 @@ export const globalStyles = {
     'linear-gradient(180deg, rgba(23, 31, 52, 0.25) 0%, rgba(23, 31, 52, 0.25) 100%)',
   boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.03)',
   backDropFilter: 'blur(15px)',
+  buttonGradient: 'linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)',
 };

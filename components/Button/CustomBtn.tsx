@@ -15,7 +15,7 @@ type Props = {
   rightIcon?: ReactElement;
 };
 
-const ButtonComp = ({
+const CustomBtn = ({
   text,
   width,
   height,
@@ -32,10 +32,10 @@ const ButtonComp = ({
     height: height,
     borderRadius: borderRadius ?? '5px',
     padding: '10px',
-    bg: bg ?? globalStyles.primaryColor,
+    bg: bg ?? globalStyles.bgColor,
     color: color ?? globalStyles.whiteColor,
-    fontSize: globalStyles.smallTextFontSize,
-    fontWeight: globalStyles.mediumbold,
+    fontSize: globalStyles.textFontSize,
+    fontWeight: globalStyles.semibold,
     border: border ?? 'none',
   };
 
@@ -46,14 +46,14 @@ const ButtonComp = ({
       onClick={onClick}
       className={globalStyles.className}
       _hover={{
-        backgroundBlendMode: bg ?? globalStyles.primaryColor,
+        background: bg ?? globalStyles.bgColor,
       }}
       _active={{
-        background: bg ?? globalStyles.primaryColor,
+        background: bg ?? globalStyles.bgColor,
         transform: 'scale(.99)',
       }}
       _focus={{
-        background: bg ?? globalStyles.primaryColor,
+        background: bg ?? globalStyles.bgColor,
       }}
     >
       <Flex
@@ -67,4 +67,4 @@ const ButtonComp = ({
   );
 };
 
-export default ButtonComp;
+export default CustomBtn;
