@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import { Box, Flex, GridItem, Stack } from '@chakra-ui/react';
+import { Box, Flex, Stack } from '@chakra-ui/react';
 import { WorkModel } from '../../../models';
-import { globalStyles } from '../../../styles';
-import { CardHeader, CardText } from '../../Shared';
+import { CardHeader, CardText, DifferentBg } from '../../Shared';
 
 type Props = {
   item: WorkModel;
@@ -10,18 +9,14 @@ type Props = {
 
 const WorkCard = ({ item }: Props) => {
   return (
-    <GridItem
-      key={item.id}
-      rounded={10}
-      minHeight='392px'
-      maxW={globalStyles.width}
-      p={5}
-      alignItems='center'
-      justifyContent='center'
-      display='flex'
-      className={globalStyles.diffBg}
+    <DifferentBg
+      flexProps={{
+        align: 'center',
+        justify: 'center',
+      }}
+      minH='340px'
     >
-      <Flex align='center' justifyContent='center' bg='transparent' gap={5}>
+      <Flex align='center' bg='transparent' gap={5}>
         <Stack bg='transparent'>
           <CardHeader>Vobb</CardHeader>
           <CardText>
@@ -36,10 +31,15 @@ const WorkCard = ({ item }: Props) => {
           position='relative'
           bg='transparent'
         >
-          <Image fill src={item.icon} alt={item.header} />
+          <Image
+            fill
+            src={item.icon}
+            alt={item.header}
+            style={{ borderRadius: 10 }}
+          />
         </Box>
       </Flex>
-    </GridItem>
+    </DifferentBg>
   );
 };
 

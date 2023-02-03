@@ -2,7 +2,6 @@ import { StaticImageData } from 'next/image';
 import { IconType } from 'react-icons/lib';
 
 export interface WorkModel {
-  title: string;
   header: string;
   description: string;
   id: number;
