@@ -3,6 +3,7 @@ export const globalStyles = {
   bgColor: '#1312C9',
   secondaryColor: '#061173',
   whiteB: '#EEF4FC',
+  diffBgColor: '#172038',
   whiteColor: '#FFF',
   headerTextColor: '#EEEEFC',
   textColor: '#EBF8FE',
@@ -22,7 +23,7 @@ export const globalStyles = {
   fontFamily: " 'Poppins', sans-serif",
   className: 'cursor',
   // This below is for different bg Items
-  diffBg: 'diffBg',
+  diffBg: 'wrapper',
   comingSoon: 'soon',
   containerWidth: {
     base: '100%',
@@ -36,7 +37,7 @@ export const globalStyles = {
     justifyContent: 'center',
   },
   alt: 'DYSERF',
-  lineHeight: 1.5,
+  lineHeight: 1.4,
   gradientBg:
     'linear-gradient(180deg, rgba(23, 31, 52, 0.25) 0%, rgba(23, 31, 52, 0.25) 100%)',
   boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.05)',

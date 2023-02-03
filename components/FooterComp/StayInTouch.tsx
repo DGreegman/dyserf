@@ -7,19 +7,17 @@ import {
 } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { CustomBtn } from '../Button';
-import { DescriptionText, SectionHeader } from '../Shared';
+import { DescriptionText, DifferentBg, SectionHeader } from '../Shared';
 import { IoMdMail } from 'react-icons/io';
 
 const StayInTouch = () => {
   return (
-    <Flex
-      w={globalStyles.width}
-      boxShadow={globalStyles.boxShadow}
-      borderRadius={20}
-      minH='365px'
-      align='center'
-      justify='center'
-      className={globalStyles.diffBg}
+    <DifferentBg
+      w='full'
+      flexProps={{
+        align: 'center',
+        justify: 'center',
+      }}
     >
       <Flex
         maxW='596px'
@@ -71,7 +69,7 @@ const StayInTouch = () => {
           />
         </Flex>
       </Flex>
-    </Flex>
+    </DifferentBg>
   );
 };
 

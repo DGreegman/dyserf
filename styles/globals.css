@@ -20,18 +20,23 @@ body {
   cursor: url('../assets/images/hovercursor.png'), auto;
 }
 
-.soon:hover{
-   cursor: url('../assets/images/soon.png'), auto;
+.soon:hover {
+  cursor: url('../assets/images/soon.png'), auto;
 }
 
-
-.diffBg {
+/* For sections and cards */
+.wrapper {
   background: linear-gradient(
     180deg,
-    rgba(23, 31, 52, 0.44) 0%,
-    rgba(23, 31, 52, 0.44) 100%
+    rgba(243, 238, 245, 0.072) 0%,
+    rgba(254, 254, 255, 0.064) 100%
   );
-  border: 1px solid rgba(138, 148, 166, 0.1);
-  box-shadow: 2px 2px 100px 50px rgba(0, 0, 0, 0.03);
-  backdrop-filter: blur(25px);
+  padding: 1px;
+}
+
+/* For buttons */
+.module-border-wrap {
+  background: linear-gradient(269.49deg, #ad00ff -13.36%, #182dea 73.24%);
+  padding: 2px;
+  border-radius: 5px;
 }
