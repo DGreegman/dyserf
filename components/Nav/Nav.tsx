@@ -86,20 +86,22 @@ const Nav = () => {
         </Flex>
 
         <Box display={{ base: 'none', lg: 'flex' }}>
-          <CustomBtn
-            width='140px'
-            height='47px'
-            text='Let’s Collab'
-            bg='linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)'
-            rightIcon={
-              <ArrowForwardIcon
-                bgColor='transparent'
-                ml={1}
-                fontSize='1.15rem'
-                className={globalStyles.className}
-              />
-            }
-          />
+          <Link href={DyserfRoutes.sendMessage}>
+            <CustomBtn
+              width='140px'
+              height='47px'
+              text='Let’s Collab'
+              bg={globalStyles.buttonGradient}
+              rightIcon={
+                <ArrowForwardIcon
+                  bgColor='transparent'
+                  ml={1}
+                  fontSize='1.15rem'
+                  className={globalStyles.className}
+                />
+              }
+            />
+          </Link>
         </Box>
 
         <IconBtn

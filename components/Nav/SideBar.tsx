@@ -91,20 +91,22 @@ const SideBar = () => {
       </Stack>
 
       <Box pt='50px' pl={4}>
-        <CustomBtn
-          width='140px'
-          height='47px'
-          text='Let’s Collab'
-          bg={globalStyles.buttonGradient}
-          rightIcon={
-            <ArrowForwardIcon
-              bgColor='transparent'
-              ml={1}
-              fontSize='1.15rem'
-              className='cursor'
-            />
-          }
-        />
+        <Link href={DyserfRoutes.sendMessage}>
+          <CustomBtn
+            width='140px'
+            height='47px'
+            text='Let’s Collab'
+            bg={globalStyles.buttonGradient}
+            rightIcon={
+              <ArrowForwardIcon
+                bgColor='transparent'
+                ml={1}
+                fontSize='1.15rem'
+                className='cursor'
+              />
+            }
+          />
+        </Link>
       </Box>
     </VStack>
   );
