@@ -4,9 +4,12 @@ import { Flex } from '@chakra-ui/react';
 import { Footer, Nav } from '../components';
 import { ChildProps } from '../models';
 import { globalStyles } from '../styles';
+import { useRouter } from 'next/router';
+import { DyserfRoutes } from '../utils';
 
 const GlobalLayout = ({ children }: ChildProps) => {
   typeof window !== 'undefined' && Aos.init();
+  const route = useRouter();
 
   return (
     <>
@@ -49,7 +52,7 @@ const GlobalLayout = ({ children }: ChildProps) => {
         >
           {children}
         </Flex>
-        <Footer />
+        <Footer showStay={route.pathname !== DyserfRoutes.sendMessage} />
       </div>
     </>
   );
