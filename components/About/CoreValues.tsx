@@ -1,8 +1,7 @@
-import AboutCard from './AboutCard';
 import { Grid, GridItem, Stack } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { coreValues } from '../../store';
-import { DescriptionText, SectionHeader } from '../Shared';
+import { DescCard, DescriptionText, SectionHeader } from '../Shared';
 
 const CoreValues = () => {
   const renderValues = coreValues.map((e) => (
@@ -12,7 +11,7 @@ const CoreValues = () => {
       maxH={e.isDouble ? '473px' : '180px'}
       rowSpan={e.isDouble ? 2 : 1}
     >
-      <AboutCard {...e} minH={e.isDouble ? '100%' : '180px'} radius={10} />
+      <DescCard {...e} minH={e.isDouble ? '100%' : '180px'} radius={10} />
     </GridItem>
   ));
 

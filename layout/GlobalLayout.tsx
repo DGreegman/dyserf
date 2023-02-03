@@ -48,7 +48,7 @@ const GlobalLayout = ({ children }: ChildProps) => {
           flex={1}
           pt={20}
           pb='170px'
-          gap='170px'
+          gap='150px'
         >
           {children}
         </Flex>

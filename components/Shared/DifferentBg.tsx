@@ -17,7 +17,6 @@ const DifferentBg = ({ children, flexProps, ...rest }: Props) => {
     >
       <Flex
         w={globalStyles.width}
-        minH='full'
         direction='column'
         borderRadius={rest.borderRadius ?? 20}
         background={globalStyles.diffBgColor}

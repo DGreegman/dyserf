@@ -1,10 +1,10 @@
-import AboutCard from './AboutCard';
 import { Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { visionCards } from '../../store';
+import { DescCard } from '../Shared';
 
 const Visions = () => {
-  const renderCards = visionCards.map((e) => <AboutCard {...e} key={e.id} />);
+  const renderCards = visionCards.map((e) => <DescCard {...e} key={e.id} />);
 
   return (
     <SectionContainer>

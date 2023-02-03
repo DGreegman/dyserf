@@ -12,7 +12,7 @@ const HomeWork = () => {
   const renderWorksItem = workItems.map((e) => <TagCard key={e}>{e}</TagCard>);
 
   return (
-    <SectionContainer gap='50px' position='relative' pt='120px'>
+    <SectionContainer gap='50px' position='relative'>
       <Stack>
         <SectionHeader>Our works</SectionHeader>
         <DescriptionText>
