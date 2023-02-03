@@ -21,6 +21,9 @@ export const globalStyles = {
   blackColor: '#110F0F',
   fontFamily: " 'Poppins', sans-serif",
   className: 'cursor',
+  // This below is for different bg Items
+  diffBg: 'diffBg',
+  comingSoon: 'soon',
   containerWidth: {
     base: '100%',
     xl: '1240px',

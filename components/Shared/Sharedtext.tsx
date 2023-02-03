@@ -7,7 +7,7 @@ export const DescriptionText = ({ children, ...rest }: TextProps) => {
       {...rest}
       fontSize={globalStyles.textFontSize}
       color={globalStyles.textColor}
-      textAlign='center'
+      lineHeight={1.7}
       opacity={0.8}
       bg='transparent'
     >
@@ -19,8 +19,9 @@ export const CardText = ({ children, ...rest }: TextProps) => {
   return (
     <Text
       {...rest}
-      fontSize={globalStyles.textFontSize}
+      fontSize={globalStyles.cardText}
       color={globalStyles.textColor}
+      lineHeight={1.8}
       opacity={0.8}
       bg='transparent'
     >

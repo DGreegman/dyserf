@@ -9,6 +9,7 @@ export const HeroHeader = ({ children, ...rest }: HeadingProps) => {
       lineHeight={globalStyles.lineHeight}
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.heroHeader}
+      bg='transparent'
       {...rest}
     >
       {children}
@@ -42,6 +43,7 @@ export const CardHeader = ({ children, ...rest }: HeadingProps) => {
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.cardHeader}
       lineHeight='48px'
+      bg='transparent'
       {...rest}
     >
       {children}

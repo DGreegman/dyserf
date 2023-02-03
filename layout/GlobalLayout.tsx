@@ -38,7 +38,13 @@ const GlobalLayout = ({ children }: ChildProps) => {
         }}
       >
         <Nav />
-        <Flex direction='column' width={globalStyles.width} flex={1}>
+        <Flex
+          direction='column'
+          width={globalStyles.width}
+          alignItems='center'
+          flex={1}
+          pt={20}
+        >
           {children}
         </Flex>
 

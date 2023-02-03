@@ -11,11 +11,27 @@ body {
   color: #fff;
 }
 
+::selection {
+  background-color: #061173;
+  color: #fff;
+}
+
 .cursor:hover {
   cursor: url('../assets/images/hovercursor.png'), auto;
 }
 
-::selection {
-  background-color: #061173;
-  color: #fff;
+.soon:hover{
+   cursor: url('../assets/images/soon.png'), auto;
+}
+
+
+.diffBg {
+  background: linear-gradient(
+    180deg,
+    rgba(23, 31, 52, 0.44) 0%,
+    rgba(23, 31, 52, 0.44) 100%
+  );
+  border: 1px solid rgba(138, 148, 166, 0.1);
+  box-shadow: 2px 2px 100px 50px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(25px);
 }

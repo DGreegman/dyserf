@@ -14,14 +14,12 @@ const StayInTouch = () => {
   return (
     <Flex
       w={globalStyles.width}
-      background='linear-gradient(180deg, rgba(23, 31, 52, 0.44) 0%, rgba(23, 31, 52, 0.44) 100%)'
       boxShadow={globalStyles.boxShadow}
       borderRadius={20}
-      border='1px solid'
       minH='365px'
-      borderColor='gray.700'
       align='center'
       justify='center'
+      className={globalStyles.diffBg}
     >
       <Flex
         maxW='596px'
@@ -32,7 +30,7 @@ const StayInTouch = () => {
       >
         <SectionHeader>Stay in touch</SectionHeader>
 
-        <DescriptionText pb={3}>
+        <DescriptionText pb={3} textAlign='center'>
           You can always stay in touch to get events, updates, information and
           also chat with us by sending us a mail.
         </DescriptionText>
