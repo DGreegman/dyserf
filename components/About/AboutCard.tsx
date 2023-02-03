@@ -9,8 +9,16 @@ interface Props {
 
 const AboutCard = ({ icon, cardHeader, cardText }: Props) => {
   return (
-    <DifferentBg w='502px'>
-      {icon && <Image src={icon} alt='bulb' />}
+    <DifferentBg minH='226px'>
+      {icon && (
+        <Image
+          src={icon}
+          alt='bulb'
+          style={{
+            background: 'transparent',
+          }}
+        />
+      )}
       <CardHeader>{cardHeader}</CardHeader>
       <CardText>{cardText}</CardText>
     </DifferentBg>
