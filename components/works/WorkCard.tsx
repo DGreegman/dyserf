@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { Box, Flex, Stack } from '@chakra-ui/react';
-import { WorkModel } from '../../../models';
-import { CardHeader, CardText, DifferentBg } from '../../Shared';
+import { Box, CardHeader, Flex, Stack } from '@chakra-ui/react';
+import { WorkModel } from '../../models';
+import { DifferentBg, CardText } from '../Shared';
 
 type Props = {
   item: WorkModel;

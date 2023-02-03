@@ -44,10 +44,11 @@ const GlobalLayout = ({ children }: ChildProps) => {
           alignItems='center'
           flex={1}
           pt={20}
+          pb='170px'
+          gap='170px'
         >
           {children}
         </Flex>
-
         <Footer />
       </div>
     </>

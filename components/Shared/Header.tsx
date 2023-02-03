@@ -44,7 +44,7 @@ export const CardHeader = ({ children, ...rest }: HeadingProps) => {
       fontWeight={globalStyles.semibold}
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.cardHeader}
-      lineHeight='48px'
+      lineHeight={1.4}
       bg='transparent'
       {...rest}
     >

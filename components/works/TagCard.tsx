@@ -1,5 +1,5 @@
 import { Center, CenterProps } from '@chakra-ui/react';
-import { globalStyles } from '../../../styles';
+import { globalStyles } from '../../styles';
 
 const TagCard = ({ children, ...rest }: CenterProps) => {
   return (

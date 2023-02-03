@@ -6,7 +6,7 @@ import { DescriptionText, HeroHeader } from '../Shared';
 
 const AboutHero = () => {
   return (
-    <SectionContainer pt='120px' pb='200px' gap={5}>
+    <SectionContainer pt='120px' gap={5}>
       <HeroHeader maxW='1031px'>
         Demystifying Service Functionalities(Dyserf)
       </HeroHeader>

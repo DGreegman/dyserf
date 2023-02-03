@@ -1,5 +1,11 @@
+import { Workhero } from '../components';
+
 const Works = () => {
-  return <h1>Done</h1>;
+  return (
+    <>
+      <Workhero />
+    </>
+  );
 };
 
 export default Works;

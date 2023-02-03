@@ -11,7 +11,7 @@ export const globalStyles = {
   cardHeader: { base: '1rem', xl: '1.5rem' },
   sectionHeader: { base: '1.5rem', xl: '3rem' },
   textFontSize: '0.88rem',
-  cardText: '0.75rem',
+  cardText: '0.8rem',
   semibold: 500,
   mediumbold: 600,
   headerFontWeight: 700,

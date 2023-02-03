@@ -15,6 +15,8 @@ export const DescriptionText = ({ children, ...rest }: TextProps) => {
     </Text>
   );
 };
+
+
 export const CardText = ({ children, ...rest }: TextProps) => {
   return (
     <Text

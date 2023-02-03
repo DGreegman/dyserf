@@ -11,14 +11,15 @@ const DifferentBg = ({ children, flexProps, ...rest }: Props) => {
       boxShadow={globalStyles.boxShadow}
       className={globalStyles.diffBg}
       minH={rest.minH ?? '356px'}
-      borderRadius={20}
+      borderRadius={rest.borderRadius ?? 20}
+      display='flex'
       {...rest}
     >
       <Flex
         w={globalStyles.width}
         minH='full'
         direction='column'
-        borderRadius={20}
+        borderRadius={rest.borderRadius ?? 20}
         background={globalStyles.diffBgColor}
         p={4}
         {...flexProps}
