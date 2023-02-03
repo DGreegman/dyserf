@@ -1,5 +1,11 @@
+import { HomeWork } from '../components';
+
 const Home = () => {
-  return <></>;
+  return (
+    <>
+      <HomeWork />
+    </>
+  );
 };
 
 export default Home;
