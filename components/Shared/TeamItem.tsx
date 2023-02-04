@@ -15,7 +15,6 @@ const TeamItem = ({ team }: Props) => {
 
   return (
     <Stack
-      minHeight='290px'
       borderRadius={10}
       align='center'
       gap={2}
@@ -41,9 +40,7 @@ const TeamItem = ({ team }: Props) => {
         />
       </Box>
 
-      <CardHeader fontWeight={globalStyles.headerFontWeight - 100}>
-        {team.name}
-      </CardHeader>
+      <CardHeader fontWeight={globalStyles.mediumbold}>{team.name}</CardHeader>
 
       <CardText color={globalStyles.textColor} textAlign='center'>
         {team.position}
