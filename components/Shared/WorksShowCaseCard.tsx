@@ -22,7 +22,7 @@ const WorksShowCaseCard = () => {
   return (
     <>
       <Grid
-        templateColumns='repeat(2,1fr)'
+        templateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}
         columnGap={6}
         bg='transparent'
         rowGap='54px'

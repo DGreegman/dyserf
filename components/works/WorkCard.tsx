@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Box, Flex, Stack } from '@chakra-ui/react';
 import { WorkModel } from '../../models';
 import { DifferentBg, CardText, CardHeader } from '../Shared';
+import { globalStyles } from '../../styles';
 
 type Props = {
   item: WorkModel;
@@ -16,8 +17,13 @@ const WorkCard = ({ item }: Props) => {
       }}
       minH='340px'
     >
-      <Flex align='center' bg='transparent' gap={5}>
-        <Stack bg='transparent' width='50%'>
+      <Flex
+        align='center'
+        bg='transparent'
+        gap={5}
+        direction={{ base: 'column', xl: 'row' }}
+      >
+        <Stack bg='transparent' width={{ base: globalStyles.width, md: '50%' }}>
           <CardHeader>Vobb</CardHeader>
           <CardText>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
@@ -27,7 +33,7 @@ const WorkCard = ({ item }: Props) => {
 
         <Box
           height='278px'
-          width={{ base: '90%', md: '50%' }}
+          width={{ base: globalStyles.width, md: '50%' }}
           position='relative'
           bg='transparent'
         >
