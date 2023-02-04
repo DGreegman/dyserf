@@ -4,6 +4,7 @@ import {
   ListOfCompanies,
   WhatWeOffer,
 } from '../components';
+import FeedBack from '../components/Shared/FeedBack';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <ListOfCompanies />
       <WhatWeOffer />
       <HomeWork />
+      <FeedBack />
     </>
   );
 };

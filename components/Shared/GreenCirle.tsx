@@ -1,8 +1,17 @@
 import { Center } from '@chakra-ui/react';
+interface Props {
+  width?: string;
+  height?: string;
+}
 
-const GreenCirle = () => {
+const GreenCirle = ({ width, height }: Props) => {
   return (
-    <Center width='80px' height='80px' borderRadius='40px' bgColor='#0CBC8B' />
+    <Center
+      width={width ?? '80px'}
+      height={height ?? '80px'}
+      borderRadius='full'
+      bgColor='#0CBC8B'
+    />
   );
 };
 
