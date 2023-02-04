@@ -17,7 +17,6 @@ const WhatWeOffer = () => {
       w='full'
       borderRadius={0}
       flexProps={{ align: 'center', gap: '50px' }}
-      //   Remove later
       minH='488px'
     >
       <Stack bg='transparent' pt='40px' pb='30px'>
