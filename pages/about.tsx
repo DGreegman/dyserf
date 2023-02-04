@@ -1,4 +1,4 @@
-import { AboutHero, CoreValues, Visions } from '../components';
+import { AboutHero, CoreValues, TeamCard, Visions } from '../components';
 
 const About = () => {
   return (
@@ -6,6 +6,7 @@ const About = () => {
       <AboutHero />
       <Visions />
       <CoreValues />
+      <TeamCard />
     </>
   );
 };
