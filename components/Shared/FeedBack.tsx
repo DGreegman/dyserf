@@ -34,6 +34,7 @@ const FeedBack = () => {
           position='absolute'
           left='33%'
           top='120px'
+          borderRadius='full'
         />
         <VStack minH='full' position='relative' pt={10}>
           <FeedBackItems alignSelf='flex-start' />

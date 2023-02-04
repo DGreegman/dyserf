@@ -1,5 +1,4 @@
 import { StaticImageData } from 'next/image';
-import { IconType } from 'react-icons/lib';
 
 export interface WorkModel {
   header: string;
@@ -18,7 +17,7 @@ export interface TeamDataModel extends TeamModel {
   name: string;
   position: string;
   social: {
-    twitter: IconType;
-    linkedin: IconType;
+    twitter: string;
+    linkedin: string;
   };
 }
