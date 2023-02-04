@@ -72,7 +72,8 @@ const CustomBtn = ({
           alignItems='center'
           className={globalStyles.className}
         >
-          {text} {rightIcon}
+          {text}
+          {rightIcon}
         </Flex>
       </Button>
     </div>

@@ -18,7 +18,6 @@ const WhatWeOffer = () => {
       borderRadius={0}
       flexProps={{ align: 'center', gap: '50px' }}
       //   Remove later
-      marginTop='100px'
       minH='488px'
     >
       <Stack bg='transparent' pt='40px' pb='30px'>
@@ -33,7 +32,7 @@ const WhatWeOffer = () => {
         templateColumns='repeat(3,1fr)'
         gap='7'
         pb={20}
-        maxW='1200px'
+        w='950px'
         bg='transparent'
       >
         {renderCards}

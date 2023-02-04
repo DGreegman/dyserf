@@ -1,8 +1,9 @@
-import { HomeWork, WhatWeOffer } from '../components';
+import { HomeHero, HomeWork, WhatWeOffer } from '../components';
 
 const Home = () => {
   return (
     <>
+      <HomeHero />
       <WhatWeOffer />
       <HomeWork />
     </>
