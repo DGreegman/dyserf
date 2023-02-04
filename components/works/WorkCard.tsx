@@ -32,7 +32,7 @@ const WorkCard = ({ item }: Props) => {
         </Stack>
 
         <Box
-          height='278px'
+          height={{ base: '240px', xl: '278px' }}
           width={{ base: globalStyles.width, md: '50%' }}
           position='relative'
           bg='transparent'
