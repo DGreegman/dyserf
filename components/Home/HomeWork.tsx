@@ -14,7 +14,11 @@ const HomeWork = () => {
           government in need of technical firepower, we are here for you.'
       />
 
-      <Grid templateColumns='repeat(6,1fr)' w='max-content' gap='11px'>
+      <Grid
+        templateColumns={{ base: 'repeat(3,1fr)', xl: 'repeat(6,1fr)' }}
+        w='max-content'
+        gap='11px'
+      >
         {renderWorksItem}
       </Grid>
 
