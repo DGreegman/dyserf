@@ -1,14 +1,18 @@
 import Link from 'next/link';
+import hero1 from '../../assets/images/hero1.png';
+import hero2 from '../../assets/images/hero2.png';
+import hero3 from '../../assets/images/hero3.png';
+import hero4 from '../../assets/images/hero4.png';
 import { Icon, Text } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { DyserfRoutes } from '../../utils';
 import { CustomBtn } from '../Button';
-import { HeroHeader, DescriptionText } from '../Shared';
+import { HeroHeader, DescriptionText, HeroTags } from '../Shared';
 import { FaPlay } from 'react-icons/fa';
 
 const HomeHero = () => {
   return (
-    <SectionContainer pt='120px' gap={5}>
+    <SectionContainer pt='120px' gap={5} position='relative'>
       <HeroHeader maxW='1031px'>
         Your innovative Ux partner <br />
         <Text
@@ -33,6 +37,11 @@ const HomeHero = () => {
           rightIcon={<Icon as={FaPlay} color='white' ml={3} />}
         />
       </Link>
+
+      <HeroTags icon={hero1} top='45%' left={0} />
+      <HeroTags icon={hero2} bottom='-40%' left='300px' />
+      <HeroTags icon={hero3} bottom='-20%' right='300px' />
+      <HeroTags icon={hero4} top='5%' right='-60px' />
     </SectionContainer>
   );
 };

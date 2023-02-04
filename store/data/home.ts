@@ -12,6 +12,8 @@ export const workItems = [
   'Education',
 ];
 
+export const heroItems = ['VANCUBE', 'Vobb', 'Valucop', 'Sphere', 'Bepro'];
+
 export const offers = [
   {
     icon: bulb,
