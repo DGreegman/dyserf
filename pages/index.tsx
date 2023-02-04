@@ -1,10 +1,10 @@
 import {
+  FeedBack,
   HomeHero,
   HomeWork,
   ListOfCompanies,
   WhatWeOffer,
 } from '../components';
-import FeedBack from '../components/Shared/FeedBack';
 
 const Home = () => {
   return (

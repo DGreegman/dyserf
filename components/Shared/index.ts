@@ -7,4 +7,5 @@ export { default as TagCard } from './TagCard';
 export { default as DescCard } from './DescCard';
 export { default as GreenCirle } from './GreenCirle';
 export { default as HeroTags } from './HeroTags';
+export { default as FeedBack } from './FeedBack';
 export { default as WorksShowCaseCard } from './WorksShowCaseCard';

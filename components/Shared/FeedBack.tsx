@@ -27,7 +27,7 @@ const FeedBack = () => {
       >
         <Box
           width='400px'
-          height='400px'
+          height='350px'
           bg=' linear-gradient(180deg, rgba(234, 24, 175, 0.3) 0%, rgba(91, 47, 215, 0.3) 53.12%, rgba(150, 49, 198, 0.3) 100%);'
           filter='blur(25px)'
           opacity={0.6}
