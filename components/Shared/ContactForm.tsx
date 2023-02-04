@@ -1,18 +1,16 @@
+import HeroTexts from './HeroTexts';
 import { Flex, FormControl, Input, Stack, Textarea } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { globalStyles } from '../../styles';
 import { CustomBtn } from '../Button';
-import { CardHeader, HeroHeader } from './Header';
-import { DescriptionText } from './Sharedtext';
+import { CardHeader } from './Header';
 
 const ContactForm = () => {
   return (
-    <SectionContainer pt='120px'>
-      <HeroHeader maxW='1031px'>We are a step away</HeroHeader>
-
-      <DescriptionText textAlign='center' maxW='1031px' pb='74px'>
-        Share your idea with us let’s collaborate,
-      </DescriptionText>
+    <SectionContainer pt={globalStyles.sectionPt}>
+      <HeroTexts desc=' Share your idea with us let’s collaborate.'>
+        We are a step away
+      </HeroTexts>
 
       <Stack
         as='form'
