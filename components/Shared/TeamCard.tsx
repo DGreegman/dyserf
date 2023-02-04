@@ -1,10 +1,10 @@
 import TeamItem from './TeamItem';
-import { Grid, Stack } from '@chakra-ui/react';
+import { Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { teams } from '../../store';
 import { globalStyles } from '../../styles';
-import { SectionHeader } from './Header';
-import { DescriptionText } from './Sharedtext';
+
+import { SectionTexts } from '..';
 
 const TeamCard = () => {
   const renderTeam = teams.map((team) => (
@@ -13,13 +13,11 @@ const TeamCard = () => {
 
   return (
     <SectionContainer gap='70px' position='relative'>
-      <Stack>
-        <SectionHeader>The team</SectionHeader>
-        <DescriptionText>
-          The TEWAM approach is our unique agile methodology that helps us
-          translate your business goals and objectives into solution.
-        </DescriptionText>
-      </Stack>
+      <SectionTexts
+        header='The team'
+        desc='The TEWAM approach is our unique agile methodology that helps us
+          translate your business goals and objectives into solution.'
+      />
 
       <Grid
         width={globalStyles.width}

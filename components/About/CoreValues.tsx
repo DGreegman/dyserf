@@ -1,7 +1,7 @@
-import { Grid, GridItem, Stack } from '@chakra-ui/react';
+import { Grid, GridItem } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { coreValues } from '../../store';
-import { DescCard, DescriptionText, SectionHeader } from '../Shared';
+import { DescCard, SectionTexts } from '../Shared';
 
 const CoreValues = () => {
   const renderValues = coreValues.map((e) => (
@@ -17,12 +17,10 @@ const CoreValues = () => {
 
   return (
     <SectionContainer gap='50px'>
-      <Stack>
-        <SectionHeader>Core Values</SectionHeader>
-        <DescriptionText>
-          These values are true to our heart. It defines who we are as a team.
-        </DescriptionText>
-      </Stack>
+      <SectionTexts
+        header='Core Values'
+        desc='  These values are true to our heart. It defines who we are as a team.'
+      />
 
       <Grid
         templateColumns='repeat(3,1fr)'

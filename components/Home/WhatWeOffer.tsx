@@ -1,10 +1,9 @@
-import { Grid, Stack } from '@chakra-ui/react';
+import { Grid } from '@chakra-ui/react';
 import { offers } from '../../store';
 import {
   DescCard,
-  DescriptionText,
   DifferentBg,
-  SectionHeader,
+  SectionTexts,
 } from '../Shared';
 
 const WhatWeOffer = () => {
@@ -19,13 +18,13 @@ const WhatWeOffer = () => {
       flexProps={{ align: 'center', gap: '50px' }}
       minH='488px'
     >
-      <Stack bg='transparent' pt='40px' pb='30px'>
-        <SectionHeader>What we offer</SectionHeader>
-        <DescriptionText>
-          A smooth technology experience that lets you concentrate on your
-          business
-        </DescriptionText>
-      </Stack>
+      <SectionTexts
+        desc='A smooth technology experience that lets you concentrate on your
+          business'
+        header='What we offer'
+        pt='40px'
+        pb='30px'
+      />
 
       <Grid
         templateColumns='repeat(3,1fr)'

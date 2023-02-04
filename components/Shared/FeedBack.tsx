@@ -2,20 +2,18 @@ import DifferentBg from './DifferentBg';
 import Image from 'next/image';
 import FeedBackItems from './FeedBackItems';
 import DLogo from '../../assets/images/Dlogo.png';
-import { Box, Grid, Stack, VStack } from '@chakra-ui/react';
+import { Box, Grid, VStack } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
-import { SectionHeader } from './Header';
-import { CardText, DescriptionText } from './Sharedtext';
+import { CardText } from './Sharedtext';
+import { SectionTexts } from '..';
 
 const FeedBack = () => {
   return (
     <SectionContainer gap='50px'>
-      <Stack>
-        <SectionHeader>Feedbacks</SectionHeader>
-        <DescriptionText>
-          What businesses and individuals have said about us
-        </DescriptionText>
-      </Stack>
+      <SectionTexts
+        header='Feedbacks'
+        desc='What businesses and individuals have said about us'
+      />
 
       <Grid
         maxW='1200px'

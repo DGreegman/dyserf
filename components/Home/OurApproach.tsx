@@ -6,8 +6,8 @@ import g3 from '../../assets/images/g3.png';
 import g4 from '../../assets/images/g4.png';
 import g5 from '../../assets/images/g5.png';
 import g4team from '../../assets/images/g4team.png';
-import { Stack, Grid, Box } from '@chakra-ui/react';
-import { DifferentBg, SectionHeader, DescriptionText } from '../Shared';
+import { Grid, Box } from '@chakra-ui/react';
+import { DifferentBg, SectionTexts } from '../Shared';
 
 const OurApproach = () => {
   return (
@@ -17,12 +17,12 @@ const OurApproach = () => {
       flexProps={{ align: 'center', gap: '50px' }}
       minH='488px'
     >
-      <Stack bg='transparent' pt='40px' pb='30px'>
-        <SectionHeader>Our approach</SectionHeader>
-        <DescriptionText textAlign='center'>
-          Easy tech for businesses
-        </DescriptionText>
-      </Stack>
+      <SectionTexts
+        header='Our Approach'
+        desc=' Easy tech for businesses'
+        pt='40px'
+        pb='30px'
+      />
 
       <Grid
         templateColumns='repeat(3, 1fr)'
