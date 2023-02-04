@@ -1,10 +1,7 @@
 import { Grid } from '@chakra-ui/react';
 import { offers } from '../../store';
-import {
-  DescCard,
-  DifferentBg,
-  SectionTexts,
-} from '../Shared';
+import { globalStyles } from '../../styles';
+import { DescCard, DifferentBg, SectionTexts } from '../Shared';
 
 const WhatWeOffer = () => {
   const renderCards = offers.map((offer) => (
@@ -27,10 +24,10 @@ const WhatWeOffer = () => {
       />
 
       <Grid
-        templateColumns='repeat(3,1fr)'
+        templateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(3,1fr)' }}
         gap='7'
         pb={20}
-        w='950px'
+        w={{ base: globalStyles.width, xl: '950px' }}
         bg='transparent'
       >
         {renderCards}
