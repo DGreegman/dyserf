@@ -29,6 +29,8 @@ const CoreValues = () => {
         maxW={{ base: globalStyles.width, xl: '1200px' }}
         gap={6}
         px={globalStyles.px}
+        data-aos='fade-up'
+        data-aos-duration='1000'
       >
         {renderValues}
       </Grid>

@@ -10,7 +10,14 @@ interface Props extends StackProps {
 
 const SectionTexts = ({ header, desc, ...res }: Props) => {
   return (
-    <Stack {...res} gap={1} bg='transparent' px={globalStyles.px}>
+    <Stack
+      {...res}
+      gap={1}
+      bg='transparent'
+      px={globalStyles.px}
+      data-aos='fade-up'
+      data-aos-duration='1000'
+    >
       <SectionHeader>{header}</SectionHeader>
       <DescriptionText textAlign='center'>{desc}</DescriptionText>
     </Stack>

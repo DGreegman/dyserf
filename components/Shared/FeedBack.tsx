@@ -21,6 +21,8 @@ const FeedBack = () => {
         minH='500px'
         position='relative'
         gap='120px'
+        data-aos='fade-up'
+        data-aos-duration='1000'
         pt={20}
       >
         <Box
@@ -39,11 +41,7 @@ const FeedBack = () => {
           <FeedBackItems alignSelf='flex-end' position='absolute' bottom={10} />
         </VStack>
 
-        <DifferentBg
-          flexProps={{ align: 'center' }}
-          position='relative'
-          _after={{}}
-        >
+        <DifferentBg flexProps={{ align: 'center' }} position='relative'>
           <Image src={DLogo} alt='Logo' style={{ background: 'transparent' }} />
 
           <CardText pt='50px'>

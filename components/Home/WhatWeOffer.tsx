@@ -29,6 +29,8 @@ const WhatWeOffer = () => {
         pb={20}
         w={{ base: globalStyles.width, xl: '950px' }}
         bg='transparent'
+        data-aos='fade-up'
+        data-aos-duration='1000'
       >
         {renderCards}
       </Grid>

@@ -14,6 +14,8 @@ const Visions = () => {
         px={globalStyles.px}
         gap='7'
         pb={20}
+        data-aos='fade-up'
+        data-aos-duration='1000'
         maxW={{ base: globalStyles.width, xl: '1020px' }}
       >
         {renderCards}

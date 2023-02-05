@@ -27,6 +27,8 @@ const TeamCard = () => {
           xl: 'repeat(5,1fr)',
         }}
         minH='450px'
+        data-aos='fade-up'
+        data-aos-duration='1000'
         alignItems='center'
         columnGap={{ base: 2, xl: 6 }}
         rowGap={{ base: '50px', xl: 0 }}

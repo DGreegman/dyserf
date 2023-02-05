@@ -30,6 +30,8 @@ const OurApproach = () => {
         templateRows={{ base: 'repeat(3, 1fr)', xl: 'repeat(1, 1fr)' }}
         w={{ base: globalStyles.width, xl: '1200px' }}
         minH={{ base: '1045px', xl: '290px' }}
+        data-aos='fade-up'
+        data-aos-duration='1000'
         gap={6}
         mb={20}
       >

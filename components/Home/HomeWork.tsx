@@ -18,6 +18,8 @@ const HomeWork = () => {
         templateColumns={{ base: 'repeat(3,1fr)', xl: 'repeat(6,1fr)' }}
         w='max-content'
         gap='11px'
+        data-aos='fade-up'
+        data-aos-duration='1000'
       >
         {renderWorksItem}
       </Grid>

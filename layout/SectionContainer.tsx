@@ -14,8 +14,8 @@ const SectionContainer = ({ children, direction, ...rest }: Props) => {
         width={globalStyles.containerWidth}
         align='center'
         justify='center'
-        {...rest}
         flexDirection={direction ?? 'column'}
+        {...rest}
       >
         {children}
       </Flex>

@@ -28,6 +28,8 @@ const WorksShowCaseCard = () => {
         bg='transparent'
         rowGap='54px'
         pt='30px'
+        data-aos='fade-up'
+        data-aos-duration='1000'
       >
         {renderWorks}
       </Grid>
