@@ -1,4 +1,5 @@
 import { SectionContainer } from '../../layout';
+import { globalStyles } from '../../styles';
 import FooterItem from './FooterItem';
 import StayInTouch from './StayInTouch';
 
@@ -8,7 +9,7 @@ interface Props {
 
 const Footer = ({ showStay }: Props) => {
   return (
-    <SectionContainer gap='90px'>
+    <SectionContainer gap='90px' px={globalStyles.px}>
       {showStay && <StayInTouch />}
       <FooterItem />
     </SectionContainer>

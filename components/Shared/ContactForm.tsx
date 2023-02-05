@@ -15,7 +15,9 @@ const ContactForm = () => {
       <Stack
         as='form'
         gap={2}
-        w='880px'
+        px={globalStyles.px}
+        w={{ base: globalStyles.width, xl: '880px' }}
+        pt='30px'
         pb='30px'
         onSubmit={(e) => {
           e.preventDefault();
