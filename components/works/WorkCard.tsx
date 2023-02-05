@@ -26,12 +26,9 @@ const WorkCard = ({ item }: Props) => {
         pt={{ base: 3, xl: 0 }}
         direction={{ base: 'column-reverse', xl: 'row' }}
       >
-        <Stack bg='transparent'>
-          <CardHeader>Vobb</CardHeader>
-          <CardText>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-            nobis et reiciendis excepturi dolor voluptatibus, quasi officiis
-          </CardText>
+        <Stack bg='transparent' w='full'>
+          <CardHeader>{item.header}</CardHeader>
+          <CardText>{item.description}</CardText>
         </Stack>
 
         <Image

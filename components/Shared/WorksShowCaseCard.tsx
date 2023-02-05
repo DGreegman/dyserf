@@ -1,24 +1,11 @@
 import WorkCard from '../works/WorkCard';
-import c from '../../assets/images/fire2.png';
 import { Grid, Box } from '@chakra-ui/react';
-
+import { workData } from '../../store';
 
 const WorksShowCaseCard = () => {
-  const renderWorks = Array(4)
-    .fill('-')
-    .map((e, i) => {
-      return (
-        <WorkCard
-          key={i}
-          item={{
-            icon: c,
-            description: e,
-            header: '',
-            id: 1,
-          }}
-        />
-      );
-    });
+  const renderWorks = workData.map((e) => {
+    return <WorkCard key={e.id} item={e} />;
+  });
 
   return (
     <>
