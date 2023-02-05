@@ -9,14 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/core": "^7.20.12",
     "@chakra-ui/icons": "^2.0.9",
     "@chakra-ui/react": "^2.3.1",
+    "@chakra-ui/system": "^2.3.8",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@types/aos": "^3.0.4",
     "aos": "^2.3.4",
     "framer-motion": "^6",
-    "next": "^12.3.1",
+    "nanoid": "^4.0.0",
+    "next": "^13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0"

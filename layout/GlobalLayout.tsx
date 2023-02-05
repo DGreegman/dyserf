@@ -1,12 +1,15 @@
 import Aos from 'aos';
 import Head from 'next/head';
-import Script from 'next/script';
-import { Footer, Nav } from '../components';
+import { Flex } from '@chakra-ui/react';
+import { Footer, Nav, ScrollTop } from '../components';
 import { ChildProps } from '../models';
 import { globalStyles } from '../styles';
+import { useRouter } from 'next/router';
+import { DyserfRoutes } from '../utils';
 
 const GlobalLayout = ({ children }: ChildProps) => {
   typeof window !== 'undefined' && Aos.init();
+  const route = useRouter();
 
   return (
     <>
@@ -38,9 +41,21 @@ const GlobalLayout = ({ children }: ChildProps) => {
         }}
       >
         <Nav />
-        {children}
+        <Flex
+          direction='column'
+          width={globalStyles.width}
+          alignItems='center'
+          flex={1}
+          pt={20}
+          pb={{ base: '50px', xl: '170px' }}
+          gap={{ base: '100px', xl: '150px' }}
+          position='relative'
+        >
+          {children}
 
-        <Footer />
+          <ScrollTop />
+        </Flex>
+        <Footer showStay={route.pathname !== DyserfRoutes.sendMessage} />
       </div>
     </>
   );

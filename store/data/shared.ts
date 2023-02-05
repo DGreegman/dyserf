@@ -1,3 +1,3 @@
-import service4 from '../../assets/images/service4.png';
+import logo from '../../assets/images/logo.png';
 
-export const sharedImg = service4;
+export { logo };

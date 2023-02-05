@@ -1,12 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import ButtonComp from '../Button/ButtonComp';
 import logo from '../../assets/images/logo.png';
 import {
   Flex,
   LinkBox,
   VStack,
-  Center,
   Spacer,
   Stack,
   Box,
@@ -15,14 +13,13 @@ import {
 import { CloseIcon } from '@chakra-ui/icons';
 import { useEffect } from 'react';
 import { navLinks } from '../../store';
-import { useRouter } from 'next/router';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { useSideBar } from '../../context';
+import { IconBtn, NavBtn } from '../Button';
 
 const SideBar = () => {
   // Hooks
-  const router = useRouter();
   const { updateShow, show } = useSideBar();
   const [isLargerThan992] = useMediaQuery('(min-width: 992px)');
 
@@ -33,19 +30,19 @@ const SideBar = () => {
 
   // renders
   const renderNavLinks = navLinks.map(({ path, title }, i) => {
-    const isActive = router.pathname.includes(path);
-
     return (
       <LinkBox
-        key={i}
-        lineHeight='21px'
-        color={isActive ? globalStyles.primaryColor : globalStyles.blackColor}
+        key={`${title}-${i}`}
+        color={globalStyles.whiteColor}
         _hover={{
           color: globalStyles.primaryColor,
         }}
         onClick={() => updateShow(false)}
+        className={globalStyles.className}
       >
-        <Link href={path}>{title}</Link>
+        <Link href={path} className={globalStyles.className}>
+          {title}
+        </Link>
       </LinkBox>
     );
   });
@@ -53,9 +50,8 @@ const SideBar = () => {
   return (
     <VStack
       width={globalStyles.width}
-      minHeight='100vh'
+      minHeight={globalStyles.fullHeight}
       position='absolute'
-      backgroundColor={globalStyles.whiteColor}
       zIndex={3000}
       top={0}
       align='flex-start'
@@ -67,25 +63,30 @@ const SideBar = () => {
       boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.07)'
     >
       <Flex width={globalStyles.width} align='center' px={4} pt={2}>
-        <Link href={DyserfRoutes.homepage}>
-          <a style={{ cursor: 'pointer' }} onClick={() => updateShow(false)}>
-            <Image src={logo} alt={globalStyles.alt} quality='100' />
-          </a>
+        <Link
+          href={DyserfRoutes.homepage}
+          onClick={() => updateShow(false)}
+          className={globalStyles.className}
+        >
+          <Image
+            src={logo}
+            alt={globalStyles.alt}
+            quality='100'
+            className={globalStyles.className}
+          />
         </Link>
 
         <Spacer />
 
-        <Center
-          cursor='pointer'
-          _active={{
-            transform: 'scale(.95)',
-          }}
-          userSelect='none'
+        <IconBtn
+          aria-label='menu icon'
           onClick={() => updateShow(false)}
-          pb={1}
-        >
-          <CloseIcon fontSize='1.25rem' />
-        </Center>
+          icon={
+            <CloseIcon fontSize='1.25rem' className={globalStyles.className} />
+          }
+          display={{ base: 'flex', lg: 'none' }}
+          fontSize='1.8rem'
+        />
       </Flex>
 
       <Stack
@@ -93,19 +94,13 @@ const SideBar = () => {
         justify='flex-start'
         px={4}
         pt={10}
-        gap='31px'
+        gap='50px'
       >
         {renderNavLinks}
       </Stack>
 
-      <Box width={{ base: '90%', md: '50%' }} alignSelf='center' pt={10}>
-        <ButtonComp
-          width={globalStyles.width}
-          height='44px'
-          text='Hire Us'
-          borderRadius='5px'
-          link={DyserfRoutes.gmail}
-        />
+      <Box pt='50px' pl={4}>
+        <NavBtn onClick={() => updateShow(false)} />
       </Box>
     </VStack>
   );
