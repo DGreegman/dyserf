@@ -47,8 +47,8 @@ const GlobalLayout = ({ children }: ChildProps) => {
           alignItems='center'
           flex={1}
           pt={20}
-          pb='170px'
-          gap='150px'
+          pb={{ base: '50px', xl: '170px' }}
+          gap={{ base: '100px', xl: '150px' }}
         >
           {children}
         </Flex>

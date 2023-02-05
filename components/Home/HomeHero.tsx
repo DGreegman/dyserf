@@ -3,7 +3,7 @@ import hero1 from '../../assets/images/hero1.png';
 import hero2 from '../../assets/images/hero2.png';
 import hero3 from '../../assets/images/hero3.png';
 import hero4 from '../../assets/images/hero4.png';
-import { Flex, Icon, Text } from '@chakra-ui/react';
+import { Box, Flex, Icon, Text, useMediaQuery } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { DyserfRoutes } from '../../utils';
 import { CustomBtn, NavBtn } from '../Button';
@@ -13,6 +13,8 @@ import { globalStyles } from '../../styles';
 import { BsPlayCircle } from 'react-icons/bs';
 
 const HomeHero = () => {
+  const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
+
   return (
     <SectionContainer pt={globalStyles.sectionPt} gap={5} position='relative'>
       <HeroTexts
@@ -29,13 +31,22 @@ const HomeHero = () => {
         </Text>
       </HeroTexts>
 
-      <Flex align='center' alignSelf='flex-start' gap={2} px={globalStyles.px}>
-        <NavBtn />
+      <Flex
+        align='center'
+        alignSelf={{ base: 'flex-start', xl: 'center' }}
+        gap={2}
+        px={globalStyles.px}
+      >
+        <Box display={{ base: 'block', xl: 'none' }}>
+          <NavBtn />
+        </Box>
+
         <Link href={DyserfRoutes.works}>
           <CustomBtn
             text='How we work'
             width='150px'
             bg='#182341'
+            addBorderGradient={isLargerThan1280}
             rightIcon={
               <Icon
                 as={FaPlay}
