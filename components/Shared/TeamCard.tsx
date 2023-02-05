@@ -3,7 +3,6 @@ import { Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { teams } from '../../store';
 import { globalStyles } from '../../styles';
-
 import { SectionTexts } from '..';
 
 const TeamCard = () => {
@@ -12,7 +11,7 @@ const TeamCard = () => {
   ));
 
   return (
-    <SectionContainer gap='70px' position='relative'>
+    <SectionContainer gap='70px'>
       <SectionTexts
         header='The team'
         desc='The TEWAM approach is our unique agile methodology that helps us
@@ -21,16 +20,16 @@ const TeamCard = () => {
 
       <Grid
         width={globalStyles.width}
-        position='relative'
         gridTemplateColumns={{
-          base: 'repeat(1,1fr)',
+          base: 'repeat(2,1fr)',
           md: 'repeat(2,1fr)',
-          lg: 'repeat(3,1fr)',
+          lg: 'repeat(2,1fr)',
           xl: 'repeat(5,1fr)',
         }}
         minH='450px'
         alignItems='center'
-        gap={6}
+        columnGap={{ base: 2, xl: 6 }}
+        rowGap={{ base: '50px', xl: 0 }}
       >
         {renderTeam}
       </Grid>

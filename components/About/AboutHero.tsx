@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Box } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
@@ -19,14 +20,19 @@ const AboutHero = () => {
         Demystifying Service Functionalities(Dyserf)
       </HeroTexts>
 
-      <Link href={DyserfRoutes.blog}>
-        <CustomBtn
-          text='Our blog'
-          width='150px'
-          bg='#182341'
-          addBorderGradient
-        />
-      </Link>
+      <Box
+        alignSelf={{ base: 'flex-start', xl: 'center' }}
+        px={{ base: 4, xl: 0 }}
+      >
+        <Link href={DyserfRoutes.blog}>
+          <CustomBtn
+            text='Our blog'
+            width='150px'
+            bg='#182341'
+            addBorderGradient
+          />
+        </Link>
+      </Box>
     </SectionContainer>
   );
 };
