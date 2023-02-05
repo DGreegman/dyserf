@@ -7,6 +7,7 @@ export const DescriptionText = ({ children, ...rest }: TextProps) => {
       {...rest}
       fontSize={globalStyles.textFontSize}
       color={globalStyles.textColor}
+      px={globalStyles.px}
       lineHeight={1.7}
       opacity={0.8}
       bg='transparent'

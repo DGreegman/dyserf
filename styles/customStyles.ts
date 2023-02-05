@@ -32,7 +32,6 @@ export const globalStyles = {
   },
   sectionStyle: {
     width: '100%',
-    px: { base: 4, xl: 10, '2xl': 0 },
     align: 'center',
     justifyContent: 'center',
   },

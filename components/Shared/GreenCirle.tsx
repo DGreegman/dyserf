@@ -1,7 +1,7 @@
-import { Center } from '@chakra-ui/react';
+import { Center, LayoutProps } from '@chakra-ui/react';
 interface Props {
-  width?: string;
-  height?: string;
+  width?: LayoutProps['width'];
+  height?: LayoutProps['height'];
 }
 
 const GreenCirle = ({ width, height }: Props) => {

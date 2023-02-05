@@ -3,6 +3,7 @@ import { Box, Flex, Stack } from '@chakra-ui/react';
 import { WorkModel } from '../../models';
 import { DifferentBg, CardText, CardHeader } from '../Shared';
 import { globalStyles } from '../../styles';
+import { CustomBtn } from '..';
 
 type Props = {
   item: WorkModel;
@@ -15,15 +16,17 @@ const WorkCard = ({ item }: Props) => {
         align: 'center',
         justify: 'center',
       }}
+      borderRadius={{ base: 0, xl: 20 }}
       minH='340px'
+      w='full'
     >
       <Flex
         align='center'
         bg='transparent'
         gap={5}
-        direction={{ base: 'column', xl: 'row' }}
+        direction={{ base: 'column-reverse', xl: 'row' }}
       >
-        <Stack bg='transparent' width={{ base: globalStyles.width, md: '50%' }}>
+        <Stack bg='transparent' width={{ base: globalStyles.width, md: '40%' }}>
           <CardHeader>Vobb</CardHeader>
           <CardText>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
@@ -32,8 +35,8 @@ const WorkCard = ({ item }: Props) => {
         </Stack>
 
         <Box
-          height={{ base: '240px', xl: '278px' }}
-          width={{ base: globalStyles.width, md: '50%' }}
+          height={{ base: '240px', xl: '258px' }}
+          width={{ base: globalStyles.width, md: '60%' }}
           position='relative'
           bg='transparent'
         >
@@ -45,6 +48,21 @@ const WorkCard = ({ item }: Props) => {
           />
         </Box>
       </Flex>
+
+      <Box
+        alignSelf='flex-start'
+        pt={6}
+        pb={1}
+        bg='transparent'
+        display={{ base: 'block', xl: 'none' }}
+      >
+        <CustomBtn
+          text='See details'
+          width='110px'
+          bg='#182341'
+          addBorderGradient
+        />
+      </Box>
     </DifferentBg>
   );
 };

@@ -46,6 +46,6 @@ body {
 /* For buttons */
 .module-border-wrap {
   background: linear-gradient(269.49deg, #ad00ff -13.36%, #182dea 73.24%);
-  padding: 2px;
+  padding: 1px;
   border-radius: 5px;
 }
