@@ -1,94 +1,116 @@
-import ButtonComp from '../Button/ButtonComp';
-import Image from 'next/future/image';
+import Image from 'next/image';
 import SideBar from './SideBar';
-import logo from '../../assets/images/logo.png';
 import Link from 'next/link';
-import {
-  Box,
-  Center,
-  Flex,
-  HStack,
-  Icon,
-  Spacer,
-  Text,
-} from '@chakra-ui/react';
+import hoops from '../../assets/images/hoops.png';
+import { Box, Flex, HStack, Spacer, Text } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
-import { navLinks } from '../../store';
+import { logo, navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { FiMenu } from 'react-icons/fi';
 import { useSideBar } from '../../context';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { CustomBtn, IconBtn } from '../Button';
 
 const Nav = () => {
   // Hooks
-  const path = useRouter().pathname;
   const { updateShow } = useSideBar();
+  const path = useRouter().pathname;
 
   // Renders
   const renderNav = navLinks.map((item, i) => {
     const isActive = path.includes(item.path);
 
     return (
-      <Link href={item.path} key={`${item.title}-${i}`}>
-        <a>
+      <Flex
+        key={`${item.title}-${i}`}
+        position='relative'
+        align='center'
+        justify='center'
+        minW='100px'
+      >
+        <Link
+          href={item.path}
+          style={{
+            position: isActive ? 'absolute' : 'relative',
+            zIndex: 3000,
+          }}
+        >
           <Text
-            color={
-              isActive ? globalStyles.secondaryColor : globalStyles.textColor
-            }
-            fontSize={globalStyles.textFontSize.base}
-            fontWeight={isActive ? globalStyles.mediumbold : 400}
+            color={globalStyles.whiteColor}
+            fontSize={globalStyles.textFontSize}
+            className={globalStyles.className}
           >
             {item.title}
           </Text>
-        </a>
-      </Link>
+        </Link>
+
+        <Box
+          opacity={isActive ? 1 : 0}
+          transition='all ease-in-out 250ms'
+          position='absolute'
+        >
+          <Image src={hoops} alt={globalStyles.alt} />
+        </Box>
+      </Flex>
     );
   });
 
   return (
     <Flex
       width={globalStyles.width}
-      bg={globalStyles.whiteColor}
+      bgColor={globalStyles.gradientBg}
       px={globalStyles.px}
+      shadow={globalStyles.boxShadow}
       align='center'
       justifyContent='center'
       position='fixed'
-      shadow='2px 2px 100px 50px rgba(0, 0, 0, 0.06)'
-      py={{ base: 2, xl: 4 }}
+      py={{ base: 3, xl: 4 }}
       zIndex={3000}
     >
       <HStack width={globalStyles.containerWidth}>
         <Link href={DyserfRoutes.homepage}>
-          <a>
-            <Image src={logo} alt={globalStyles.alt} priority quality='100' />
-          </a>
+          <Image
+            src={logo}
+            alt={globalStyles.alt}
+            priority
+            quality='100'
+            className={globalStyles.className}
+          />
         </Link>
 
         <Spacer />
 
-        <Flex gap='70px' pr='91px' display={{ base: 'none', lg: 'flex' }}>
+        <Flex gap='70px' pr='80px' display={{ base: 'none', lg: 'flex' }}>
           {renderNav}
         </Flex>
 
         <Box display={{ base: 'none', lg: 'flex' }}>
-          <ButtonComp
-            width='135px'
-            height='44px'
-            text='Hire Us'
-            link={DyserfRoutes.gmail}
-          />
+          <Link href={DyserfRoutes.sendMessage}>
+            <CustomBtn
+              width='140px'
+              height='47px'
+              text='Let’s Collab'
+              bg={globalStyles.buttonGradient}
+              rightIcon={
+                <ArrowForwardIcon
+                  bgColor='transparent'
+                  ml={1}
+                  fontSize='1.15rem'
+                  className={globalStyles.className}
+                />
+              }
+            />
+          </Link>
         </Box>
 
-        <Center
-          display={{ base: 'flex', lg: 'none' }}
-          cursor='pointer'
-          _active={{
-            transform: 'scale(.95)',
-          }}
+        <IconBtn
+          aria-label='menu icon'
           onClick={() => updateShow(true)}
-        >
-          <Icon as={FiMenu} fontSize='1.8rem' />
-        </Center>
+          icon={<FiMenu className={globalStyles.className} />}
+          display={{ base: 'flex', lg: 'none' }}
+          fontSize='1.8rem'
+        />
       </HStack>
 
       <SideBar />

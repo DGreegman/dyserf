@@ -1,43 +1,47 @@
 export const globalStyles = {
   primaryColor: '#1312C9',
-  textColor: '#323B4B',
+  bgColor: '#1312C9',
   secondaryColor: '#061173',
-  goldenColor: '#FFC700',
+  whiteB: '#EEF4FC',
+  diffBgColor: '#172038',
   whiteColor: '#FFF',
-  smallTextFontSize: '0.8rem',
-  headerFontSize: { base: '1.5rem', xl: '2rem' },
-  textFontSize: { base: '0.8rem', xl: '1rem' },
+  headerTextColor: '#EEEEFC',
+  textColor: '#EBF8FE',
+  heroHeader: { base: '2.4rem', xl: '4rem' },
+  cardHeader: { base: '1rem', xl: '1.1rem' },
+  sectionHeader: { base: '1.5rem', xl: '3rem' },
+  textFontSize: '0.88rem',
+  cardText: '0.8rem',
   semibold: 500,
   mediumbold: 600,
   headerFontWeight: 700,
+  bold: 900,
   width: '100%',
   fullHeight: '100vh',
   px: { base: 4, xl: 10, '2xl': 0 },
   blackColor: '#110F0F',
   fontFamily: " 'Poppins', sans-serif",
+  className: 'cursor',
+  // This below is for different bg Items
+  diffBg: 'wrapper',
+  comingSoon: 'soon',
   containerWidth: {
     base: '100%',
-    xl: '1200px',
+    xl: '1240px',
     '2xl': '1450px',
   },
   sectionStyle: {
     width: '100%',
-    px: { base: 4, xl: 10, '2xl': 0 },
     align: 'center',
     justifyContent: 'center',
   },
+  sectionPt: { base: '10px', lg: '100px', xl: '120px' },
   alt: 'DYSERF',
-  lineHeight: 1.5,
-};
-
-export const bodyTextStyle = {
-  color: globalStyles.textColor,
-  fontSize: globalStyles.textFontSize,
-};
-
-export const bodyHeaderStyle = {
-  fontWeight: globalStyles.mediumbold,
-  fontFamily: globalStyles.fontFamily,
-  fontSize: globalStyles.headerFontSize,
-  color: globalStyles.textColor,
+  lineHeight: 1.4,
+  gradientBg:
+    'linear-gradient(180deg, rgba(23, 31, 52, 0.25) 0%, rgba(23, 31, 52, 0.25) 100%)',
+  boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.05)',
+  backDropFilter: 'blur(15px)',
+  buttonGradient: 'linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)',
+  radius: 5,
 };

@@ -1,23 +1,23 @@
 import {
-  Consultancy,
-  FirePower,
-  Hero,
-  Review,
-  Services,
-  Team,
-  WhyWork,
+  FeedBack,
+  HomeHero,
+  HomeWork,
+  ListOfCompanies,
+  OurApproach,
+  TeamCard,
+  WhatWeOffer,
 } from '../components';
 
 const Home = () => {
   return (
     <>
-      <Hero />
-      <Consultancy />
-      <WhyWork />
-      <Services background='#E7E7FA' />
-      <FirePower showBtn />
-      <Team />
-      <Review />
+      <HomeHero />
+      <ListOfCompanies />
+      <WhatWeOffer />
+      <HomeWork />
+      <OurApproach />
+      <TeamCard />
+      <FeedBack />
     </>
   );
 };

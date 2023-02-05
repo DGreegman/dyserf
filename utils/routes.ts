@@ -1,9 +1,8 @@
 export class DyserfRoutes {
   static homepage = '/';
   static about = '/about';
-  static services = '/services';
   static works = '/works';
-  static team = '/team';
-  static career = '/career';
+  static blog = '/blog';
+  static sendMessage = '/send_message';
   static gmail = 'mailto:officialdyserf@gmail.com';
 }
