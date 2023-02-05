@@ -24,7 +24,12 @@ const WhatWeOffer = () => {
       />
 
       <Grid
-        templateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(3,1fr)' }}
+        templateColumns={{
+          base: 'repeat(1,1fr)',
+          md: 'repeat(2,1fr)',
+          lg: 'repeat(3,1fr)',
+          xl: 'repeat(3,1fr)',
+        }}
         gap='7'
         pb={20}
         w={{ base: globalStyles.width, xl: '950px' }}

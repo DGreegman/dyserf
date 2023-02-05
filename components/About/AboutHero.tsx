@@ -21,7 +21,7 @@ const AboutHero = () => {
       </HeroTexts>
 
       <Box
-        alignSelf={{ base: 'flex-start', xl: 'center' }}
+        alignSelf={{ base: 'flex-start', lg: 'center' }}
         px={{ base: 4, xl: 0 }}
       >
         <Link href={DyserfRoutes.blog}>

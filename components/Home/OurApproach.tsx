@@ -26,10 +26,10 @@ const OurApproach = () => {
       />
 
       <Grid
-        templateColumns={{ base: 'repeat(1, 1fr)', xl: 'repeat(3, 1fr)' }}
-        templateRows={{ base: 'repeat(3, 1fr)', xl: 'repeat(1, 1fr)' }}
+        templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
+        bg='transparent'
         w={{ base: globalStyles.width, xl: '1200px' }}
-        minH={{ base: '1045px', xl: '290px' }}
+        minH={{ base: '1045px', lg: '290px' }}
         data-aos='fade-up'
         data-aos-duration='1000'
         gap={6}

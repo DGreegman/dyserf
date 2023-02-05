@@ -35,7 +35,7 @@ export const globalStyles = {
     align: 'center',
     justifyContent: 'center',
   },
-  sectionPt: { base: '10px', xl: '120px' },
+  sectionPt: { base: '10px', lg: '100px', xl: '120px' },
   alt: 'DYSERF',
   lineHeight: 1.4,
   gradientBg:

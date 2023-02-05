@@ -9,7 +9,7 @@ export const HeroHeader = ({ children, ...rest }: HeadingProps) => {
       lineHeight={globalStyles.lineHeight}
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.heroHeader}
-      textAlign={{ base: 'left', xl: 'center' }}
+      textAlign={{ base: 'left', lg: 'center' }}
       w={{ base: globalStyles.width, xl: '1031px' }}
       px={globalStyles.px}
       bg='transparent'

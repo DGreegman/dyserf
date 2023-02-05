@@ -33,7 +33,7 @@ const HomeHero = () => {
 
       <Flex
         align='center'
-        alignSelf={{ base: 'flex-start', xl: 'center' }}
+        alignSelf={{ base: 'flex-start', lg: 'center' }}
         gap={2}
         px={globalStyles.px}
       >

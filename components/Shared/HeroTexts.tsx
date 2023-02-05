@@ -12,8 +12,9 @@ const HeroTexts = ({ children, desc }: Props) => {
     <>
       <HeroHeader maxW='1031px'>{children}</HeroHeader>
       <DescriptionText
-        textAlign={{ base: 'left', xl: 'center' }}
-        w={{ base: globalStyles.width, xl: '1031px' }}
+        textAlign={{ base: 'left', lg: 'center' }}
+        w={{ base: globalStyles.width, md: '70%', xl: '1031px' }}
+        alignSelf={{ base: 'flex-start', lg: 'center' }}
         pt={1}
         pb={3}
       >

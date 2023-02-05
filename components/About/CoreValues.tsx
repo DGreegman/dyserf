@@ -24,7 +24,11 @@ const CoreValues = () => {
       />
 
       <Grid
-        templateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(3,1fr)' }}
+        templateColumns={{
+          base: 'repeat(1,1fr)',
+          md: 'repeat(2,1fr)',
+          lg: 'repeat(3,1fr)',
+        }}
         templateRows='repeat(2,1fr)'
         maxW={{ base: globalStyles.width, xl: '1200px' }}
         gap={6}

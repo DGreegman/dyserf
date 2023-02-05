@@ -17,7 +17,7 @@ const TeamItem = ({ team }: Props) => {
   return (
     <GridItem
       alignSelf={isTop ? 'flex-start' : 'inherit'}
-      colSpan={{ base: test ? 2 : 1, xl: 'auto' }}
+      colSpan={{ base: test ? 2 : 1, lg: 'auto' }}
     >
       <Stack borderRadius={10} align='center' gap={2}>
         <Box

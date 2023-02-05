@@ -16,7 +16,7 @@ const ContactForm = () => {
         as='form'
         gap={2}
         px={globalStyles.px}
-        w={{ base: globalStyles.width, xl: '880px' }}
+        w={{ base: globalStyles.width, lg: '880px' }}
         pt='30px'
         pb='30px'
         data-aos='fade-up'

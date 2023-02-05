@@ -23,10 +23,10 @@ const TeamCard = () => {
         gridTemplateColumns={{
           base: 'repeat(2,1fr)',
           md: 'repeat(2,1fr)',
-          lg: 'repeat(2,1fr)',
+          lg: 'repeat(5,1fr)',
           xl: 'repeat(5,1fr)',
         }}
-        minH='450px'
+        minH={{ base: '400px', xl: '450px' }}
         data-aos='fade-up'
         data-aos-duration='1000'
         alignItems='center'
