@@ -24,6 +24,9 @@ const WorkCard = ({ item }: Props) => {
         align='center'
         bg='transparent'
         gap={5}
+        pt={{ base: 3, xl: 0 }}
+        // Fix later
+        // w='50%'
         direction={{ base: 'column-reverse', xl: 'row' }}
       >
         <Stack bg='transparent' width={{ base: globalStyles.width, md: '40%' }}>
@@ -35,7 +38,7 @@ const WorkCard = ({ item }: Props) => {
         </Stack>
 
         <Box
-          height={{ base: '240px', xl: '258px' }}
+          height={{ base: '276px', xl: '258px' }}
           width={{ base: globalStyles.width, md: '60%' }}
           position='relative'
           bg='transparent'

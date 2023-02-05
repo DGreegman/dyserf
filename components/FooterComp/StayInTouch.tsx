@@ -14,6 +14,7 @@ const StayInTouch = () => {
   return (
     <DifferentBg
       w='full'
+      borderRadius={{ base: 0, xl: 20 }}
       flexProps={{
         align: 'center',
         justify: 'center',

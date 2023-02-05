@@ -27,6 +27,7 @@ const WorksShowCaseCard = () => {
         columnGap={6}
         bg='transparent'
         rowGap='54px'
+        pt='30px'
       >
         {renderWorks}
       </Grid>

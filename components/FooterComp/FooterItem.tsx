@@ -26,6 +26,7 @@ const FooterItem = () => {
       alignItems='center'
       justifyContent='space-between'
       py={5}
+      px={globalStyles.px}
     >
       <Link href={DyserfRoutes.homepage}>
         <Image

@@ -9,7 +9,7 @@ import { SectionTexts } from '..';
 
 const FeedBack = () => {
   return (
-    <SectionContainer gap='50px'>
+    <SectionContainer gap='50px' display={{ base: 'none', xl: 'flex' }}>
       <SectionTexts
         header='Feedbacks'
         desc='What businesses and individuals have said about us'

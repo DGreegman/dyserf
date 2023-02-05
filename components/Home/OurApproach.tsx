@@ -8,6 +8,7 @@ import g5 from '../../assets/images/g5.png';
 import g4team from '../../assets/images/g4team.png';
 import { Grid, Box } from '@chakra-ui/react';
 import { DifferentBg, SectionTexts } from '../Shared';
+import { globalStyles } from '../../styles';
 
 const OurApproach = () => {
   return (
@@ -25,9 +26,10 @@ const OurApproach = () => {
       />
 
       <Grid
-        templateColumns='repeat(3, 1fr)'
-        w='1200px'
-        minH='270px'
+        templateColumns={{ base: 'repeat(1, 1fr)', xl: 'repeat(3, 1fr)' }}
+        templateRows={{ base: 'repeat(3, 1fr)', xl: 'repeat(1, 1fr)' }}
+        w={{ base: globalStyles.width, xl: '1200px' }}
+        minH={{ base: '1045px', xl: '290px' }}
         gap={6}
         mb={20}
       >
