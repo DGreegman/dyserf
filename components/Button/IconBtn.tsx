@@ -1,9 +1,9 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { IconButton, IconButtonProps } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 
 interface Props extends IconButtonProps {
-  icon: React.ReactElement;
+  icon: ReactElement;
   onClick: () => void;
 }
 

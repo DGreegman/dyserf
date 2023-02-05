@@ -10,7 +10,7 @@ import { ReactElement } from 'react';
 import { globalStyles } from '../../styles';
 
 type Props = {
-  text: string;
+  text?: string;
   width: LayoutProps['width'];
   height?: LayoutProps['height'];
   type?: 'button' | 'submit' | 'reset' | undefined;

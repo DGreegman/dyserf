@@ -1,7 +1,7 @@
 import Aos from 'aos';
 import Head from 'next/head';
 import { Flex } from '@chakra-ui/react';
-import { Footer, Nav } from '../components';
+import { Footer, Nav, ScrollTop } from '../components';
 import { ChildProps } from '../models';
 import { globalStyles } from '../styles';
 import { useRouter } from 'next/router';
@@ -49,8 +49,11 @@ const GlobalLayout = ({ children }: ChildProps) => {
           pt={20}
           pb={{ base: '50px', xl: '170px' }}
           gap={{ base: '100px', xl: '150px' }}
+          position='relative'
         >
           {children}
+
+          <ScrollTop />
         </Flex>
         <Footer showStay={route.pathname !== DyserfRoutes.sendMessage} />
       </div>

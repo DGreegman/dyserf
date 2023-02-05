@@ -33,6 +33,7 @@ const AboutHero = () => {
           />
         </Link>
       </Box>
+
     </SectionContainer>
   );
 };
