@@ -1,6 +1,7 @@
 import { Grid, GridItem } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { coreValues } from '../../store';
+import { globalStyles } from '../../styles';
 import { DescCard, SectionTexts } from '../Shared';
 
 const CoreValues = () => {
@@ -23,10 +24,11 @@ const CoreValues = () => {
       />
 
       <Grid
-        templateColumns='repeat(3,1fr)'
+        templateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(3,1fr)' }}
         templateRows='repeat(2,1fr)'
-        maxW='1200px'
+        maxW={{ base: globalStyles.width, xl: '1200px' }}
         gap={6}
+        px={globalStyles.px}
       >
         {renderValues}
       </Grid>

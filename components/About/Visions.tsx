@@ -1,6 +1,7 @@
 import { Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { visionCards } from '../../store';
+import { globalStyles } from '../../styles';
 import { DescCard } from '../Shared';
 
 const Visions = () => {
@@ -8,7 +9,13 @@ const Visions = () => {
 
   return (
     <SectionContainer>
-      <Grid templateColumns='repeat(2,1fr)' gap='7' pb={20} maxW='1020px'>
+      <Grid
+        templateColumns={{ base: 'repeat(1,1fr)', xl: 'repeat(2,1fr)' }}
+        px={globalStyles.px}
+        gap='7'
+        pb={20}
+        maxW={{ base: globalStyles.width, xl: '1020px' }}
+      >
         {renderCards}
       </Grid>
     </SectionContainer>
