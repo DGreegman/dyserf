@@ -21,6 +21,7 @@ type Props = {
   bg?: BackgroundProps['bg'];
   color?: ColorProps['color'];
   rightIcon?: ReactElement;
+  leftIcon?: ReactElement;
   addBorderGradient?: boolean;
 };
 
@@ -36,6 +37,7 @@ const CustomBtn = ({
   rightIcon,
   borderColor,
   addBorderGradient,
+  leftIcon,
 }: Props) => {
   const style = {
     width: width,
@@ -72,6 +74,7 @@ const CustomBtn = ({
           alignItems='center'
           className={globalStyles.className}
         >
+          {leftIcon}
           {text}
           {rightIcon}
         </Flex>
