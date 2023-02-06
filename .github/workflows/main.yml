@@ -4,10 +4,11 @@ on:
   push:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: node 16
     steps:
     - uses: actions/checkout@v3
     - name: Install modules
       run: yarn
     - name: Run ESLint
       run: yarn lint
+ 

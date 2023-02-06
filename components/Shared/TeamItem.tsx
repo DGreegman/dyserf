@@ -57,7 +57,7 @@ const TeamItem = ({ team }: Props) => {
           >
             <Icon
               as={BsTwitter}
-              color={globalStyles.primaryColor}
+              color={globalStyles.whiteColor}
               className={globalStyles.className}
               fontSize='1.25rem'
               cursor='pointer'
@@ -72,7 +72,7 @@ const TeamItem = ({ team }: Props) => {
           >
             <Icon
               as={BsLinkedin}
-              color={globalStyles.primaryColor}
+              color={globalStyles.whiteColor}
               className={globalStyles.className}
               cursor='pointer'
               fontSize='1.25rem'

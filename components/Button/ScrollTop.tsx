@@ -1,7 +1,6 @@
-import CustomBtn from './CustomBtn';
 import { ChevronUpIcon } from '@chakra-ui/icons';
 import { globalStyles } from '../../styles';
-import { Box } from '@chakra-ui/react';
+import { Box, Center } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 
 const ScrollTop = () => {
@@ -26,23 +25,25 @@ const ScrollTop = () => {
       right={5}
       zIndex={5}
       display={{ base: showBtn ? 'block' : 'none', xl: 'none' }}
+      bg={globalStyles.buttonGradient}
+      borderRadius='full'
+      boxShadow='md'
     >
-      <CustomBtn
+      <Center
         width='45px'
         height='45px'
-        bg={globalStyles.buttonGradient}
+        bg='transparent'
         onClick={() => {
           window.scrollTo(0, 0);
         }}
-        borderRadius='full'
-        rightIcon={
-          <ChevronUpIcon
-            bgColor='transparent'
-            fontSize='2rem'
-            className={globalStyles.className}
-          />
-        }
-      />
+        className={globalStyles.className}
+      >
+        <ChevronUpIcon
+          bgColor='transparent'
+          fontSize='2rem'
+          className={globalStyles.className}
+        />
+      </Center>
     </Box>
   );
 };
