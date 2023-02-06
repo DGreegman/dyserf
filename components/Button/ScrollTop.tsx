@@ -24,7 +24,7 @@ const ScrollTop = () => {
       top='50%'
       right={5}
       zIndex={5}
-      display={{ base: showBtn ? 'block' : 'none', xl: 'none' }}
+      display={{ base: showBtn ? 'block' : 'none' }}
       bg={globalStyles.buttonGradient}
       borderRadius='full'
       boxShadow='md'
