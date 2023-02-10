@@ -13,7 +13,6 @@ const Visions = () => {
         templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
         px={globalStyles.px}
         gap='7'
-        pb={20}
         data-aos='fade-up'
         data-aos-duration='1000'
         maxW={{ base: globalStyles.width, xl: '1020px' }}

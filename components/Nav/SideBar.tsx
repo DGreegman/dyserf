@@ -37,10 +37,13 @@ const SideBar = () => {
         _hover={{
           color: globalStyles.primaryColor,
         }}
-        onClick={() => updateShow(false)}
         className={globalStyles.className}
       >
-        <Link href={path} className={globalStyles.className}>
+        <Link
+          href={path}
+          className={globalStyles.className}
+          onClick={() => updateShow(false)}
+        >
           {title}
         </Link>
       </LinkBox>
