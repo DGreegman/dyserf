@@ -6,7 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  cursor: url('../assets/images/cursor1.png'), auto;
+  cursor: url('../assets/images/cursor1.png'), auto  !important;
   background-color: #182341;
   color: #fff;
 }
@@ -26,11 +26,11 @@ body {
 }
 
 .cursor:hover {
-  cursor: url('../assets/images/hovercursor.png'), auto;
+  cursor: url('../assets/images/hovercursor.png'), auto  !important;
 }
 
 .soon:hover {
-  cursor: url('../assets/images/soon.png'), auto;
+  cursor: url('../assets/images/soon.png'), auto  !important;
 }
 
 /* For sections and cards */
