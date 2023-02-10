@@ -40,6 +40,9 @@ const Nav = () => {
             color={globalStyles.whiteColor}
             fontSize={globalStyles.textFontSize}
             className={globalStyles.className}
+            _hover={{
+              opacity: !isActive ? 0.7 : 1,
+            }}
           >
             {item.title}
           </Text>
@@ -65,7 +68,7 @@ const Nav = () => {
       align='center'
       justifyContent='center'
       position='fixed'
-      py={{ base: 3, xl: 4 }}
+      py={{ base: 1, xl: 4 }}
       zIndex={3000}
     >
       <HStack width={globalStyles.containerWidth}>

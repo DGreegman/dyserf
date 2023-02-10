@@ -60,6 +60,7 @@ const CustomBtn = ({
         className={`${globalStyles.className}`}
         _hover={{
           background: bg ?? globalStyles.bgColor,
+          transform: 'scale(1.05)',
         }}
         _active={{
           background: bg ?? globalStyles.bgColor,
