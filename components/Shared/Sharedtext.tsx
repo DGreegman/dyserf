@@ -11,6 +11,7 @@ export const DescriptionText = ({ children, ...rest }: TextProps) => {
       lineHeight={1.7}
       opacity={0.8}
       bg='transparent'
+      maxW='717px'
     >
       {children}
     </Text>

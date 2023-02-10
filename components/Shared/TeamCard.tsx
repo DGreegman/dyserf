@@ -26,7 +26,7 @@ const TeamCard = () => {
           lg: 'repeat(5,1fr)',
           xl: 'repeat(5,1fr)',
         }}
-        minH={{ base: '400px', xl: '450px' }}
+        minH={{ base: '400px', xl: '400px' }}
         data-aos='fade-up'
         data-aos-duration='1000'
         alignItems='center'

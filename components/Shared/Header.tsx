@@ -1,4 +1,4 @@
-import { Heading, HeadingProps } from '@chakra-ui/react';
+import { Heading, HeadingProps, Text } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 
 export const HeroHeader = ({ children, ...rest }: HeadingProps) => {
@@ -41,9 +41,7 @@ export const SectionHeader = ({ children, ...rest }: HeadingProps) => {
 
 export const CardHeader = ({ children, ...rest }: HeadingProps) => {
   return (
-    <Heading
-      fontFamily={globalStyles.fontFamily}
-      fontWeight={globalStyles.semibold}
+    <Text
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.cardHeader}
       lineHeight={1.4}
@@ -51,6 +49,6 @@ export const CardHeader = ({ children, ...rest }: HeadingProps) => {
       {...rest}
     >
       {children}
-    </Heading>
+    </Text>
   );
 };
