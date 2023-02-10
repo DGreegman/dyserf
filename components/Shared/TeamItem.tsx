@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Box, Flex, GridItem, Icon, Stack } from '@chakra-ui/react';
+import { Box, Flex, GridItem, Icon } from '@chakra-ui/react';
 import { TeamDataModel } from '../../models';
 import { globalStyles } from '../../styles';
 import { CardHeader } from './Header';
@@ -19,7 +19,7 @@ const TeamItem = ({ team }: Props) => {
       alignSelf={isTop ? 'flex-start' : 'inherit'}
       colSpan={{ base: test ? 2 : 1, lg: 'auto' }}
     >
-      <Stack borderRadius={10} align='center' gap={2}>
+      <Flex borderRadius={10} align='center' direction='column' gap={1}>
         <Box
           position='relative'
           width='110px'
@@ -29,7 +29,6 @@ const TeamItem = ({ team }: Props) => {
           <Image
             src={team.icon}
             alt={team.name}
-            priority
             fill
             style={{
               objectFit: 'contain',
@@ -40,11 +39,17 @@ const TeamItem = ({ team }: Props) => {
           />
         </Box>
 
-        <CardHeader fontWeight={globalStyles.mediumbold}>
+        <CardHeader fontWeight={400} pb={1}>
           {team.name}
         </CardHeader>
 
-        <CardText color={globalStyles.textColor} textAlign='center'>
+        <CardText
+          color={globalStyles.textColor}
+          textAlign='center'
+          wordBreak='break-word'
+          maxW='100px'
+          pb='1'
+        >
           {team.position}
         </CardText>
 
@@ -79,7 +84,7 @@ const TeamItem = ({ team }: Props) => {
             />
           </a>
         </Flex>
-      </Stack>
+      </Flex>
     </GridItem>
   );
 };

@@ -21,7 +21,7 @@ const ScrollTop = () => {
   return (
     <Box
       position='fixed'
-      top='50%'
+      bottom='80px'
       right={5}
       zIndex={5}
       display={{ base: showBtn ? 'block' : 'none' }}

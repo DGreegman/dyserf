@@ -3,6 +3,7 @@ import { Box, Flex, Stack } from '@chakra-ui/react';
 import { WorkModel } from '../../models';
 import { DifferentBg, CardText, CardHeader } from '../Shared';
 import { CustomBtn } from '..';
+import { globalStyles } from '../../styles';
 
 type Props = {
   item: WorkModel;
@@ -18,6 +19,7 @@ const WorkCard = ({ item }: Props) => {
       borderRadius={{ base: 0, md: 10, xl: 20 }}
       minH='340px'
       w='full'
+      className={globalStyles.className}
     >
       <Flex
         align='center'
@@ -25,15 +27,21 @@ const WorkCard = ({ item }: Props) => {
         gap={5}
         pt={{ base: 3, xl: 0 }}
         direction={{ base: 'column-reverse', xl: 'row' }}
+        className={globalStyles.className}
       >
-        <Stack bg='transparent' w='full'>
-          <CardHeader>{item.header}</CardHeader>
-          <CardText>{item.description}</CardText>
+        <Stack bg='transparent' w='full' className={globalStyles.className}>
+          <CardHeader className={globalStyles.className}>
+            {item.header}
+          </CardHeader>
+          <CardText className={globalStyles.className}>
+            {item.description}
+          </CardText>
         </Stack>
 
         <Image
           src={item.icon}
           alt={item.header}
+          className={globalStyles.className}
           style={{
             objectFit: 'contain',
             background: 'transparent',

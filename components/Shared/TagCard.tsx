@@ -7,7 +7,7 @@ const TagCard = ({ children, ...rest }: CenterProps) => {
       rounded={globalStyles.radius}
       border={`1px solid ${globalStyles.whiteB}`}
       fontSize={globalStyles.cardText}
-      fontWeight={globalStyles.headerFontWeight}
+      fontWeight={globalStyles.normalBold}
       minW='101px'
       minH='42px'
       letterSpacing='0.03em'
