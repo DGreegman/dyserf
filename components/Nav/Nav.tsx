@@ -2,15 +2,15 @@ import Image from 'next/image';
 import SideBar from './SideBar';
 import Link from 'next/link';
 import hoops from '../../assets/images/hoops.png';
+import hamburger from '../../assets/images/hamburger.png';
 import { Box, Flex, HStack, Spacer, Text } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { logo, navLinks } from '../../store';
 import { useRouter } from 'next/router';
-import { FiMenu } from 'react-icons/fi';
 import { useSideBar } from '../../context';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { CustomBtn, IconBtn } from '../Button';
+import { CustomBtn } from '../Button';
 
 const Nav = () => {
   // Hooks
@@ -68,7 +68,7 @@ const Nav = () => {
       align='center'
       justifyContent='center'
       position='fixed'
-      py={{ base: 1, xl: 4 }}
+      py={{ base: 2, xl: 4 }}
       zIndex={3000}
     >
       <HStack width={globalStyles.containerWidth}>
@@ -107,13 +107,18 @@ const Nav = () => {
           </Link>
         </Box>
 
-        <IconBtn
-          aria-label='menu icon'
+        <Box
           onClick={() => updateShow(true)}
-          icon={<FiMenu className={globalStyles.className} />}
           display={{ base: 'flex', lg: 'none' }}
-          fontSize='1.8rem'
-        />
+        >
+          <Image
+            src={hamburger}
+            alt='hamburger'
+            priority
+            quality={100}
+            onClick={() => updateShow(true)}
+          />
+        </Box>
       </HStack>
 
       <SideBar />
