@@ -13,9 +13,9 @@ import { NavBtn } from '../Button';
 
 const Nav = () => {
   // Hooks
-  const { updateShow } = useSideBar();
   const path = useRouter().pathname;
   const transparent = 'transparent';
+  const { updateShow } = useSideBar();
 
   // Renders
   const renderNav = navLinks.map((item, i) => {
@@ -107,9 +107,7 @@ const Nav = () => {
         </Flex>
 
         <Box display={{ base: 'none', lg: 'flex' }}>
-          <Link href={DyserfRoutes.sendMessage}>
-            <NavBtn />
-          </Link>
+          <NavBtn />
         </Box>
 
         <Box
