@@ -1,33 +1,36 @@
-import { Flex, Text } from '@chakra-ui/react';
+import Image from 'next/image';
+import { Grid, GridItem } from '@chakra-ui/react';
 import { heroItems } from '../../store';
 import { globalStyles } from '../../styles';
-import { GreenCirle } from '../Shared';
 
 const ListOfCompanies = () => {
-  const renderTabs = heroItems.map((e) => {
+  const renderTabs = heroItems.map((e, i) => {
+    const isLast = i === heroItems.length - 1;
+    const isSecondLast = i === heroItems.length - 2;
+
     return (
-      <Flex key={e} align='center' gap={2}>
-        <GreenCirle
-          width={{ base: '30px', xl: '80px' }}
-          height={{ base: '30px', xl: '80px' }}
-        />
-        <Text fontWeight={700}>{e}</Text>
-      </Flex>
+      <GridItem
+        key={i + 1}
+        gridColumnStart={isLast ? 3 : isSecondLast ? 2 : 'auto'}
+      >
+        <Image src={e} alt='Dyserf' priority />
+      </GridItem>
     );
   });
 
   return (
-    <Flex
-      maxW='1000px'
-      flexWrap='wrap'
-      columnGap={{ base: 5, xl: '220px' }}
+    <Grid
+      templateColumns={{ base: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }}
+      justifyContent='center'
+      justifyItems='center'
+      alignItems='center'
+      maxW='1200px'
+      rowGap='50px'
+      columnGap='100px'
       px={globalStyles.px}
-      rowGap={{ base: '40px', xl: '80px' }}
-      mt={{ base: 0, xl: '170px' }}
-      justifyContent={{ base: 'flex-start', xl: 'center' }}
     >
       {renderTabs}
-    </Flex>
+    </Grid>
   );
 };
 

@@ -1,6 +1,12 @@
 import bulb from '../../assets/images/bulb.png';
 import design from '../../assets/images/design.png';
 import deve from '../../assets/images/deve.png';
+import vanlogo from '../../assets/images/vanlogo.png';
+import voblogo from '../../assets/images/voblogo.png';
+import caspadelogo from '../../assets/images/caspadelogo.png';
+import peacelogo from '../../assets/images/peacelogo.png';
+import belogo from '../../assets/images/belogo.png';
+import Tlogo from '../../assets/images/Tlogo.png';
 import { nanoid } from 'nanoid';
 
 export const workItems = [
@@ -12,7 +18,14 @@ export const workItems = [
   'Education',
 ];
 
-export const heroItems = ['VANCUBE', 'Vobb', 'Valucop', 'Sphere', 'Bepro'];
+export const heroItems = [
+  vanlogo,
+  voblogo,
+  caspadelogo,
+  belogo,
+  peacelogo,
+  Tlogo,
+];
 
 export const offers = [
   {
