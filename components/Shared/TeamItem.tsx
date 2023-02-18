@@ -12,18 +12,18 @@ type Props = {
 
 const TeamItem = ({ team }: Props) => {
   const isTop = team.id == 2 || team.id == 4;
-  const test = team.id === 3;
+  const isCenter = team.id === 3;
 
   return (
     <GridItem
       alignSelf={isTop ? 'flex-start' : 'inherit'}
-      colSpan={{ base: test ? 2 : 1, lg: 'auto' }}
+      colSpan={{ base: isCenter ? 2 : 1, lg: 'auto' }}
     >
       <Flex borderRadius={10} align='center' direction='column' gap={1}>
         <Box
           position='relative'
-          width='110px'
-          height='110px'
+          width='140px'
+          height='150px'
           borderRadius={globalStyles.width}
         >
           <Image
@@ -33,7 +33,6 @@ const TeamItem = ({ team }: Props) => {
             style={{
               objectFit: 'contain',
               borderRadius: globalStyles.width,
-              border: '3px solid #323B4B',
             }}
             quality={100}
           />

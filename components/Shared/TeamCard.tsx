@@ -26,10 +26,10 @@ const TeamCard = () => {
           lg: 'repeat(5,1fr)',
           xl: 'repeat(5,1fr)',
         }}
-        minH='320px'
+        minH='353px'
+        alignItems='flex-end'
         data-aos='fade-up'
         data-aos-duration='1000'
-        alignItems='flex-end'
         columnGap={{ base: 2, xl: 6 }}
         rowGap={{ base: '50px', xl: 0 }}
       >
