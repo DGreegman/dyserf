@@ -1,11 +1,7 @@
 import { ContactForm } from '../components';
 
 const SendMessage = () => {
-  return (
-    <>
-      <ContactForm />
-    </>
-  );
+  return <ContactForm />;
 };
 
 export default SendMessage;

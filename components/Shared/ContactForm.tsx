@@ -1,7 +1,7 @@
 import HeroTexts from './HeroTexts';
 import { Flex, FormControl, Input, Stack, Textarea } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
-import { globalStyles } from '../../styles';
+import { globalStyles, inputGradient } from '../../styles';
 import { CustomBtn } from '../Button';
 import { CardHeader } from './Header';
 
@@ -30,8 +30,8 @@ const ContactForm = () => {
             size='lg'
             isRequired
             border={0}
-            background='linear-gradient(180deg, rgba(23, 31, 52, 0.44) 0%, rgba(23, 31, 52, 0.44) 100%);'
-            boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.03)'
+            background={inputGradient}
+            boxShadow={globalStyles.boxShadow}
             placeholder='Name'
             fontSize={globalStyles.textFontSize}
             className={globalStyles.className}
@@ -49,8 +49,8 @@ const ContactForm = () => {
         <FormControl>
           <Input
             size='lg'
-            background='linear-gradient(180deg, rgba(23, 31, 52, 0.44) 0%, rgba(23, 31, 52, 0.44) 100%);'
-            boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.03)'
+            background={inputGradient}
+            boxShadow={globalStyles.boxShadow}
             placeholder='Email'
             type='email'
             border={0}
@@ -71,7 +71,7 @@ const ContactForm = () => {
         <FormControl>
           <Textarea
             size='lg'
-            background='linear-gradient(180deg, rgba(23, 31, 52, 0.44) 0%, rgba(23, 31, 52, 0.44) 100%);'
+            background={inputGradient}
             border={0}
             resize='none'
             minH='250px'
