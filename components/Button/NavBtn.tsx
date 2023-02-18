@@ -16,6 +16,7 @@ const NavBtn = ({ onClick }: Props) => {
         height='47px'
         text='Let’s Collab'
         bg={globalStyles.buttonGradient}
+        addActive
         rightIcon={
           <ArrowForwardIcon
             bgColor='transparent'

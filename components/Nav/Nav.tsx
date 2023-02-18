@@ -9,8 +9,7 @@ import { DyserfRoutes } from '../../utils';
 import { logo, navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { useSideBar } from '../../context';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { CustomBtn } from '../Button';
+import { NavBtn } from '../Button';
 
 const Nav = () => {
   // Hooks
@@ -109,21 +108,7 @@ const Nav = () => {
 
         <Box display={{ base: 'none', lg: 'flex' }}>
           <Link href={DyserfRoutes.sendMessage}>
-            <CustomBtn
-              width='140px'
-              height='47px'
-              text='Let’s Collab'
-              addActive
-              bg={globalStyles.buttonGradient}
-              rightIcon={
-                <ArrowForwardIcon
-                  bgColor='transparent'
-                  ml={1}
-                  fontSize='1.15rem'
-                  className={globalStyles.className}
-                />
-              }
-            />
+            <NavBtn />
           </Link>
         </Box>
 
