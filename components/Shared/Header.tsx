@@ -6,7 +6,7 @@ export const HeroHeader = ({ children, ...rest }: HeadingProps) => {
     <Heading
       fontFamily={globalStyles.fontFamily}
       fontWeight={globalStyles.headerFontWeight}
-      lineHeight={globalStyles.lineHeight}
+      lineHeight={1.3}
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.heroHeader}
       textAlign={{ base: 'left', lg: 'center' }}
