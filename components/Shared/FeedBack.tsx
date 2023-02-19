@@ -89,8 +89,9 @@ const FeedBack = () => {
       <Grid
         templateColumns='repeat(4,1fr)'
         justifyItems='center'
-        alignItems='flex-start'
         gap='80px'
+        data-aos='fade-up'
+        data-aos-duration='1000'
       >
         {renderFeedBacks}
       </Grid>
