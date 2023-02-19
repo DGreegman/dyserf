@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import { ChildProps } from '../models/childrenProps';
+import { ChildProps } from '../models';
 
 interface SideBarProps {
   show: boolean;
