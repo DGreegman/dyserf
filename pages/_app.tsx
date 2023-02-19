@@ -1,5 +1,5 @@
-import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
+import { ChakraProvider } from '@chakra-ui/react';
 import { ShowSideNavContext } from '../context';
 import { GlobalLayout } from '../layout';
 import '../styles/globals.css';

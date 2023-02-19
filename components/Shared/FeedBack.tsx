@@ -1,14 +1,30 @@
 import DifferentBg from './DifferentBg';
 import Image from 'next/image';
 import DLogo from '../../assets/images/Dlogo.png';
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { CardText } from './Sharedtext';
 import { SectionTexts } from '..';
+import { feedBackItems, useFeedBackStore } from '../../store';
+import { FeedBackItem } from './FeedBackItem';
 
 const FeedBack = () => {
+  const { description, image, id } = useFeedBackStore();
+
+  const renderFeedBacks = feedBackItems.map((feedbackItem) => {
+    const isActive = feedbackItem.id === id;
+
+    return (
+      <FeedBackItem
+        isActive={isActive}
+        feedbackItem={feedbackItem}
+        key={feedbackItem.id}
+      />
+    );
+  });
+
   return (
-    <SectionContainer gap='50px' display={{ base: 'none', xl: 'flex' }}>
+    <SectionContainer display={{ base: 'none', xl: 'flex' }} pt='30px'>
       <SectionTexts
         header='Feedbacks'
         desc='What businesses and individuals have said about us'
@@ -16,7 +32,7 @@ const FeedBack = () => {
 
       <Flex
         maxW='1200px'
-        minH='500px'
+        minH='450px'
         position='relative'
         data-aos='fade-up'
         data-aos-duration='1000'
@@ -36,21 +52,48 @@ const FeedBack = () => {
         />
 
         <DifferentBg
-          flexProps={{ align: 'center', px: '50px' }}
+          flexProps={{ align: 'center', px: '50px', gap: '32px' }}
           position='relative'
-          maxWidth='817px'
+          maxWidth='717px'
           minH='295px'
           maxH='295px'
         >
-          <Image src={DLogo} alt='Logo' style={{ background: 'transparent' }} />
+          <Box
+            position='relative'
+            width='98px'
+            height='98px'
+            background='transparent'
+          >
+            <Image
+              src={DLogo}
+              alt='Logo'
+              fill
+              style={{ background: 'transparent', objectFit: 'contain' }}
+            />
+          </Box>
 
-          <CardText pt='50px' maxWidth='709px'>
-            Dyserf don’t just get your projects done, they work as part of your
-            team to improve your general workflow. It was a great experience we
-            had with dyserf working on our project.
-          </CardText>
+          <CardText maxWidth='709px'>{description}</CardText>
+
+          <Box
+            position='relative'
+            width='90px'
+            height='30px'
+            background='transparent'
+            alignSelf='flex-end'
+          >
+            <Image src={image} alt={id} style={{ background: 'transparent' }} />
+          </Box>
         </DifferentBg>
       </Flex>
+
+      <Grid
+        templateColumns='repeat(4,1fr)'
+        justifyItems='center'
+        alignItems='flex-start'
+        gap='80px'
+      >
+        {renderFeedBacks}
+      </Grid>
     </SectionContainer>
   );
 };

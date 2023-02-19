@@ -27,6 +27,8 @@ const ListOfCompanies = () => {
       maxW='1200px'
       rowGap='50px'
       columnGap='100px'
+      data-aos='fade-up'
+      data-aos-duration='1000'
       px={globalStyles.px}
     >
       {renderTabs}
