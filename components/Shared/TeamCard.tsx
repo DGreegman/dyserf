@@ -30,8 +30,8 @@ const TeamCard = () => {
         alignItems='flex-end'
         data-aos='fade-up'
         data-aos-duration='1000'
-        columnGap={{ base: 2, xl: 6 }}
-        rowGap={{ base: '50px', xl: 0 }}
+        columnGap={{ base: '20', xl: 6 }}
+        rowGap={{ base: '20px', xl: 0 }}
       >
         {renderTeam}
       </Grid>
