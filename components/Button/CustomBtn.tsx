@@ -23,6 +23,7 @@ type Props = {
   rightIcon?: ReactElement;
   leftIcon?: ReactElement;
   addBorderGradient?: boolean;
+  addActive?: boolean;
 };
 
 const CustomBtn = ({
@@ -38,6 +39,7 @@ const CustomBtn = ({
   borderColor,
   addBorderGradient,
   leftIcon,
+  addActive,
 }: Props) => {
   const style = {
     width: width,
@@ -60,7 +62,7 @@ const CustomBtn = ({
         className={`${globalStyles.className}`}
         _hover={{
           background: bg ?? globalStyles.bgColor,
-          transform: 'scale(1.05)',
+          transform: addActive ? 'scale(1.05)' : '',
         }}
         _active={{
           background: bg ?? globalStyles.bgColor,

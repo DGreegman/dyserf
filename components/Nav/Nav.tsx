@@ -9,13 +9,13 @@ import { DyserfRoutes } from '../../utils';
 import { logo, navLinks } from '../../store';
 import { useRouter } from 'next/router';
 import { useSideBar } from '../../context';
-import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { CustomBtn } from '../Button';
+import { NavBtn } from '../Button';
 
 const Nav = () => {
   // Hooks
-  const { updateShow } = useSideBar();
   const path = useRouter().pathname;
+  const transparent = 'transparent';
+  const { updateShow } = useSideBar();
 
   // Renders
   const renderNav = navLinks.map((item, i) => {
@@ -28,6 +28,7 @@ const Nav = () => {
         align='center'
         justify='center'
         minW='100px'
+        bg={transparent}
       >
         <Link
           href={item.path}
@@ -40,6 +41,7 @@ const Nav = () => {
             color={globalStyles.whiteColor}
             fontSize={globalStyles.textFontSize}
             className={globalStyles.className}
+            bg={transparent}
             _hover={{
               opacity: !isActive ? 0.7 : 1,
             }}
@@ -52,8 +54,15 @@ const Nav = () => {
           opacity={isActive ? 1 : 0}
           transition='all ease-in-out 250ms'
           position='absolute'
+          bg={transparent}
         >
-          <Image src={hoops} alt={globalStyles.alt} />
+          <Image
+            src={hoops}
+            alt={globalStyles.alt}
+            style={{
+              background: transparent,
+            }}
+          />
         </Box>
       </Flex>
     );
@@ -62,7 +71,8 @@ const Nav = () => {
   return (
     <Flex
       width={globalStyles.width}
-      bgColor={globalStyles.gradientBg}
+      bg={globalStyles.gradientBg}
+      backdropFilter={globalStyles.backDropFilter}
       px={globalStyles.px}
       shadow={globalStyles.boxShadow}
       align='center'
@@ -71,7 +81,7 @@ const Nav = () => {
       py={{ base: 2, xl: 4 }}
       zIndex={3000}
     >
-      <HStack width={globalStyles.containerWidth}>
+      <HStack width={globalStyles.containerWidth} bg={transparent}>
         <Link href={DyserfRoutes.homepage}>
           <Image
             src={logo}
@@ -79,32 +89,25 @@ const Nav = () => {
             priority
             quality='100'
             className={globalStyles.className}
+            style={{
+              background: transparent,
+            }}
           />
         </Link>
 
-        <Spacer />
+        <Spacer bg={transparent} />
 
-        <Flex gap='70px' pr='80px' display={{ base: 'none', lg: 'flex' }}>
+        <Flex
+          gap='70px'
+          pr='80px'
+          display={{ base: 'none', lg: 'flex' }}
+          bg={transparent}
+        >
           {renderNav}
         </Flex>
 
         <Box display={{ base: 'none', lg: 'flex' }}>
-          <Link href={DyserfRoutes.sendMessage}>
-            <CustomBtn
-              width='140px'
-              height='47px'
-              text='Let’s Collab'
-              bg={globalStyles.buttonGradient}
-              rightIcon={
-                <ArrowForwardIcon
-                  bgColor='transparent'
-                  ml={1}
-                  fontSize='1.15rem'
-                  className={globalStyles.className}
-                />
-              }
-            />
-          </Link>
+          <NavBtn />
         </Box>
 
         <Box

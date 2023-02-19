@@ -41,8 +41,11 @@ export const globalStyles = {
   lineHeight: 1.4,
   gradientBg:
     'linear-gradient(180deg, rgba(23, 31, 52, 0.25) 0%, rgba(23, 31, 52, 0.25) 100%)',
-  boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.05)',
+  boxShadow: '2px 2px 100px 50px rgba(0, 0, 0, 0.03)',
   backDropFilter: 'blur(15px)',
   buttonGradient: 'linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)',
   radius: 5,
 };
+
+export const inputGradient =
+  'linear-gradient(180deg, rgba(23, 31, 52, 0.44) 0%, rgba(23, 31, 52, 0.44) 100%);';

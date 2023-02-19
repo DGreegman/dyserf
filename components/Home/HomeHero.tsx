@@ -1,13 +1,9 @@
 import Link from 'next/link';
-import hero1 from '../../assets/images/hero1.png';
-import hero2 from '../../assets/images/hero2.png';
-import hero3 from '../../assets/images/hero3.png';
-import hero4 from '../../assets/images/hero4.png';
 import { Box, Flex, Icon, Text, useMediaQuery } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { DyserfRoutes } from '../../utils';
 import { CustomBtn, NavBtn } from '../Button';
-import { HeroTags, HeroTexts } from '../Shared';
+import { HeroTexts } from '../Shared';
 import { FaPlay } from 'react-icons/fa';
 import { globalStyles } from '../../styles';
 import { BsPlayCircle } from 'react-icons/bs';
@@ -21,7 +17,7 @@ const HomeHero = () => {
         desc='Dyserf is an innovative team that builds digital experiences, which
         accelerate business growth and make life activities easier and faster.'
       >
-        Your innovative Ux partner <br />
+        Your world-class digital product development partner <br />
         <Text
           bgClip='text'
           bgGradient={globalStyles.buttonGradient}
@@ -67,11 +63,6 @@ const HomeHero = () => {
           />
         </Link>
       </Flex>
-
-      <HeroTags icon={hero1} top='45%' left={0} />
-      <HeroTags icon={hero2} bottom='-40%' left='300px' />
-      <HeroTags icon={hero3} bottom='-20%' right='300px' />
-      <HeroTags icon={hero4} top='5%' right='-60px' />
     </SectionContainer>
   );
 };

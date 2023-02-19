@@ -15,7 +15,7 @@ const HomeWork = () => {
       />
 
       <Grid
-        templateColumns={{ base: 'repeat(3,1fr)', xl: 'repeat(6,1fr)' }}
+        templateColumns={{ base: 'repeat(3,1fr)', lg: 'repeat(6,1fr)' }}
         w='max-content'
         gap='11px'
         data-aos='fade-up'

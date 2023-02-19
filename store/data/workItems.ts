@@ -19,13 +19,13 @@ export const workData: WorkModel[] = [
     header: 'Zyrop',
     description:
       'Connecting people and money. Across borders, currencies, and cultures. Move money across Currencies and Countries',
-    id: 1,
+    id: 3,
     icon: c,
   },
   {
     header: 'Bepro',
     description: 'An E-learning plateform for Nigerian student.',
-    id: 1,
+    id: 4,
     icon: c,
   },
 ];
