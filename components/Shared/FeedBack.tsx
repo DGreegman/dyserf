@@ -5,13 +5,29 @@ import { Box, Flex, Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { CardText } from './Sharedtext';
 import { SectionTexts } from '..';
-import { feedBackItems, useFeedBackStore } from '../../store';
+import { feedBackItems, onAddNewFeedBack, useFeedBackStore } from '../../store';
 import { FeedBackItem } from './FeedBackItem';
+import { useEffect, useState } from 'react';
 
 const FeedBack = () => {
   const { description, image, id } = useFeedBackStore();
+  const [selectedItem, setSelectedItem] = useState(0);
 
-  const renderFeedBacks = feedBackItems.map((feedbackItem) => {
+  useEffect(() => {
+    const timer = setInterval(() => {
+      selectedItem < feedBackItems.length - 1
+        ? setSelectedItem((p) => p + 1)
+        : setSelectedItem(0);
+    }, 5000);
+
+    onAddNewFeedBack(feedBackItems[selectedItem]);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [selectedItem]);
+
+  const renderFeedBacks = feedBackItems.map((feedbackItem, i) => {
     const isActive = feedbackItem.id === id;
 
     return (
@@ -19,6 +35,9 @@ const FeedBack = () => {
         isActive={isActive}
         feedbackItem={feedbackItem}
         key={feedbackItem.id}
+        onClick={() => {
+          setSelectedItem(i);
+        }}
       />
     );
   });

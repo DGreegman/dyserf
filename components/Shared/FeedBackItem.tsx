@@ -7,9 +7,10 @@ import { globalStyles } from '../../styles';
 interface Props {
   isActive: boolean;
   feedbackItem: FeedbackModel;
+  onClick?: () => void;
 }
 
-export const FeedBackItem = ({ isActive, feedbackItem }: Props) => {
+export const FeedBackItem = ({ isActive, feedbackItem, onClick }: Props) => {
   return (
     <GridItem
       position='relative'
@@ -19,7 +20,10 @@ export const FeedBackItem = ({ isActive, feedbackItem }: Props) => {
       className={globalStyles.className}
       bgColor={isActive ? '#171F34' : 'transparent'}
       transition='all 350ms linear'
-      onClick={() => onAddNewFeedBack(feedbackItem)}
+      onClick={() => {
+        onAddNewFeedBack(feedbackItem);
+        onClick && onClick();
+      }}
       display='flex'
       px='1.5'
       alignItems='center'
