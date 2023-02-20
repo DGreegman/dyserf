@@ -10,7 +10,7 @@ export const HeroHeader = ({ children, ...rest }: HeadingProps) => {
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.heroHeader}
       textAlign={{ base: 'left', lg: 'center' }}
-      maxW={{ base: '100%', xl: '1110px' }}
+      maxW={{ base: '100%', xl: '1089px' }}
       px={globalStyles.px}
       bg='transparent'
       letterSpacing='0.015em'
