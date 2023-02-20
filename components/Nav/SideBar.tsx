@@ -3,12 +3,12 @@ import Image from 'next/image';
 import logo from '../../assets/images/logo.png';
 import {
   Flex,
-  LinkBox,
   VStack,
   Spacer,
   Stack,
   Box,
   useMediaQuery,
+  Text,
 } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons';
 import { useEffect } from 'react';
@@ -31,19 +31,22 @@ const SideBar = () => {
   // renders
   const renderNavLinks = navLinks.map(({ path, title }, i) => {
     return (
-      <LinkBox
-        key={`${title}-${i}`}
-        color={globalStyles.whiteColor}
-        _hover={{
-          color: globalStyles.primaryColor,
-        }}
-        onClick={() => updateShow(false)}
+      <Link
+        href={path}
         className={globalStyles.className}
+        key={`${title}-${i}`}
       >
-        <Link href={path} className={globalStyles.className}>
+        <Text
+          color={globalStyles.whiteColor}
+          _hover={{
+            color: globalStyles.primaryColor,
+          }}
+          onClick={() => updateShow(false)}
+          className={globalStyles.className}
+        >
           {title}
-        </Link>
-      </LinkBox>
+        </Text>
+      </Link>
     );
   });
 
