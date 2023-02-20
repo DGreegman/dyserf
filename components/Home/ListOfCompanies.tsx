@@ -11,7 +11,9 @@ const ListOfCompanies = () => {
     return (
       <GridItem
         key={i + 1}
-        gridColumnStart={isLast ? 3 : isSecondLast ? 2 : 'auto'}
+        gridColumnStart={{
+          md: isLast ? 3 : isSecondLast ? 2 : 'auto',
+        }}
       >
         <Image src={e} alt='Dyserf' priority />
       </GridItem>
@@ -20,12 +22,12 @@ const ListOfCompanies = () => {
 
   return (
     <Grid
-      templateColumns={{ base: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }}
+      templateColumns={{ base: 'repeat(3,1fr)', md: 'repeat(4,1fr)' }}
       justifyContent='center'
       justifyItems='center'
       alignItems='center'
       maxW='1200px'
-      rowGap='50px'
+      rowGap={{ base: '40px', md: '50px' }}
       columnGap={{ base: '20px', xl: '100px' }}
       data-aos='fade-up'
       data-aos-duration='1000'

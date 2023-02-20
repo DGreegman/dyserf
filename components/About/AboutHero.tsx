@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Box } from '@chakra-ui/react';
+import { Box, useMediaQuery } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
@@ -7,6 +7,11 @@ import { CustomBtn } from '../Button';
 import { HeroTexts } from '../Shared';
 
 const AboutHero = () => {
+  const [isLargerThan800] = useMediaQuery('(min-width: 800px)', {
+    ssr: true,
+    fallback: false, // return false on the server, and re-evaluate on the client side
+  });
+
   return (
     <SectionContainer pt={globalStyles.sectionPt} gap={5}>
       <HeroTexts
@@ -17,7 +22,8 @@ const AboutHero = () => {
         globally. The TEWAM approach is our unique agile methodology that helps
         us translate your business goals and objectives into solution.'
       >
-        Demystifying Service Functionalities(Dyserf)
+        Demystifying Service Functionalities{!isLargerThan800 ? <br /> : null}
+        (Dyserf)
       </HeroTexts>
 
       <Box
@@ -33,7 +39,6 @@ const AboutHero = () => {
           />
         </Link>
       </Box>
-
     </SectionContainer>
   );
 };
