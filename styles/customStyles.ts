@@ -6,6 +6,7 @@ export const globalStyles = {
   diffBgColor: '#172038',
   whiteColor: '#FFF',
   headerTextColor: '#EEEEFC',
+  btnBg: '#182341',
   textColor: '#EBF8FE',
   heroHeader: { base: '2.4rem', xl: '4.3rem' },
   cardHeader: { base: '1rem', xl: '1.1rem' },

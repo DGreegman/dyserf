@@ -12,7 +12,6 @@ const AboutHero = () => {
 
   useLayoutEffect(() => {
     const media = window.matchMedia('(min-width: 800px)');
-
     setMediaQuery(media.matches);
   }, [mediaQuery]);
 
@@ -40,7 +39,7 @@ const AboutHero = () => {
           <CustomBtn
             text='Our blog'
             width='150px'
-            bg='#182341'
+            bg={globalStyles.btnBg}
             addBorderGradient
           />
         </Link>

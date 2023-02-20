@@ -38,7 +38,7 @@ const HomeHero = () => {
           <CustomBtn
             text='How we work'
             width='150px'
-            bg='#182341'
+            bg={globalStyles.btnBg}
             addBorderGradient={isLargerThan1280}
             rightIcon={
               <Icon
