@@ -7,7 +7,7 @@ import caspadelogo from '../../assets/images/caspadelogo.png';
 import peacelogo from '../../assets/images/peacelogo.png';
 import belogo from '../../assets/images/belogo.png';
 import Tlogo from '../../assets/images/Tlogo.png';
-import mobileTlogo from '../../assets/images/mobileTlogo.png';
+import mobileTlogo from '../../assets/images/mobileTLogo.png';
 import { nanoid } from 'nanoid';
 
 export const workItems = [
