@@ -5,8 +5,18 @@ import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { CustomBtn } from '../Button';
 import { HeroTexts } from '../Shared';
+import { useLayoutEffect, useState } from 'react';
 
 const AboutHero = () => {
+  const [mediaQuery, setMediaQuery] = useState(false);
+
+  useLayoutEffect(() => {
+    const media = window.matchMedia('(min-width: 800px)');
+    setMediaQuery(media.matches);
+  }, [mediaQuery]);
+
+  console.log(mediaQuery);
+
   return (
     <SectionContainer pt={globalStyles.sectionPt} gap={5}>
       <HeroTexts
@@ -17,7 +27,8 @@ const AboutHero = () => {
         globally. The TEWAM approach is our unique agile methodology that helps
         us translate your business goals and objectives into solution.'
       >
-        Demystifying Service Functionalities(Dyserf)
+        Demystifying Service Functionalities{!mediaQuery ? <br /> : null}
+        (Dyserf)
       </HeroTexts>
 
       <Box
@@ -28,12 +39,11 @@ const AboutHero = () => {
           <CustomBtn
             text='Our blog'
             width='150px'
-            bg='#182341'
+            bg={globalStyles.btnBg}
             addBorderGradient
           />
         </Link>
       </Box>
-
     </SectionContainer>
   );
 };

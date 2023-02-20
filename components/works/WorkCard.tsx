@@ -60,7 +60,7 @@ const WorkCard = ({ item }: Props) => {
         <CustomBtn
           text='See details'
           width='110px'
-          bg='#182341'
+          bg={globalStyles.btnBg}
           addBorderGradient
         />
       </Box>

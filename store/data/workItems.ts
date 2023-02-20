@@ -1,4 +1,7 @@
-import c from '../../assets/images/fire2.png';
+// import a from '../../assets/images/fire1.png';
+import b from '../../assets/images/nft.png';
+import c from '../../assets/images/zyrop.png';
+import d from '../../assets/images/fire2.png';
 import { WorkModel } from '../../models';
 
 export const workData: WorkModel[] = [
@@ -13,7 +16,7 @@ export const workData: WorkModel[] = [
     description:
       'An NFT Analytic marketplace for Spotting NFT alpha by ranking, rarity, whale tracking, drops calendar and more!',
     id: 2,
-    icon: c,
+    icon: b,
   },
   {
     header: 'Zyrop',
@@ -26,6 +29,6 @@ export const workData: WorkModel[] = [
     header: 'Bepro',
     description: 'An E-learning plateform for Nigerian student.',
     id: 4,
-    icon: c,
+    icon: d,
   },
 ];

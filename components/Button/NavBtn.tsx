@@ -1,6 +1,6 @@
+import Link from 'next/link';
 import CustomBtn from './CustomBtn';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import { Link } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 

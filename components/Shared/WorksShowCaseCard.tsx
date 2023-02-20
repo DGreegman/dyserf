@@ -11,6 +11,7 @@ const WorksShowCaseCard = () => {
     <>
       <Grid
         templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
+        gridAutoRows='1fr'
         columnGap={6}
         bg='transparent'
         rowGap='54px'

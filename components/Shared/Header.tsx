@@ -6,11 +6,11 @@ export const HeroHeader = ({ children, ...rest }: HeadingProps) => {
     <Heading
       fontFamily={globalStyles.fontFamily}
       fontWeight={globalStyles.headerFontWeight}
-      lineHeight={1.3}
+      lineHeight={{ base: 1.6, xl: 1.3 }}
       color={globalStyles.headerTextColor}
       fontSize={globalStyles.heroHeader}
       textAlign={{ base: 'left', lg: 'center' }}
-      w={{ base: globalStyles.width, xl: '1031px' }}
+      maxW={{ base: '100%', xl: '1210px', '2xl': '1110px' }}
       px={globalStyles.px}
       bg='transparent'
       letterSpacing='0.015em'

@@ -13,10 +13,7 @@ const HomeHero = () => {
 
   return (
     <SectionContainer pt={globalStyles.sectionPt} gap={5} position='relative'>
-      <HeroTexts
-        desc='Dyserf is an innovative team that builds digital experiences, which
-        accelerate business growth and make life activities easier and faster.'
-      >
+      <HeroTexts>
         Your world-class digital product development partner <br />
         <Text
           bgClip='text'
@@ -41,7 +38,7 @@ const HomeHero = () => {
           <CustomBtn
             text='How we work'
             width='150px'
-            bg='#182341'
+            bg={globalStyles.btnBg}
             addBorderGradient={isLargerThan1280}
             rightIcon={
               <Icon
