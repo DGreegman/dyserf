@@ -43,7 +43,7 @@ const FeedBack = () => {
   });
 
   return (
-    <SectionContainer display={{ base: 'none', lg: 'flex' }} pt='30px'>
+    <SectionContainer display={{ base: 'none', lg: 'flex' }} pt='10px'>
       <SectionTexts
         header='Feedbacks'
         desc='What businesses and individuals have said about us'

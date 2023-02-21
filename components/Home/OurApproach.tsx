@@ -33,7 +33,7 @@ const OurApproach = () => {
         data-aos='fade-up'
         data-aos-duration='1000'
         gap={6}
-        mb={20}
+        pb='30px'
       >
         <Grid templateColumns='repeat(2, 1fr)' gridAutoRows='1fr' gap={5}>
           <ApproachCard t='Empathy' colSpan={1} bg='#4A9FFF'>
