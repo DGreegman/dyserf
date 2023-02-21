@@ -5,7 +5,7 @@ import { DescCard, DifferentBg, SectionTexts } from '../Shared';
 
 const WhatWeOffer = () => {
   const renderCards = offers.map((offer) => (
-    <DescCard key={offer.id} {...offer} minH='330px' />
+    <DescCard key={offer.id} {...offer} minH='300px' />
   ));
 
   return (

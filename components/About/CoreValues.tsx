@@ -6,12 +6,7 @@ import { DescCard, SectionTexts } from '../Shared';
 
 const CoreValues = () => {
   const renderValues = coreValues.map((e) => (
-    <GridItem
-      key={e.id}
-      bg='transparent'
-      maxH={e.isDouble ? '473px' : '180px'}
-      rowSpan={e.isDouble ? 2 : 1}
-    >
+    <GridItem key={e.id} bg='transparent' rowSpan={e.isDouble ? 2 : 1}>
       <DescCard {...e} minH={e.isDouble ? '100%' : '180px'} radius={10} />
     </GridItem>
   ));
@@ -20,7 +15,7 @@ const CoreValues = () => {
     <SectionContainer gap='50px'>
       <SectionTexts
         header='Core Values'
-        desc='  These values are true to our heart. It defines who we are as a team.'
+        desc='These values are true to our heart. It defines who we are as a team.'
       />
 
       <Grid

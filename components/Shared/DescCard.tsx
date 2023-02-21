@@ -33,9 +33,9 @@ const DescCard = ({
 
   return (
     <DifferentBg
-      minH={minH ?? '226px'}
+      minH={minH ?? 'max-content'}
       borderRadius={radius ?? 20}
-      flexProps={{ gap: 5 }}
+      flexProps={{ gap: 2 }}
     >
       {icon && (
         <Image

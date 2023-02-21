@@ -15,6 +15,7 @@ const Visions = () => {
         gap='7'
         data-aos='fade-up'
         data-aos-duration='1000'
+        gridAutoRows='1fr'
         maxW={{ base: globalStyles.width, xl: '1020px' }}
       >
         {renderCards}
