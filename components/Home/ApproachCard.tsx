@@ -3,6 +3,7 @@ import {
   Text,
   GridItemProps,
   BackgroundProps,
+  SpaceProps,
 } from '@chakra-ui/react';
 import { ChildProps } from '../../models';
 import { globalStyles } from '../../styles';
@@ -11,11 +12,17 @@ interface Props extends ChildProps {
   t: string;
   colSpan?: GridItemProps['colSpan'];
   bg?: BackgroundProps['bg'];
+  pb?: SpaceProps['pb'];
 }
 
-const ApproachCard = ({ children, t, colSpan, bg }: Props) => {
+const ApproachCard = ({ children, t, colSpan, bg, pb }: Props) => {
   const sharedText = (t: string) => (
-    <Text fontWeight={globalStyles.semibold} color='#323B4B' bg='transparent'>
+    <Text
+      fontWeight={globalStyles.semibold}
+      color='#323B4B'
+      bg='transparent'
+      pb={pb}
+    >
       {t}
     </Text>
   );

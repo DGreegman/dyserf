@@ -40,7 +40,7 @@ const OurApproach = () => {
             <Box bg='transparent' position='absolute' right={1} top={-1}>
               <Image
                 src={g1}
-                alt='Dyserf'
+                alt={globalStyles.alt}
                 style={{ background: 'transparent', objectPosition: 'top' }}
               />
             </Box>
@@ -50,7 +50,7 @@ const OurApproach = () => {
             <Box bg='transparent' position='absolute' right='0.5' top={-1}>
               <Image
                 src={g2}
-                alt='Dyserf'
+                alt={globalStyles.alt}
                 style={{ background: 'transparent', objectPosition: 'top' }}
               />
             </Box>
@@ -60,7 +60,7 @@ const OurApproach = () => {
             <Box bg='transparent' position='absolute' right={1} top={-1}>
               <Image
                 src={g3}
-                alt='Dyserf'
+                alt={globalStyles.alt}
                 style={{ background: 'transparent', objectPosition: 'top' }}
               />
             </Box>
@@ -72,7 +72,7 @@ const OurApproach = () => {
             <Box bg='transparent' position='absolute' right={1} top={-1}>
               <Image
                 src={g5}
-                alt='Dyserf'
+                alt={globalStyles.alt}
                 style={{ background: 'transparent', objectPosition: 'top' }}
               />
             </Box>
@@ -85,7 +85,7 @@ const OurApproach = () => {
             >
               <Image
                 src={g4team}
-                alt='Dyserf'
+                alt={globalStyles.alt}
                 style={{ background: 'transparent', objectPosition: 'top' }}
               />
             </Box>
@@ -97,7 +97,7 @@ const OurApproach = () => {
             <Box bg='transparent' position='absolute' right={1} top={-1}>
               <Image
                 src={g5}
-                alt='Dyserf'
+                alt={globalStyles.alt}
                 style={{ background: 'transparent', objectPosition: 'top' }}
               />
             </Box>
@@ -107,7 +107,7 @@ const OurApproach = () => {
             <Box bg='transparent' position='absolute' right={0} top='3px'>
               <Image
                 src={g4}
-                alt='Dyserf'
+                alt={globalStyles.alt}
                 style={{ background: 'transparent', objectPosition: 'top' }}
               />
             </Box>
