@@ -68,7 +68,12 @@ const OurApproach = () => {
         </Grid>
 
         <Grid>
-          <ApproachCard t='Creative collaboration' colSpan={1} bg='#00C39A'>
+          <ApproachCard
+            t='Creative collaboration'
+            colSpan={1}
+            bg='#00C39A'
+            pb='2.5'
+          >
             <Box bg='transparent' position='absolute' right={1} top={-1}>
               <Image
                 src={g5}
