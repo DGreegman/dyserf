@@ -16,8 +16,8 @@ const WorkCard = ({ item }: Props) => {
         align: 'center',
         justify: 'center',
       }}
-      borderRadius={{ base: 0, md: 10, xl: 20 }}
-      minH='340px'
+      borderRadius={{ base: 0, md: 10 }}
+      minH='380px'
       w='full'
       className={globalStyles.className}
     >
