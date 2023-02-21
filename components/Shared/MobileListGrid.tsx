@@ -40,6 +40,7 @@ export const MobileGrid = () => {
       rowGap={{ base: '40px', md: '50px' }}
       columnGap={{ base: '20px', md: '30px', xl: '100px' }}
       gridAutoRows='1fr'
+      display={{ base: 'grid', md: 'none' }}
     >
       <MobileGridItem
         templateColumns='repeat(3,1fr)'
