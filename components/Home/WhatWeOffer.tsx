@@ -13,14 +13,13 @@ const WhatWeOffer = () => {
       w='full'
       borderRadius={0}
       flexProps={{ align: 'center', gap: '50px' }}
-      minH='488px'
     >
       <SectionTexts
         desc='A smooth technology experience that lets you concentrate on your
           business'
         header='What we offer'
-        pt='40px'
         pb='30px'
+        pt='40px'
       />
 
       <Grid
@@ -31,11 +30,11 @@ const WhatWeOffer = () => {
           xl: 'repeat(3,1fr)',
         }}
         gap='7'
-        pb={20}
         w={{ base: globalStyles.width, xl: '950px' }}
         bg='transparent'
         data-aos='fade-up'
         data-aos-duration='1000'
+        pb='30px'
       >
         {renderCards}
       </Grid>
