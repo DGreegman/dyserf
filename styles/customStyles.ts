@@ -12,7 +12,7 @@ export const globalStyles = {
   cardHeader: { base: '1rem', xl: '1.1rem' },
   sectionHeader: { base: '1.5rem', xl: '3rem' },
   textFontSize: '0.88rem',
-  cardText: '0.8rem',
+  cardText: '0.87rem',
   normalBold: 400,
   semibold: 500,
   mediumbold: 600,
