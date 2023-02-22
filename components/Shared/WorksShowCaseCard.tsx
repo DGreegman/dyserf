@@ -1,6 +1,7 @@
 import WorkCard from '../works/WorkCard';
 import { Grid, Box } from '@chakra-ui/react';
 import { workData } from '../../store';
+import { globalStyles } from '../../styles';
 
 const WorksShowCaseCard = () => {
   const renderWorks = workData.map((e) => {
@@ -31,6 +32,7 @@ const WorksShowCaseCard = () => {
         bottom={0}
         opacity={0.2}
         filter='blur(100px)'
+        className={globalStyles.className}
         background='linear-gradient(269.49deg, #AD00FF -13.36%, #182DEA 73.24%)'
       />
     </>
