@@ -62,13 +62,13 @@ const FeedBack = () => {
         pt={{ base: '5', xl: 0 }}
       >
         <Box
-          width={{ base: '90%', xl: '400px' }}
+          width={{ base: '90%', md: '400px' }}
           height='350px'
           bg='linear-gradient(180deg, rgba(234, 24, 175, 0.3) 0%, rgba(91, 47, 215, 0.3) 53.12%, rgba(150, 49, 198, 0.3) 100%);'
           filter='blur(25px)'
           opacity={0.6}
           position='absolute'
-          left={{ base: '2', xl: '25%' }}
+          left={{ base: '2', md: '25%' }}
           top='70px'
           borderRadius='full'
         />

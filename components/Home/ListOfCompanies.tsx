@@ -16,7 +16,6 @@ const ListOfCompanies = () => {
         gridColumnStart={{
           md: isLast ? 3 : isSecondLast ? 2 : 'auto',
         }}
-        display={{ base: 'none', md: 'flex' }}
       >
         <Image src={e} alt={globalStyles.alt} priority />
       </GridItem>
