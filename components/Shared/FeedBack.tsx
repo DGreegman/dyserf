@@ -81,9 +81,9 @@ const FeedBack = () => {
             gap: '32px',
           }}
           position='relative'
-          maxWidth={{ base: '82%', xl: '717px' }}
-          minH={{ base: '329px', xl: '295px' }}
-          maxH={{ base: 'full', xl: '295px' }}
+          maxWidth={{ base: '82%', md: '717px' }}
+          minH={{ base: '329px', md: '295px' }}
+          maxH={{ base: 'full', md: '295px' }}
         >
           <Box
             position='relative'
