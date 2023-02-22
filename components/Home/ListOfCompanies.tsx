@@ -36,6 +36,7 @@ const ListOfCompanies = () => {
         data-aos='fade-up'
         data-aos-duration='1000'
         px={globalStyles.px}
+        userSelect='none'
         display={{ base: 'none', md: 'grid' }}
       >
         {renderTabs}
