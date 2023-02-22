@@ -8,6 +8,7 @@ import { SectionTexts } from '..';
 import { feedBackItems, onAddNewFeedBack, useFeedBackStore } from '../../store';
 import { FeedBackItem } from './FeedBackItem';
 import { useEffect, useState } from 'react';
+import { AnimatedArrows } from './AnimatedArrows';
 
 const FeedBack = () => {
   const { description, image, id } = useFeedBackStore();
@@ -16,7 +17,7 @@ const FeedBack = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       selectedItem < feedBackItems.length - 1
-        ? setSelectedItem((p) => p + 1)
+        ? setSelectedItem((prev) => prev + 1)
         : setSelectedItem(0);
     }, 5000);
 
@@ -43,7 +44,7 @@ const FeedBack = () => {
   });
 
   return (
-    <SectionContainer display={{ base: 'none', lg: 'flex' }} pt='10px'>
+    <SectionContainer pt='10px'>
       <SectionTexts
         header='Feedbacks'
         desc='What businesses and individuals have said about us'
@@ -53,29 +54,36 @@ const FeedBack = () => {
         maxW='1200px'
         minH='450px'
         position='relative'
+        direction='column'
         data-aos='fade-up'
         data-aos-duration='1000'
         align='center'
         justify='center'
+        pt={{ base: '5', xl: 0 }}
       >
         <Box
-          width='400px'
+          width={{ base: '90%', xl: '400px' }}
           height='350px'
           bg='linear-gradient(180deg, rgba(234, 24, 175, 0.3) 0%, rgba(91, 47, 215, 0.3) 53.12%, rgba(150, 49, 198, 0.3) 100%);'
           filter='blur(25px)'
           opacity={0.6}
           position='absolute'
-          left='25%'
+          left={{ base: '2', xl: '25%' }}
           top='70px'
           borderRadius='full'
         />
 
         <DifferentBg
-          flexProps={{ align: 'center', px: '50px', gap: '32px' }}
+          flexProps={{
+            align: 'center',
+            px: { base: '30px', xl: '50px' },
+            pb: { base: '4', xl: 0 },
+            gap: '32px',
+          }}
           position='relative'
-          maxWidth='717px'
-          minH='295px'
-          maxH='295px'
+          maxWidth={{ base: '82%', xl: '717px' }}
+          minH={{ base: '329px', xl: '295px' }}
+          maxH={{ base: 'full', xl: '295px' }}
         >
           <Box
             position='relative'
@@ -91,7 +99,9 @@ const FeedBack = () => {
             />
           </Box>
 
-          <CardText maxWidth='709px'>{description}</CardText>
+          <CardText maxWidth={{ base: 'full', xl: '709px' }}>
+            {description}
+          </CardText>
 
           <Box
             position='relative'
@@ -103,12 +113,15 @@ const FeedBack = () => {
             <Image src={image} alt={id} style={{ background: 'transparent' }} />
           </Box>
         </DifferentBg>
+
+        <AnimatedArrows />
       </Flex>
 
       <Grid
         templateColumns='repeat(4,1fr)'
         justifyItems='center'
         gap='80px'
+        display={{ base: 'none', lg: 'flex' }}
         data-aos='fade-up'
         data-aos-duration='1000'
       >

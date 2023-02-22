@@ -15,7 +15,6 @@ const AboutHero = () => {
     setMediaQuery(media.matches);
   }, [mediaQuery]);
 
-  console.log(mediaQuery);
 
   return (
     <SectionContainer pt={globalStyles.sectionPt} gap={5}>
