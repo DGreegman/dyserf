@@ -15,11 +15,11 @@ const WorkCard = ({ item }: Props) => {
       flexProps={{
         align: 'center',
         justify: 'center',
+        className: globalStyles.className,
       }}
       borderRadius={{ base: 0, md: 10 }}
       minH='380px'
       w='full'
-      className={globalStyles.className}
     >
       <Flex
         align='center'

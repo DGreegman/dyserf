@@ -34,7 +34,7 @@ const ScrollTop = () => {
         height='45px'
         bg='transparent'
         onClick={() => {
-          window.scrollTo(0, 0);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
         className={globalStyles.className}
       >
