@@ -1,71 +1,23 @@
 import Image from 'next/image';
 import SideBar from './SideBar';
 import Link from 'next/link';
-import hoops from '../../assets/images/hoops.png';
 import hamburger from '../../assets/images/hamburger.png';
-import { Box, Flex, HStack, Spacer, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack, Spacer } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { logo, navLinks } from '../../store';
-import { useRouter } from 'next/router';
 import { useSideBar } from '../../context';
 import { NavBtn } from '../Button';
+import { NavItem } from './NavItem';
 
 const Nav = () => {
   // Hooks
-  const path = useRouter().pathname;
   const transparent = 'transparent';
   const { updateShow } = useSideBar();
 
   // Renders
   const renderNav = navLinks.map((item, i) => {
-    const isActive = path.includes(item.path);
-
-    return (
-      <Flex
-        key={`${item.title}-${i}`}
-        position='relative'
-        align='center'
-        justify='center'
-        minW='100px'
-        bg={transparent}
-      >
-        <Link
-          href={item.path}
-          style={{
-            position: isActive ? 'absolute' : 'relative',
-            zIndex: 3000,
-          }}
-        >
-          <Text
-            color={globalStyles.whiteColor}
-            fontSize={globalStyles.textFontSize}
-            className={globalStyles.className}
-            bg={transparent}
-            _hover={{
-              opacity: !isActive ? 0.7 : 1,
-            }}
-          >
-            {item.title}
-          </Text>
-        </Link>
-
-        <Box
-          opacity={isActive ? 1 : 0}
-          transition='all ease-in-out 250ms'
-          position='absolute'
-          bg={transparent}
-        >
-          <Image
-            src={hoops}
-            alt={globalStyles.alt}
-            style={{
-              background: transparent,
-            }}
-          />
-        </Box>
-      </Flex>
-    );
+    return <NavItem key={`${item.path}_${i}`} {...item} />;
   });
 
   return (

@@ -18,9 +18,9 @@ const HomeHero = () => {
         <Text
           bgClip='text'
           bgGradient={globalStyles.buttonGradient}
-          fontSize={{ base: '2rem', xl: '4rem' }}
+          fontSize={{ base: '2rem', xl: '3.5rem' }}
         >
-          for Project Development
+          which accelerates business growth
         </Text>
       </HeroTexts>
 

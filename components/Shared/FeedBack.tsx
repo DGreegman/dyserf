@@ -77,13 +77,12 @@ const FeedBack = () => {
           flexProps={{
             align: 'center',
             px: { base: '30px', xl: '50px' },
-            pb: { base: '4', xl: 0 },
+            pb: '4',
             gap: '32px',
           }}
           position='relative'
           maxWidth={{ base: '82%', md: '717px' }}
           minH={{ base: '329px', md: '295px' }}
-          maxH={{ base: 'full', md: '295px' }}
         >
           <Box
             position='relative'
