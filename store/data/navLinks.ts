@@ -1,6 +1,7 @@
+import { NavModel } from '../../models';
 import { DyserfRoutes } from '../../utils';
 
-export const navLinks = [
+export const navLinks: NavModel[] = [
   {
     path: DyserfRoutes.about,
     title: 'About us',
@@ -13,5 +14,6 @@ export const navLinks = [
   {
     path: DyserfRoutes.blog,
     title: 'Blog',
+    isExternal: true,
   },
 ];

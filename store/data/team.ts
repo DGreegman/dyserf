@@ -4,6 +4,7 @@ import team5 from '../../assets/images/team5.png';
 import ifeanyi from '../../assets/images/ifeanyi.png';
 import team7 from '../../assets/images/team7.png';
 import { TeamDataModel } from '../../models';
+import { DyserfRoutes } from '../../utils';
 
 export const teams: TeamDataModel[] = [
   {
@@ -12,8 +13,8 @@ export const teams: TeamDataModel[] = [
     name: 'Evans',
     position: 'Lead Content Strategist',
     social: {
-      twitter: '#',
-      linkedin: '#',
+      twitter: DyserfRoutes.evansTwitter,
+      linkedin: DyserfRoutes.evansLinkedin,
     },
   },
   {
@@ -22,8 +23,8 @@ export const teams: TeamDataModel[] = [
     name: 'James',
     position: 'Front end Developer',
     social: {
-      twitter: '#',
-      linkedin: '#',
+      twitter: DyserfRoutes.jamesTwitter,
+      linkedin: DyserfRoutes.jamesLinkedin,
     },
   },
 
@@ -33,20 +34,18 @@ export const teams: TeamDataModel[] = [
     name: 'Emerie',
     position: 'Lead Product Designer',
     social: {
-      twitter: '#',
-      linkedin: '#',
+      twitter: DyserfRoutes.emerieTwitter,
+      linkedin: DyserfRoutes.emerieLinkedin,
     },
   },
-
-  //   Refactor
   {
     id: 4,
     icon: team7,
     name: 'Nenye',
     position: 'Lead Product Manager',
     social: {
-      twitter: '#',
-      linkedin: '#',
+      twitter: DyserfRoutes.nenyeTwitter,
+      linkedin: DyserfRoutes.nenyeLinkedin,
     },
   },
   {
@@ -55,8 +54,8 @@ export const teams: TeamDataModel[] = [
     name: 'Gracious',
     position: 'Lead Product Developer',
     social: {
-      twitter: '#',
-      linkedin: '#',
+      twitter: DyserfRoutes.graciousTwitter,
+      linkedin: DyserfRoutes.graciousLinkedin,
     },
   },
 ];

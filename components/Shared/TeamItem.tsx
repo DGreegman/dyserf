@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Box, Flex, GridItem, Icon } from '@chakra-ui/react';
+import { Box, Flex, GridItem } from '@chakra-ui/react';
 import { TeamDataModel } from '../../models';
 import { globalStyles } from '../../styles';
 import { CardHeader } from './Header';
 import { CardText } from './Sharedtext';
-import { BsTwitter, BsLinkedin } from 'react-icons/bs';
+import { socialIcons } from '../../store';
 
 type Props = {
   team: TeamDataModel;
@@ -30,6 +30,7 @@ const TeamItem = ({ team }: Props) => {
             src={team.icon}
             alt={team.name}
             fill
+            sizes='100vw'
             style={{
               objectFit: 'contain',
               borderRadius: globalStyles.width,
@@ -59,27 +60,25 @@ const TeamItem = ({ team }: Props) => {
             target='_blank'
             className={globalStyles.className}
           >
-            <Icon
-              as={BsTwitter}
-              color={globalStyles.whiteColor}
+            <Image
+              src={socialIcons[0]}
+              alt={globalStyles.alt}
+              quality='100'
               className={globalStyles.className}
-              fontSize='1.25rem'
-              cursor='pointer'
             />
           </a>
 
           <a
-            href={team.social.twitter}
+            href={team.social.linkedin}
             rel='noopener noreferrer'
             target='_blank'
             className={globalStyles.className}
           >
-            <Icon
-              as={BsLinkedin}
-              color={globalStyles.whiteColor}
+            <Image
+              src={socialIcons[2]}
+              alt={globalStyles.alt}
+              quality='100'
               className={globalStyles.className}
-              cursor='pointer'
-              fontSize='1.25rem'
             />
           </a>
         </Flex>

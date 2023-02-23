@@ -14,6 +14,7 @@ export const MobileGrid = () => {
           alt={globalStyles.alt}
           priority
           fill
+          sizes='100vw'
           style={{ objectFit: 'contain' }}
         />
       </GridItem>
