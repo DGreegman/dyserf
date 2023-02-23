@@ -70,7 +70,7 @@ const Title = ({ title, isActive }: ITitle) => {
   return (
     <Text
       color={globalStyles.whiteColor}
-      fontSize={globalStyles.textFontSize}
+      fontSize={globalStyles.cardText}
       className={globalStyles.className}
       bg='transparent'
       _hover={{

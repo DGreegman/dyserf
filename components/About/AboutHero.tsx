@@ -18,14 +18,7 @@ const AboutHero = () => {
 
   return (
     <SectionContainer pt={globalStyles.sectionPt} gap={5}>
-      <HeroTexts
-        desc='Dyserf is an innovative team that builds digital experiences, accelerate
-        business growth, personal development and make life activities easier
-        and faster. We are team of experts from different background that have
-        built solutions and digital experiences that affect over 100,000 people,
-        globally. The TEWAM approach is our unique agile methodology that helps
-        us translate your business goals and objectives into solution.'
-      >
+      <HeroTexts desc='Dyserf, a leading UX design and project development firm, specializes in building exceptional digital experiences for businesses and organizations. With a team of experienced UX designers, researchers, and developers, we offer a range of services to help our clients improve their user engagement and achieve their business goals. The TEWAM approach is our unique agile methodology that helps us translate your business goals and objectives into solution.'>
         Demystifying Service Functionalities{!mediaQuery ? <br /> : null}
         (Dyserf)
       </HeroTexts>
