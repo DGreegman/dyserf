@@ -20,7 +20,7 @@ const HomeHero = () => {
           bgGradient={globalStyles.buttonGradient}
           fontSize={{ base: '2rem', xl: '3.5rem' }}
         >
-          which accelerates business growth
+          crafting intuitive experience
         </Text>
       </HeroTexts>
 

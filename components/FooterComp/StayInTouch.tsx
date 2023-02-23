@@ -30,7 +30,11 @@ const StayInTouch = () => {
         >
           <SectionHeader>Stay in touch</SectionHeader>
 
-          <DescriptionText pb={3} textAlign='center'>
+          <DescriptionText
+            pb={3}
+            textAlign='center'
+            fontSize={globalStyles.cardText}
+          >
             You can always stay in touch to get events, updates, information and
             also chat with us by sending us a mail.
           </DescriptionText>

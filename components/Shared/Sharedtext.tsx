@@ -5,11 +5,13 @@ export const DescriptionText = ({ children, ...rest }: TextProps) => {
   return (
     <Text
       {...rest}
-      fontSize={globalStyles.textFontSize}
+      fontSize={rest.fontSize ?? globalStyles.textFontSize}
       color={globalStyles.textColor}
       px={globalStyles.px}
+      letterSpacing='0.05em'
+      fontWeight={400}
       lineHeight={1.7}
-      opacity={0.8}
+      opacity={0.7}
       bg='transparent'
     >
       {children}
