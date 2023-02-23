@@ -9,9 +9,9 @@ const FooterItem = () => {
   // Renders
   const renderIcons = socialIcons.map((item, i) => (
     <Box key={i} className={globalStyles.className}>
-      <a href='#'>
+      <a href={item.path}>
         <Image
-          src={item}
+          src={item.icon}
           alt={globalStyles.alt}
           quality='100'
           className={globalStyles.className}

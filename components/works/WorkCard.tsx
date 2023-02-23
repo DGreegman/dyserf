@@ -12,73 +12,137 @@ type Props = {
 
 const WorkCard = ({ item }: Props) => {
   return (
-    <a
-      href={DyserfRoutes.projects}
-      rel='noopener noreferrer'
-      target='_blank'
-      className={globalStyles.className}
-    >
-      <DifferentBg
-        flexProps={{
-          align: 'center',
-          justify: 'center',
-          className: globalStyles.className,
-        }}
-        borderRadius={{ base: 0, md: 10 }}
-        minH='380px'
-      >
-        <Flex
-          align='center'
-          bg='transparent'
-          gap={5}
-          pt={{ base: 3, xl: 0 }}
-          direction={{ base: 'column-reverse', xl: 'row' }}
+    <>
+      <Box display={{ base: 'none', md: 'block' }}>
+        <a
+          href={DyserfRoutes.projects}
+          rel='noopener noreferrer'
+          target='_blank'
           className={globalStyles.className}
         >
-          <Stack bg='transparent' flex='1' className={globalStyles.className}>
-            <CardHeader className={globalStyles.className}>
-              {item.header}
-            </CardHeader>
-            <CardText className={globalStyles.className}>
-              {item.description}
-            </CardText>
-          </Stack>
-
-          <Image
-            src={item.icon}
-            alt={item.header}
-            className={globalStyles.className}
-            style={{
-              objectFit: 'contain',
-              background: 'transparent',
-              borderRadius: 10,
+          <DifferentBg
+            flexProps={{
+              align: 'center',
+              justify: 'center',
+              className: globalStyles.className,
             }}
-          />
-        </Flex>
+            borderRadius={{ base: 0, md: 10 }}
+            minH={{ base: '380px', md: '540px', xl: '380px' }}
+          >
+            <Flex
+              align='center'
+              bg='transparent'
+              gap={5}
+              pt={{ base: 3, xl: 0 }}
+              direction={{ base: 'column-reverse', xl: 'row' }}
+              className={globalStyles.className}
+            >
+              <Stack
+                bg='transparent'
+                flex='1'
+                className={globalStyles.className}
+              >
+                <CardHeader className={globalStyles.className}>
+                  {item.header}
+                </CardHeader>
+                <CardText className={globalStyles.className}>
+                  {item.description}
+                </CardText>
+              </Stack>
 
-        <Box
-          alignSelf='flex-start'
-          pt={6}
-          pb={1}
-          bg='transparent'
-          display={{ base: 'block', xl: 'none' }}
+              <Image
+                src={item.icon}
+                alt={item.header}
+                className={globalStyles.className}
+                style={{
+                  objectFit: 'cover',
+                  background: 'transparent',
+                  borderRadius: 10,
+                }}
+              />
+            </Flex>
+
+            <Box
+              alignSelf='flex-start'
+              pt={6}
+              pb={1}
+              bg='transparent'
+              display={{ base: 'block', xl: 'none' }}
+            >
+              <CustomBtn
+                text='See details'
+                width='110px'
+                bg={globalStyles.btnBg}
+                addBorderGradient
+              />
+            </Box>
+          </DifferentBg>
+        </a>
+      </Box>
+
+      <Box display={{ base: 'block', md: 'none' }}>
+        <DifferentBg
+          flexProps={{
+            align: 'center',
+            justify: 'center',
+            className: globalStyles.className,
+          }}
+          borderRadius={{ base: 0, md: 10 }}
+          minH='380px'
         >
-          <a
-            href={DyserfRoutes.projects}
-            rel='noopener noreferrer'
-            target='_blank'
+          <Flex
+            align='center'
+            bg='transparent'
+            gap={5}
+            pt={{ base: 3, xl: 0 }}
+            direction={{ base: 'column-reverse', xl: 'row' }}
             className={globalStyles.className}
           >
-            <CustomBtn
-              text='See details'
-              width='110px'
-              bg={globalStyles.btnBg}
-              addBorderGradient
+            <Stack bg='transparent' flex='1' className={globalStyles.className}>
+              <CardHeader className={globalStyles.className}>
+                {item.header}
+              </CardHeader>
+              <CardText className={globalStyles.className}>
+                {item.description}
+              </CardText>
+            </Stack>
+
+            <Image
+              src={item.icon}
+              alt={item.header}
+              className={globalStyles.className}
+              style={{
+                objectFit: 'contain',
+                background: 'transparent',
+                borderRadius: 10,
+              }}
             />
-          </a>
-        </Box>
-      </DifferentBg>
-    </a>
+          </Flex>
+
+          <Box
+            alignSelf='flex-start'
+            pt={6}
+            pb={1}
+            bg='transparent'
+            display={{ base: 'block', xl: 'none' }}
+          >
+            <a
+              href={DyserfRoutes.projects}
+              rel='noopener noreferrer'
+              target='_blank'
+              className={globalStyles.className}
+            >
+              <CustomBtn
+                text='See details'
+                width='110px'
+                bg={globalStyles.btnBg}
+                addBorderGradient
+              />
+            </a>
+          </Box>
+        </DifferentBg>
+      </Box>
+    </>
   );
 };
 
