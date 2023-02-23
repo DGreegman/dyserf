@@ -40,7 +40,7 @@ export const AnimatedArrows = () => {
       alignSelf='flex-end'
       mt='5'
       mr='2'
-      display={{ base: 'flex', lg: 'none' }}
+      display={{ base: 'flex', md: 'none' }}
     >
       {renderArrows}
     </Flex>

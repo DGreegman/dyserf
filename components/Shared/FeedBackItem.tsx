@@ -1,20 +1,18 @@
 import Image from 'next/image';
 import { GridItem } from '@chakra-ui/react';
-import { FeedbackModel } from '../../models';
+import { FeedBackItemModel } from '../../models';
 import { onAddNewFeedBack } from '../../store';
 import { globalStyles } from '../../styles';
 
-interface Props {
-  isActive: boolean;
-  feedbackItem: FeedbackModel;
-  onClick?: () => void;
-}
-
-export const FeedBackItem = ({ isActive, feedbackItem, onClick }: Props) => {
+export const FeedBackItem = ({
+  feedbackItem,
+  onClick,
+  isActive,
+}: FeedBackItemModel) => {
   return (
     <GridItem
       position='relative'
-      width='123px'
+      width={{ base: 'full', md: '123px' }}
       height='60px'
       borderRadius={8}
       className={globalStyles.className}
@@ -22,7 +20,7 @@ export const FeedBackItem = ({ isActive, feedbackItem, onClick }: Props) => {
       transition='all 350ms linear'
       onClick={() => {
         onAddNewFeedBack(feedbackItem);
-        onClick && onClick();
+        onClick?.();
       }}
       display='flex'
       px='1.5'
@@ -32,7 +30,8 @@ export const FeedBackItem = ({ isActive, feedbackItem, onClick }: Props) => {
       <Image
         src={feedbackItem.image}
         className={globalStyles.className}
-        alt={feedbackItem.id}
+        alt={feedbackItem.name}
+        width={123}
         style={{ background: 'transparent', objectFit: 'contain' }}
       />
     </GridItem>

@@ -5,40 +5,40 @@ import { Box, Flex, Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { CardText } from './Sharedtext';
 import { SectionTexts } from '..';
-import { feedBackItems, onAddNewFeedBack, useFeedBackStore } from '../../store';
+import { feedBackItems, useFeedBackStore } from '../../store';
 import { FeedBackItem } from './FeedBackItem';
-import { useEffect, useState } from 'react';
 import { AnimatedArrows } from './AnimatedArrows';
+import { DySerfSwiper } from './Swiper';
 
 const FeedBack = () => {
   const { description, image, id } = useFeedBackStore();
-  const [selectedItem, setSelectedItem] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      selectedItem < feedBackItems.length - 1
-        ? setSelectedItem((prev) => prev + 1)
-        : setSelectedItem(0);
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     selectedItem < feedBackItems.length - 1
+  //       ? setSelectedItem((prev) => prev + 1)
+  //       : setSelectedItem(0);
+  //   }, 5000);
 
-    onAddNewFeedBack(feedBackItems[selectedItem]);
+  //   onAddNewFeedBack(feedBackItems[selectedItem]);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, [selectedItem]);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, [selectedItem]);
 
-  const renderFeedBacks = feedBackItems.map((feedbackItem, i) => {
+  // const onClickHandler = (index: number) => {
+  //   setSelectedItem(index);
+  // };
+
+  const renderFeedBacks = feedBackItems.map((feedbackItem) => {
     const isActive = feedbackItem.id === id;
 
     return (
       <FeedBackItem
-        isActive={isActive}
         feedbackItem={feedbackItem}
         key={feedbackItem.id}
-        onClick={() => {
-          setSelectedItem(i);
-        }}
+        isActive={isActive}
       />
     );
   });
@@ -95,6 +95,7 @@ const FeedBack = () => {
               src={DLogo}
               alt='Logo'
               fill
+              sizes='100'
               style={{ background: 'transparent', objectFit: 'contain' }}
             />
           </Box>
@@ -121,12 +122,14 @@ const FeedBack = () => {
         templateColumns='repeat(4,1fr)'
         justifyItems='center'
         gap='80px'
-        display={{ base: 'none', lg: 'flex' }}
+        display={{ base: 'none', md: 'grid' }}
         data-aos='fade-up'
         data-aos-duration='1000'
       >
         {renderFeedBacks}
       </Grid>
+
+      <DySerfSwiper />
     </SectionContainer>
   );
 };

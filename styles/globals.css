@@ -50,3 +50,8 @@ body {
   border-radius: 5px;
 }
 
+
+.swiper-slide{
+  display: flex;
+  align-items: center;
+}
