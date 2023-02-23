@@ -8,7 +8,7 @@ export const globalStyles = {
   headerTextColor: '#EEEEFC',
   btnBg: '#182341',
   textColor: '#EBF8FE',
-  heroHeader: { base: '2.4rem', xl: '4.3rem' },
+  heroHeader: { base: '2.4rem', lg: '3rem', xl: '4.3rem' },
   cardHeader: { base: '1rem', xl: '1.1rem' },
   sectionHeader: { base: '1.5rem', xl: '3rem' },
   textFontSize: '0.88rem',

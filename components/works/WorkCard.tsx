@@ -30,17 +30,19 @@ const WorkCard = ({ item }: Props) => {
             minH={{ base: '380px', md: '540px', xl: '380px' }}
           >
             <Flex
-              align='center'
+              align={{ base: 'flex-start', xl: 'center' }}
               bg='transparent'
               gap={5}
+              flex='1'
               pt={{ base: 3, xl: 0 }}
               direction={{ base: 'column-reverse', xl: 'row' }}
               className={globalStyles.className}
             >
               <Stack
                 bg='transparent'
-                flex='1'
+                maxW={{ md: globalStyles.width, xl: '190px' }}
                 className={globalStyles.className}
+                flex='1'
               >
                 <CardHeader className={globalStyles.className}>
                   {item.header}
@@ -58,6 +60,7 @@ const WorkCard = ({ item }: Props) => {
                   objectFit: 'cover',
                   background: 'transparent',
                   borderRadius: 10,
+                  flex: '1',
                 }}
               />
             </Flex>

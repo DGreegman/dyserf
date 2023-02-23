@@ -10,7 +10,9 @@ interface Props extends ChildProps {
 const HeroTexts = ({ children, desc }: Props) => {
   return (
     <>
-      <HeroHeader>{children}</HeroHeader>
+      <HeroHeader alignSelf={{ base: 'flex-start', lg: 'center' }}>
+        {children}
+      </HeroHeader>
       {desc && (
         <DescriptionText
           textAlign={{ base: 'left', lg: 'center' }}
