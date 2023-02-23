@@ -19,7 +19,6 @@ const WorkCard = ({ item }: Props) => {
       }}
       borderRadius={{ base: 0, md: 10 }}
       minH='380px'
-      w='full'
     >
       <Flex
         align='center'
@@ -29,7 +28,7 @@ const WorkCard = ({ item }: Props) => {
         direction={{ base: 'column-reverse', xl: 'row' }}
         className={globalStyles.className}
       >
-        <Stack bg='transparent' w='full' className={globalStyles.className}>
+        <Stack bg='transparent' flex='1' className={globalStyles.className}>
           <CardHeader className={globalStyles.className}>
             {item.header}
           </CardHeader>
