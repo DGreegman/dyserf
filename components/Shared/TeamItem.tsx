@@ -61,7 +61,7 @@ const TeamItem = ({ team }: Props) => {
             className={globalStyles.className}
           >
             <Image
-              src={socialIcons[0]}
+              src={socialIcons[0].icon}
               alt={globalStyles.alt}
               quality='100'
               className={globalStyles.className}
@@ -75,7 +75,7 @@ const TeamItem = ({ team }: Props) => {
             className={globalStyles.className}
           >
             <Image
-              src={socialIcons[2]}
+              src={socialIcons[2].icon}
               alt={globalStyles.alt}
               quality='100'
               className={globalStyles.className}
