@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../../assets/images/logo.png';
 import {
   Flex,
   VStack,
@@ -14,9 +12,9 @@ import { CloseIcon } from '@chakra-ui/icons';
 import { useEffect } from 'react';
 import { navLinks } from '../../store';
 import { globalStyles } from '../../styles';
-import { DyserfRoutes } from '../../utils';
 import { useSideBar } from '../../context';
 import { IconBtn, NavBtn } from '../Button';
+import { HeroLogo } from './shared';
 
 export const SideBar = () => {
   // Hooks
@@ -66,19 +64,7 @@ export const SideBar = () => {
       boxShadow='2px 2px 100px 50px rgba(0, 0, 0, 0.07)'
     >
       <Flex width={globalStyles.width} align='center' px={4} pt={2}>
-        <Link
-          href={DyserfRoutes.homepage}
-          onClick={() => updateShow(false)}
-          className={globalStyles.className}
-        >
-          <Image
-            src={logo}
-            alt={globalStyles.alt}
-            quality='100'
-            className={globalStyles.className}
-            priority
-          />
-        </Link>
+        <HeroLogo onClick={() => updateShow(false)} />
 
         <Spacer />
 
@@ -109,4 +95,3 @@ export const SideBar = () => {
     </VStack>
   );
 };
-
