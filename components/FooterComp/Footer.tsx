@@ -1,12 +1,12 @@
-import FooterItem from './FooterItem';
-import StayInTouch from './StayInTouch';
+import { FooterItem } from './FooterItem';
+import { StayInTouch } from './StayInTouch';
 import { SectionContainer } from '../../layout';
 
 interface Props {
   showStay?: boolean;
 }
 
-const Footer = ({ showStay }: Props) => {
+export const Footer = ({ showStay }: Props) => {
   return (
     <SectionContainer gap='90px'>
       {showStay && <StayInTouch />}
@@ -14,5 +14,3 @@ const Footer = ({ showStay }: Props) => {
     </SectionContainer>
   );
 };
-
-export default Footer;

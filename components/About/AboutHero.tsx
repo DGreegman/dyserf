@@ -7,14 +7,13 @@ import { CustomBtn } from '../Button';
 import { HeroTexts } from '../Shared';
 import { useLayoutEffect, useState } from 'react';
 
-const AboutHero = () => {
+export const AboutHero = () => {
   const [mediaQuery, setMediaQuery] = useState(false);
 
   useLayoutEffect(() => {
     const media = window.matchMedia('(min-width: 800px)');
     setMediaQuery(media.matches);
   }, [mediaQuery]);
-
 
   return (
     <SectionContainer pt={globalStyles.sectionPt} gap={5}>
@@ -40,4 +39,3 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;

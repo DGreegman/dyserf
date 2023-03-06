@@ -1,2 +1,2 @@
-export { default as WorkCard } from './WorkCard';
-export { default as Workhero } from './WorkHero';
+export * from './WorkCard';
+export * from './WorkHero';

@@ -7,7 +7,7 @@ interface Props extends IconButtonProps {
   onClick: () => void;
 }
 
-const IconBtn = ({ icon, onClick, ...rest }: Props) => {
+export const IconBtn = ({ icon, onClick, ...rest }: Props) => {
   return (
     <IconButton
       {...rest}
@@ -26,4 +26,3 @@ const IconBtn = ({ icon, onClick, ...rest }: Props) => {
   );
 };
 
-export default IconBtn;

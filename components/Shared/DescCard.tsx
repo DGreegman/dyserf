@@ -12,7 +12,7 @@ interface Props {
   listItem?: string[];
 }
 
-const DescCard = ({
+export const DescCard = ({
   icon,
   cardHeader,
   cardText,
@@ -53,4 +53,3 @@ const DescCard = ({
   );
 };
 
-export default DescCard;

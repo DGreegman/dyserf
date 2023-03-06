@@ -1,4 +1,3 @@
-import ApproachCard from './ApproachCard';
 import Image from 'next/image';
 import g1 from '../../assets/images/g1.png';
 import g2 from '../../assets/images/g2.png';
@@ -6,11 +5,12 @@ import g3 from '../../assets/images/g3.png';
 import g4 from '../../assets/images/g4.png';
 import g5 from '../../assets/images/g5.png';
 import g4team from '../../assets/images/g4team.png';
+import { ApproachCard } from './ApproachCard';
 import { Grid, Box } from '@chakra-ui/react';
 import { DifferentBg, SectionTexts } from '../Shared';
 import { globalStyles } from '../../styles';
 
-const OurApproach = () => {
+export const OurApproach = () => {
   return (
     <DifferentBg
       w='full'
@@ -122,5 +122,3 @@ const OurApproach = () => {
     </DifferentBg>
   );
 };
-
-export default OurApproach;

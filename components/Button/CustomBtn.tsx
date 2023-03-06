@@ -24,9 +24,11 @@ type Props = {
   leftIcon?: ReactElement;
   addBorderGradient?: boolean;
   addActive?: boolean;
+  isLoading?: boolean;
+  loadingText?: string;
 };
 
-const CustomBtn = ({
+export const CustomBtn = ({
   text,
   width,
   height,
@@ -40,6 +42,8 @@ const CustomBtn = ({
   addBorderGradient,
   leftIcon,
   addActive,
+  isLoading,
+  loadingText,
 }: Props) => {
   const style = {
     width: width,
@@ -59,6 +63,8 @@ const CustomBtn = ({
         type={type}
         onClick={onClick}
         borderColor={borderColor}
+        isLoading={isLoading}
+        loadingText={loadingText}
         className={`${globalStyles.className}`}
         _hover={{
           background: bg ?? globalStyles.bgColor,
@@ -86,4 +92,3 @@ const CustomBtn = ({
   );
 };
 
-export default CustomBtn;

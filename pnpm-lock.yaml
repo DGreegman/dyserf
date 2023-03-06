@@ -5,6 +5,7 @@ specifiers:
   '@chakra-ui/icons': ^2.0.9
   '@chakra-ui/react': ^2.3.1
   '@chakra-ui/system': ^2.3.8
+  '@emailjs/browser': ^3.10.0
   '@emotion/react': ^11
   '@emotion/styled': ^11
   '@next/font': 13.1.6
@@ -30,6 +31,7 @@ dependencies:
   '@chakra-ui/icons': 2.0.15_i3shekjw4uogiqsyudihvyzi2i
   '@chakra-ui/react': 2.4.6_rrb6gtinh6li2xpca7pu3n25ke
   '@chakra-ui/system': 2.3.8_dovxhg2tvkkxkdnqyoum6wzcxm
+  '@emailjs/browser': 3.10.0
   '@emotion/react': 11.10.5_gvkgbs26gyeobkquyf3rbr7noe
   '@emotion/styled': 11.10.5_lipnl3xrkzgy7krmf63wlhwhfq
   '@next/font': 13.1.6
@@ -1377,6 +1379,11 @@ packages:
     dependencies:
       '@chakra-ui/system': 2.3.7_dovxhg2tvkkxkdnqyoum6wzcxm
       react: 18.2.0
+    dev: false
+
+  /@emailjs/browser/3.10.0:
+    resolution: {integrity: sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@emotion/babel-plugin/11.10.5_@babel+core@7.20.12:

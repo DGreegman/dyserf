@@ -1,16 +1,15 @@
-import DifferentBg from './DifferentBg';
 import Image from 'next/image';
 import DLogo from '../../assets/images/Dlogo.png';
 import { Box, Flex, Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { CardText } from './Sharedtext';
-import { SectionTexts } from '..';
+import { DifferentBg, SectionTexts } from '..';
 import { feedBackItems, useFeedBackStore } from '../../store';
 import { FeedBackItem } from './FeedBackItem';
 import { AnimatedArrows } from './AnimatedArrows';
 import { DySerfSwiper } from './Swiper';
 
-const FeedBack = () => {
+export const FeedBack = () => {
   const { description, image, id } = useFeedBackStore();
 
   // useEffect(() => {
@@ -132,5 +131,3 @@ const FeedBack = () => {
     </SectionContainer>
   );
 };
-
-export default FeedBack;

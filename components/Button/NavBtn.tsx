@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CustomBtn from './CustomBtn';
+import { CustomBtn } from './CustomBtn';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
@@ -8,7 +8,7 @@ interface Props {
   onClick?: () => void;
 }
 
-const NavBtn = ({ onClick }: Props) => {
+export const NavBtn = ({ onClick }: Props) => {
   return (
     <Link href={DyserfRoutes.sendMessage} onClick={onClick}>
       <CustomBtn
@@ -30,4 +30,3 @@ const NavBtn = ({ onClick }: Props) => {
   );
 };
 
-export default NavBtn;

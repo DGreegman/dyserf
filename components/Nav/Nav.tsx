@@ -1,16 +1,15 @@
 import Image from 'next/image';
-import SideBar from './SideBar';
-import Link from 'next/link';
 import hamburger from '../../assets/images/hamburger.png';
+import { SideBar } from './SideBar';
 import { Box, Flex, HStack, Spacer } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
-import { DyserfRoutes } from '../../utils';
-import { logo, navLinks } from '../../store';
+import { navLinks } from '../../store';
 import { useSideBar } from '../../context';
 import { NavBtn } from '../Button';
 import { NavItem } from './NavItem';
+import { HeroLogo } from './shared';
 
-const Nav = () => {
+export const Nav = () => {
   // Hooks
   const transparent = 'transparent';
   const { updateShow } = useSideBar();
@@ -34,18 +33,7 @@ const Nav = () => {
       zIndex={3000}
     >
       <HStack width={globalStyles.containerWidth} bg={transparent}>
-        <Link href={DyserfRoutes.homepage}>
-          <Image
-            src={logo}
-            alt={globalStyles.alt}
-            priority
-            quality='100'
-            className={globalStyles.className}
-            style={{
-              background: transparent,
-            }}
-          />
-        </Link>
+        <HeroLogo />
 
         <Spacer bg={transparent} />
 
@@ -80,5 +68,3 @@ const Nav = () => {
     </Flex>
   );
 };
-
-export default Nav;

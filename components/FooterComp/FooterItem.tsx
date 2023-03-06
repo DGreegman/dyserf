@@ -5,7 +5,7 @@ import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
 import { logo, socialIcons } from '../../store';
 
-const FooterItem = () => {
+export const FooterItem = () => {
   // Renders
   const renderIcons = socialIcons.map((item, i) => (
     <Box key={i} className={globalStyles.className}>
@@ -55,5 +55,3 @@ const FooterItem = () => {
     </Flex>
   );
 };
-
-export default FooterItem;

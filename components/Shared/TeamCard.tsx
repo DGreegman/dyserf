@@ -1,11 +1,11 @@
-import TeamItem from './TeamItem';
+import { TeamItem } from './TeamItem';
 import { Grid } from '@chakra-ui/react';
 import { SectionContainer } from '../../layout';
 import { teams } from '../../store';
 import { globalStyles } from '../../styles';
 import { SectionTexts } from '..';
 
-const TeamCard = () => {
+export const TeamCard = () => {
   const renderTeam = teams.map((team) => (
     <TeamItem team={team} key={team.id} />
   ));
@@ -38,5 +38,3 @@ const TeamCard = () => {
     </SectionContainer>
   );
 };
-
-export default TeamCard;
