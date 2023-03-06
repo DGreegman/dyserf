@@ -1,4 +1,4 @@
-// import a from '../../assets/images/fire1.png';
+import a from '../../assets/images/saas.jpg';
 import b from '../../assets/images/nft.png';
 import c from '../../assets/images/zyrop.png';
 import d from '../../assets/images/fire2.png';
@@ -9,7 +9,7 @@ export const workData: WorkModel[] = [
     header: 'Saas Application',
     description: 'Saas Application for travel abroad agents.',
     id: 1,
-    icon: c,
+    icon: a,
   },
   {
     header: 'NFT Marketplace',

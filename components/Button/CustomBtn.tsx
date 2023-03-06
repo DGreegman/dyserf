@@ -57,7 +57,12 @@ export const CustomBtn = ({
   };
 
   return (
-    <div className={addBorderGradient ? 'module-border-wrap' : ''}>
+    <div
+      className={addBorderGradient ? 'module-border-wrap' : ''}
+      style={{
+        background: addBorderGradient ? undefined : 'transparent',
+      }}
+    >
       <Button
         sx={style}
         type={type}
@@ -66,9 +71,10 @@ export const CustomBtn = ({
         isLoading={isLoading}
         loadingText={loadingText}
         className={`${globalStyles.className}`}
+        transition='all 0.3s linear'
         _hover={{
           background: bg ?? globalStyles.bgColor,
-          transform: addActive ? 'scale(1.05)' : '',
+          transform: addActive ? 'scale(1.03)' : '',
         }}
         _active={{
           background: bg ?? globalStyles.bgColor,
