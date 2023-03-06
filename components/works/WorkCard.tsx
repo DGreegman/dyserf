@@ -13,6 +13,7 @@ type Props = {
 export const WorkCard = ({ item }: Props) => {
   return (
     <>
+      {/* This is for large screens */}
       <Box display={{ base: 'none', md: 'block' }}>
         <a
           href={DyserfRoutes.projects}
@@ -26,16 +27,16 @@ export const WorkCard = ({ item }: Props) => {
               justify: 'center',
               className: globalStyles.className,
             }}
-            borderRadius={{ base: 0, md: 10 }}
-            minH={{ base: '380px', md: '540px', xl: '380px' }}
+            borderRadius={{ md: 10 }}
+            minH={{ md: '540px', xl: '380px' }}
           >
             <Flex
-              align={{ base: 'flex-start', xl: 'center' }}
+              align={{ md: 'flex-start', xl: 'center' }}
               bg='transparent'
               gap={5}
               flex='1'
-              pt={{ base: 3, xl: 0 }}
-              direction={{ base: 'column-reverse', xl: 'row' }}
+              pt={{ md: 3, xl: 0 }}
+              direction={{ md: 'column-reverse', xl: 'row' }}
               className={globalStyles.className}
             >
               <Stack
@@ -70,7 +71,7 @@ export const WorkCard = ({ item }: Props) => {
               pt={6}
               pb={1}
               bg='transparent'
-              display={{ base: 'block', xl: 'none' }}
+              display={{ md: 'block', xl: 'none' }}
             >
               <CustomBtn
                 text='See details'
@@ -83,6 +84,7 @@ export const WorkCard = ({ item }: Props) => {
         </a>
       </Box>
 
+      {/* This is for small screens */}
       <Box display={{ base: 'block', md: 'none' }}>
         <DifferentBg
           flexProps={{
@@ -90,18 +92,23 @@ export const WorkCard = ({ item }: Props) => {
             justify: 'center',
             className: globalStyles.className,
           }}
-          borderRadius={{ base: 0, md: 10 }}
+          borderRadius='none'
           minH='380px'
         >
           <Flex
             align='center'
             bg='transparent'
             gap={5}
-            pt={{ base: 3, xl: 0 }}
-            direction={{ base: 'column-reverse', xl: 'row' }}
+            pt='3'
+            direction='column-reverse'
             className={globalStyles.className}
           >
-            <Stack bg='transparent' flex='1' className={globalStyles.className}>
+            <Stack
+              bg='transparent'
+              className={globalStyles.className}
+              w={globalStyles.width}
+              flex='1'
+            >
               <CardHeader className={globalStyles.className}>
                 {item.header}
               </CardHeader>
@@ -127,7 +134,7 @@ export const WorkCard = ({ item }: Props) => {
             pt={6}
             pb={1}
             bg='transparent'
-            display={{ base: 'block', xl: 'none' }}
+            display='block'
           >
             <a
               href={DyserfRoutes.projects}

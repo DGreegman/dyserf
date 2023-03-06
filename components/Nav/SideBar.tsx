@@ -76,6 +76,7 @@ export const SideBar = () => {
             alt={globalStyles.alt}
             quality='100'
             className={globalStyles.className}
+            priority
           />
         </Link>
 
