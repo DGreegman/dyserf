@@ -41,13 +41,17 @@ export const ContactForm = () => {
     onLoading(true);
 
     if (user_email && user_name && message) {
-      onError(undefined, undefined);
       send_message(form.current!, () => {
         setContact(initialFormState);
       });
     } else {
       onError('Please fill all the required fields', 'warning');
       onLoading(undefined);
+
+      setTimeout(() => {
+        onError(undefined, undefined);
+        onLoading(undefined);
+      }, 3000);
     }
   };
 
