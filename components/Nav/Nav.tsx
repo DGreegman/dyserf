@@ -46,7 +46,11 @@ export const Nav = () => {
           {renderNav}
         </Flex>
 
-        <Box display={{ base: 'none', lg: 'flex' }}>
+        <Box
+          display={{ base: 'none', lg: 'flex' }}
+          background='transparent'
+          borderRadius={5}
+        >
           <NavBtn />
         </Box>
 

@@ -56,7 +56,10 @@ export const WorkCard = ({ item }: Props) => {
               <Image
                 src={item.icon}
                 alt={item.header}
+                width={362}
+                height={283}
                 className={globalStyles.className}
+                quality='100'
                 style={{
                   objectFit: 'cover',
                   background: 'transparent',

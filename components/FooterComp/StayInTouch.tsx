@@ -72,6 +72,7 @@ export const StayInTouch = () => {
               height='48px'
               text='Subscribe'
               bg={globalStyles.buttonGradient}
+              addActive
             />
           </Flex>
         </Flex>
