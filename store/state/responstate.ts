@@ -9,7 +9,7 @@ interface ResponseData extends ResponseModel {
 }
 
 export const useReponseStore = create<ResponseData>((set) => ({
-  onSuccess: (e) => set({ successMessage: e }),
+  onSuccess: (e) => set({ successMessage: e, status: 'success' }),
   onError: (e, s) => set({ errorMessage: e, status: s }),
   onLoading: (e) => set({ isLoading: e }),
   reset: () =>
