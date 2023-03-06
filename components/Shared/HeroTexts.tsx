@@ -7,7 +7,7 @@ interface Props extends ChildProps {
   desc?: string;
 }
 
-const HeroTexts = ({ children, desc }: Props) => {
+export const HeroTexts = ({ children, desc }: Props) => {
   return (
     <>
       <HeroHeader alignSelf={{ base: 'flex-start', lg: 'center' }}>
@@ -28,4 +28,3 @@ const HeroTexts = ({ children, desc }: Props) => {
   );
 };
 
-export default HeroTexts;

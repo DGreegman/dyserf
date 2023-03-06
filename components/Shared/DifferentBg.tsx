@@ -5,7 +5,7 @@ interface Props extends BoxProps {
   flexProps?: FlexProps;
 }
 
-const DifferentBg = ({ children, flexProps, ...rest }: Props) => {
+export const DifferentBg = ({ children, flexProps, ...rest }: Props) => {
   return (
     <Box
       boxShadow={globalStyles.boxShadow}
@@ -29,4 +29,3 @@ const DifferentBg = ({ children, flexProps, ...rest }: Props) => {
   );
 };
 
-export default DifferentBg;

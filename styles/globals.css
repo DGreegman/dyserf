@@ -6,7 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  cursor: url('/image/cursor1.png'), auto  !important;
+  cursor: url('/image/cursor1.png'), auto !important;
   background-color: #182341;
   color: #fff;
 }
@@ -26,11 +26,11 @@ body {
 }
 
 .cursor:hover {
-  cursor: url('/image/hovercursor.png'), auto  !important;
+  cursor: url('/image/hovercursor.png'), auto !important;
 }
 
 .soon:hover {
-  cursor: url('/image/soon.png'), auto  !important;
+  cursor: url('/image/soon.png'), auto !important;
 }
 
 /* For sections and cards */
@@ -50,8 +50,15 @@ body {
   border-radius: 5px;
 }
 
-
-.swiper-slide{
+.swiper-slide {
   display: flex;
   align-items: center;
+}
+
+/* to remove bg from chakra icons */
+.css-1wpg9jd,
+.css-149izd1,
+.css-14ogjxt,
+.css-fi0ww0 {
+  background-color: transparent;
 }

@@ -1,9 +1,9 @@
-import WorkCard from '../works/WorkCard';
+import { WorkCard } from '../works/WorkCard';
 import { Grid, Box } from '@chakra-ui/react';
 import { workData } from '../../store';
 import { globalStyles } from '../../styles';
 
-const WorksShowCaseCard = () => {
+export const WorksShowCaseCard = () => {
   const renderWorks = workData.map((e) => {
     return <WorkCard key={e.id} item={e} />;
   });
@@ -38,5 +38,3 @@ const WorksShowCaseCard = () => {
     </>
   );
 };
-
-export default WorksShowCaseCard;

@@ -4,7 +4,7 @@ import { coreValues } from '../../store';
 import { globalStyles } from '../../styles';
 import { DescCard, SectionTexts } from '../Shared';
 
-const CoreValues = () => {
+export const CoreValues = () => {
   const renderValues = coreValues.map((e) => (
     <GridItem key={e.id} bg='transparent' rowSpan={e.isDouble ? 2 : 1}>
       <DescCard {...e} minH={e.isDouble ? '100%' : '180px'} radius={10} />
@@ -37,4 +37,3 @@ const CoreValues = () => {
   );
 };
 
-export default CoreValues;

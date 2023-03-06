@@ -18,7 +18,7 @@ import { DyserfRoutes } from '../../utils';
 import { useSideBar } from '../../context';
 import { IconBtn, NavBtn } from '../Button';
 
-const SideBar = () => {
+export const SideBar = () => {
   // Hooks
   const { updateShow, show } = useSideBar();
   const [isLargerThan992] = useMediaQuery('(min-width: 992px)');
@@ -109,4 +109,3 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;

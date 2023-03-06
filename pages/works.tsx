@@ -1,7 +1,7 @@
-import { Workhero } from '../components';
+import { WorkHero } from '../components';
 
 const Works = () => {
-  return <Workhero />;
+  return <WorkHero />;
 };
 
 export default Works;

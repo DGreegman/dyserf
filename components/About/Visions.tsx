@@ -4,7 +4,7 @@ import { visionCards } from '../../store';
 import { globalStyles } from '../../styles';
 import { DescCard } from '../Shared';
 
-const Visions = () => {
+export const Visions = () => {
   const renderCards = visionCards.map((e) => <DescCard {...e} key={e.id} />);
 
   return (
@@ -24,4 +24,3 @@ const Visions = () => {
   );
 };
 
-export default Visions;

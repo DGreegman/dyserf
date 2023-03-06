@@ -8,7 +8,7 @@ interface Props extends StackProps {
   desc: string;
 }
 
-const SectionTexts = ({ header, desc, ...res }: Props) => {
+export const SectionTexts = ({ header, desc, ...res }: Props) => {
   return (
     <Stack
       gap={1}
@@ -25,5 +25,3 @@ const SectionTexts = ({ header, desc, ...res }: Props) => {
     </Stack>
   );
 };
-
-export default SectionTexts;

@@ -4,7 +4,7 @@ import { heroItems } from '../../store';
 import { globalStyles } from '../../styles';
 import { MobileGrid } from '../Shared';
 
-const ListOfCompanies = () => {
+export const ListOfCompanies = () => {
   // Large screens
   const renderTabs = heroItems.map((e, i) => {
     const isLast = i === heroItems.length - 1;
@@ -44,5 +44,4 @@ const ListOfCompanies = () => {
   );
 };
 
-export default ListOfCompanies;
 

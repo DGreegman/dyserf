@@ -15,7 +15,7 @@ interface Props extends ChildProps {
   pb?: SpaceProps['pb'];
 }
 
-const ApproachCard = ({ children, t, colSpan, bg, pb }: Props) => {
+export const ApproachCard = ({ children, t, colSpan, bg, pb }: Props) => {
   const sharedText = (t: string) => (
     <Text
       fontWeight={globalStyles.semibold}
@@ -45,4 +45,3 @@ const ApproachCard = ({ children, t, colSpan, bg, pb }: Props) => {
   );
 };
 
-export default ApproachCard;

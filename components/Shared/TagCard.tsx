@@ -1,7 +1,7 @@
 import { Center, CenterProps } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 
-const TagCard = ({ children, ...rest }: CenterProps) => {
+export const TagCard = ({ children, ...rest }: CenterProps) => {
   return (
     <Center
       rounded={globalStyles.radius}
@@ -20,4 +20,3 @@ const TagCard = ({ children, ...rest }: CenterProps) => {
   );
 };
 
-export default TagCard;

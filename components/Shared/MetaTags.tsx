@@ -6,7 +6,7 @@ interface Props {
   image?: string;
 }
 
-const Metatags = ({ title, description }: Props) => {
+export const Metatags = ({ title, description }: Props) => {
   return (
     <Head>
       <meta name='twitter:card' content='summary' />
@@ -23,4 +23,3 @@ const Metatags = ({ title, description }: Props) => {
   );
 };
 
-export default Metatags;

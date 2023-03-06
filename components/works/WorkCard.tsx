@@ -10,7 +10,7 @@ type Props = {
   item: WorkModel;
 };
 
-const WorkCard = ({ item }: Props) => {
+export const WorkCard = ({ item }: Props) => {
   return (
     <>
       <Box display={{ base: 'none', md: 'block' }}>
@@ -149,4 +149,3 @@ const WorkCard = ({ item }: Props) => {
   );
 };
 
-export default WorkCard;

@@ -10,7 +10,7 @@ import { CustomBtn } from '../Button';
 import { DescriptionText, DifferentBg, SectionHeader } from '../Shared';
 import { IoMdMail } from 'react-icons/io';
 
-const StayInTouch = () => {
+export const StayInTouch = () => {
   return (
     <Flex w={globalStyles.width} data-aos='fade-up' data-aos-duration='1000'>
       <DifferentBg
@@ -80,4 +80,3 @@ const StayInTouch = () => {
   );
 };
 
-export default StayInTouch;

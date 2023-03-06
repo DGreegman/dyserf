@@ -3,7 +3,7 @@ import { globalStyles } from '../../styles';
 import { Box, Center } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 
-const ScrollTop = () => {
+export const ScrollTop = () => {
   const [showBtn, setShowBtn] = useState(false);
 
   useEffect(() => {
@@ -48,4 +48,3 @@ const ScrollTop = () => {
   );
 };
 
-export default ScrollTop;

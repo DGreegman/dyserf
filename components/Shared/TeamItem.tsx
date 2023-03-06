@@ -10,7 +10,7 @@ type Props = {
   team: TeamDataModel;
 };
 
-const TeamItem = ({ team }: Props) => {
+export const TeamItem = ({ team }: Props) => {
   const isTop = team.id == 2 || team.id == 4;
   const isCenter = team.id === 3;
 
@@ -87,4 +87,3 @@ const TeamItem = ({ team }: Props) => {
   );
 };
 
-export default TeamItem;

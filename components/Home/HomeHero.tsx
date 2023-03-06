@@ -8,7 +8,7 @@ import { FaPlay } from 'react-icons/fa';
 import { globalStyles } from '../../styles';
 import { BsPlayCircle } from 'react-icons/bs';
 
-const HomeHero = () => {
+export const HomeHero = () => {
   const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
 
   return (
@@ -64,4 +64,3 @@ const HomeHero = () => {
   );
 };
 
-export default HomeHero;

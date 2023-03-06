@@ -5,7 +5,6 @@ import { FeedBackItem } from './FeedBackItem';
 import { useState } from 'react';
 import 'swiper/css';
 
-// Fix collobo btn
 
 export const DySerfSwiper = () => {
   const [selectedItem, setSelectedItem] = useState(0);

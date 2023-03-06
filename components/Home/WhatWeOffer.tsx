@@ -3,7 +3,7 @@ import { offers } from '../../store';
 import { globalStyles } from '../../styles';
 import { DescCard, DifferentBg, SectionTexts } from '../Shared';
 
-const WhatWeOffer = () => {
+export const WhatWeOffer = () => {
   const renderCards = offers.map((offer) => (
     <DescCard key={offer.id} {...offer} minH='300px' />
   ));
@@ -42,4 +42,3 @@ const WhatWeOffer = () => {
   );
 };
 
-export default WhatWeOffer;

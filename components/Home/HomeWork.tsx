@@ -3,7 +3,7 @@ import { SectionContainer } from '../../layout';
 import { workItems } from '../../store';
 import { WorksShowCaseCard, TagCard, SectionTexts } from '../Shared';
 
-const HomeWork = () => {
+export const HomeWork = () => {
   const renderWorksItem = workItems.map((e) => <TagCard key={e}>{e}</TagCard>);
 
   return (
@@ -29,4 +29,3 @@ const HomeWork = () => {
   );
 };
 
-export default HomeWork;

@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import SideBar from './SideBar';
 import Link from 'next/link';
 import hamburger from '../../assets/images/hamburger.png';
+import { SideBar } from './SideBar';
 import { Box, Flex, HStack, Spacer } from '@chakra-ui/react';
 import { globalStyles } from '../../styles';
 import { DyserfRoutes } from '../../utils';
@@ -10,7 +10,7 @@ import { useSideBar } from '../../context';
 import { NavBtn } from '../Button';
 import { NavItem } from './NavItem';
 
-const Nav = () => {
+export const Nav = () => {
   // Hooks
   const transparent = 'transparent';
   const { updateShow } = useSideBar();
@@ -80,5 +80,3 @@ const Nav = () => {
     </Flex>
   );
 };
-
-export default Nav;
